@@ -35,4 +35,5 @@ name; give name **and** email.
 - **SAT section split** — Reading/Writing and Math sub-scores of the 1330.
 - **Harvard Quiz Bowl "Global Rank 3"** — marked unconfirmed in Notion. Confirm before it goes public.
 - **Roboprenr Lab** — the 7th course title (only 6 are named in Notion).
-- **Internships** — Notion logs none. Do you have any to add?
+- **Internship — Scaler School of Technology (YIIC)** — added. Still need: dates, your role/what you built, and a completion certificate if you have one.
+- **LinkedIn** — couldn't be read automatically (login-gated). Paste anything from it not already captured here.
