@@ -1,0 +1,217 @@
+/* ===================================================================
+   Daksh Singh — Portfolio / Resume Website
+   Clean, professional, admissions-officer-scannable. No external deps.
+   =================================================================== */
+
+:root {
+  --ink:        #1a2230;
+  --ink-soft:   #47546a;
+  --muted:      #6b7688;
+  --line:       #e3e7ee;
+  --line-soft:  #eef1f6;
+  --bg:         #ffffff;
+  --bg-alt:     #f7f9fc;
+  --accent:     #1f4e79;   /* deep engineering blue */
+  --accent-2:   #2b6cb0;
+  --accent-bg:  #eaf1f8;
+  --gold:       #8a6d1f;
+  --flag-bg:    #fff7e6;
+  --flag-line:  #f0d9a8;
+  --flag-ink:   #7a5b12;
+  --radius:     8px;
+  --maxw:       960px;
+  --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: var(--font);
+  color: var(--ink);
+  background: var(--bg);
+  line-height: 1.55;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: var(--accent-2); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+h1, h2, h3, h4 { line-height: 1.25; color: var(--ink); }
+
+/* ---------- Layout scaffolding ---------- */
+.wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 24px; }
+
+section { padding: 44px 0 8px; border-top: 1px solid var(--line-soft); }
+section:first-of-type { border-top: none; }
+
+.section-title {
+  font-size: 1.35rem;
+  letter-spacing: .01em;
+  margin: 0 0 4px;
+  color: var(--accent);
+}
+.section-sub { margin: 0 0 20px; color: var(--muted); font-size: .92rem; }
+
+/* ---------- Sticky nav ---------- */
+.nav {
+  position: sticky; top: 0; z-index: 50;
+  background: rgba(255,255,255,.94);
+  backdrop-filter: saturate(180%) blur(8px);
+  border-bottom: 1px solid var(--line);
+}
+.nav-inner {
+  max-width: var(--maxw); margin: 0 auto; padding: 10px 24px;
+  display: flex; align-items: center; gap: 18px;
+  overflow-x: auto;
+}
+.nav-brand { font-weight: 700; color: var(--ink); white-space: nowrap; margin-right: 4px; }
+.nav a {
+  color: var(--ink-soft); font-size: .86rem; white-space: nowrap;
+  padding: 4px 2px; border-bottom: 2px solid transparent;
+}
+.nav a:hover { color: var(--accent); text-decoration: none; }
+.nav a.active { color: var(--accent); border-bottom-color: var(--accent); }
+
+/* ---------- Header ---------- */
+.header {
+  background: linear-gradient(180deg, var(--bg-alt), #fff);
+  border-bottom: 1px solid var(--line);
+  padding: 46px 0 34px;
+}
+.header h1 { font-size: 2.4rem; margin: 0 0 6px; letter-spacing: -.01em; }
+.header .tagline { font-size: 1.05rem; color: var(--ink-soft); margin: 0 0 18px; }
+.contact { display: flex; flex-wrap: wrap; gap: 8px 22px; font-size: .93rem; }
+.contact span, .contact a { color: var(--ink-soft); }
+.contact .label { color: var(--muted); font-weight: 600; margin-right: 4px; }
+
+/* ---------- Objective ---------- */
+.objective p { font-size: 1.08rem; color: var(--ink-soft); max-width: 720px; }
+
+/* ---------- Tables ---------- */
+table.grades {
+  width: 100%; border-collapse: collapse; margin: 0 0 22px;
+  font-size: .93rem;
+}
+table.grades caption {
+  text-align: left; font-weight: 700; color: var(--ink);
+  padding: 0 0 8px; font-size: 1rem;
+}
+table.grades th, table.grades td {
+  text-align: left; padding: 8px 12px; border-bottom: 1px solid var(--line-soft);
+}
+table.grades thead th {
+  background: var(--bg-alt); color: var(--ink-soft);
+  font-size: .78rem; text-transform: uppercase; letter-spacing: .04em;
+  border-bottom: 1px solid var(--line);
+}
+table.grades tbody tr:hover { background: var(--bg-alt); }
+.grade-pill {
+  display: inline-block; min-width: 30px; text-align: center;
+  padding: 1px 8px; border-radius: 20px; font-weight: 600; font-size: .82rem;
+  background: var(--accent-bg); color: var(--accent);
+}
+.grade-pill.star { background: #eaf7ee; color: #1c7a3e; }
+.grade-pill.low  { background: #fbecec; color: #a23b3b; }
+
+/* ---------- Cards ---------- */
+.cards { display: grid; gap: 16px; }
+.card {
+  border: 1px solid var(--line); border-radius: var(--radius);
+  padding: 18px 20px; background: #fff;
+}
+.card-head {
+  display: flex; justify-content: space-between; align-items: baseline;
+  gap: 12px; flex-wrap: wrap;
+}
+.card h3 { font-size: 1.08rem; margin: 0; }
+.card .meta { color: var(--muted); font-size: .84rem; white-space: nowrap; }
+.card .role { color: var(--accent); font-weight: 600; font-size: .9rem; margin: 2px 0 0; }
+.card p { margin: 10px 0 0; color: var(--ink-soft); font-size: .95rem; }
+.card ul { margin: 10px 0 0; padding-left: 18px; color: var(--ink-soft); font-size: .95rem; }
+.card ul li { margin: 3px 0; }
+
+.tag-row { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px; }
+.tag {
+  font-size: .72rem; letter-spacing: .02em; text-transform: uppercase;
+  color: var(--ink-soft); background: var(--bg-alt);
+  border: 1px solid var(--line); padding: 2px 9px; border-radius: 20px;
+}
+.tag.cat { color: var(--accent); border-color: var(--accent-bg); background: var(--accent-bg); }
+
+.metric-line {
+  margin-top: 10px; font-size: .95rem; color: var(--ink);
+  border-left: 3px solid var(--accent-2); padding-left: 12px;
+}
+
+/* ---------- Honors / awards list ---------- */
+.honor {
+  display: flex; gap: 16px; padding: 16px 0; border-bottom: 1px solid var(--line-soft);
+}
+.honor:last-child { border-bottom: none; }
+.honor .year {
+  flex: 0 0 92px; color: var(--accent); font-weight: 700; font-size: .9rem;
+}
+.honor .body h3 { font-size: 1.02rem; margin: 0 0 3px; }
+.honor .body p { margin: 4px 0 0; color: var(--ink-soft); font-size: .93rem; }
+
+/* ---------- Certificate / photo slot ---------- */
+.cert-slot {
+  margin-top: 12px; border: 1px dashed var(--line);
+  border-radius: 6px; padding: 12px 14px; background: var(--bg-alt);
+  font-size: .85rem; color: var(--muted);
+  display: flex; align-items: center; gap: 8px;
+}
+.cert-slot.filled { border-style: solid; background: #fff; }
+.cert-slot .ico { font-size: 1rem; }
+.cert-slot a { font-weight: 600; }
+
+/* ---------- Flags for missing / to-confirm data ---------- */
+.flag {
+  display: inline-block; font-size: .72rem; font-weight: 600;
+  background: var(--flag-bg); color: var(--flag-ink);
+  border: 1px solid var(--flag-line); border-radius: 4px;
+  padding: 1px 7px; margin-left: 6px; vertical-align: middle;
+  letter-spacing: .01em;
+}
+.needs { color: var(--flag-ink); font-style: italic; }
+
+/* ---------- Two-column helpers ---------- */
+.two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+@media (max-width: 700px) { .two-col { grid-template-columns: 1fr; } }
+
+/* ---------- Interests chips ---------- */
+.interests { display: flex; flex-wrap: wrap; gap: 10px; }
+.interest {
+  border: 1px solid var(--line); border-radius: var(--radius);
+  padding: 12px 16px; background: #fff; flex: 1 1 220px;
+}
+.interest h4 { margin: 0 0 4px; font-size: .98rem; }
+.interest p { margin: 0; font-size: .88rem; color: var(--muted); }
+
+/* ---------- Footer ---------- */
+.footer {
+  margin-top: 40px; border-top: 1px solid var(--line);
+  padding: 26px 0 50px; color: var(--muted); font-size: .85rem;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 560px) {
+  .header h1 { font-size: 1.9rem; }
+  table.grades { font-size: .86rem; }
+  .honor { flex-direction: column; gap: 4px; }
+  .honor .year { flex-basis: auto; }
+}
+
+/* ---------- Print ---------- */
+@media print {
+  .nav { display: none; }
+  body { font-size: 11pt; }
+  section { padding: 14px 0; page-break-inside: avoid; }
+  .card, .honor { page-break-inside: avoid; }
+  .cert-slot { display: none; }
+  a { color: var(--ink); text-decoration: none; }
+}
