@@ -24,8 +24,20 @@ python3 -m http.server 8000   # then visit http://localhost:8000
 
 ## Deploying
 
-Any static host works. GitHub Pages: enable Pages on this repo/branch, root folder.
-No build step required.
+Static site — no build step. Two easy options:
+
+### Vercel (recommended — hosts the certificate PDFs too)
+1. Go to vercel.com → **Add New… → Project → Import Git Repository**.
+2. Select `Daksh-Github123/portfolio-website`, branch `claude/daksh-portfolio-site-i0r0eo`.
+3. Framework preset: **Other**. Build command: none. Output directory: `./` (root).
+4. Deploy. The certificate PDFs under `assets/certificates/` are served automatically.
+
+(Programmatic deploy from this session was blocked by a Vercel "permission to create a
+project" error — a team/role restriction on the connected account. Importing from the
+dashboard uses your own account permissions and avoids it.)
+
+### GitHub Pages
+Enable Pages on this repo/branch, root folder. Also zero-config.
 
 ## Data provenance
 
