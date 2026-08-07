@@ -5,81 +5,91 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Daksh Singh — Mechanical Engineering Portfolio</title>
   <meta name="description" content="Portfolio and academic record of Daksh Singh, prospective Mechanical Engineering undergraduate. Robotics, underwater ROVs, research, and community work.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚙️</text></svg>">
 </head>
 <body>
 
-<!-- =================== NAV =================== -->
 <nav class="nav" aria-label="Section navigation">
   <div class="nav-inner">
     <span class="nav-brand">Daksh Singh</span>
-    <a href="#objective">Objective</a>
-    <a href="#education">Education</a>
-    <a href="#testing">Testing</a>
-    <a href="#honors">Honors</a>
-    <a href="#activities">Activities</a>
-    <a href="#mun">MUN</a>
-    <a href="#courses">Courses</a>
-    <a href="#internships">Internships</a>
-    <a href="#service">Service</a>
-    <a href="#leadership">Leadership</a>
-    <a href="#interests">Interests</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
+    <div class="nav-links" id="navLinks">
+      <a href="#about">About</a>
+      <a href="#academics">Academics</a>
+      <a href="#honors">Honors</a>
+      <a href="#activities">Activities</a>
+      <a href="#internships">Internships &amp; Research</a>
+      <a href="#service">Service &amp; Leadership</a>
+      <a href="#interests">Interests</a>
+    </div>
+    <button class="print-btn" onclick="window.print()">Print</button>
   </div>
 </nav>
 
-<!-- =================== HEADER =================== -->
-<header class="header" id="top">
+<header class="hero" id="top">
   <div class="wrap">
-    <h1>Daksh Singh</h1>
-    <p class="tagline">Prospective Mechanical Engineering undergraduate · Robotics &amp; underwater systems · Class of 2027</p>
-    <div class="contact">
-      <span><span class="label">Email</span><a href="mailto:mailtodakshsingh@gmail.com">mailtodakshsingh@gmail.com</a></span>
-      <span><span class="label">Location</span>Bengaluru, India</span>
+    <p class="hero-eyebrow">Mechanical Engineering · Class of 2027</p>
+    <h1 id="about">Daksh Singh</h1>
+    <p class="hero-loc">Inventure Academy, Bengaluru, India</p>
+    <p class="hero-bio">
+      A-Level student focused on robotics and hardware engineering — two-time national champion
+      and two-time World Championship qualifier with MATE ROV. I build real systems, not just
+      theory, and I'm working toward founding my own engineering company.
+    </p>
+
+    <div class="stats-bar">
+      <div class="stat"><span class="stat-num">2×</span><span class="stat-label">1st in India (MATE ROV)</span></div>
+      <div class="stat"><span class="stat-num">2×</span><span class="stat-label">World Championship qualifier</span></div>
+      <div class="stat"><span class="stat-num">5</span><span class="stat-label">AP Computer Science A</span></div>
+      <div class="stat"><span class="stat-num">725+</span><span class="stat-label">hrs in robotics (MATE ROV)</span></div>
+      <div class="stat"><span class="stat-num">3,000+</span><span class="stat-label">Instagram followers</span></div>
+    </div>
+
+    <div class="hero-links">
+      <a href="mailto:mailtodakshsingh@gmail.com">mailtodakshsingh@gmail.com</a>
+      <a href="https://www.linkedin.com/in/daksh-singh-innovator/" target="_blank" rel="noopener">LinkedIn</a>
     </div>
   </div>
 </header>
 
 <main class="wrap">
 
-  <!-- =================== OBJECTIVE =================== -->
-  <section id="objective" class="objective">
-    <h2 class="section-title">Objective</h2>
-    <p>
-      I am a junior in high school focused on robotics and academics. I'm keen on building
-      real-world, hardware-based solutions to problems — and if I really have to solve something,
-      I'll use all means available to me to develop a solution. One day I hope my journey takes me
-      to founding my own technology-based company.
-    </p>
-    <h3 style="margin-top:24px;font-size:1.05rem;color:var(--ink-soft);">About</h3>
+  <section class="about-body">
     <p>
       I discovered robotics in ninth grade through my strengths in physics and computer science.
       My early exposure to competitive robotics showed me how complex real systems can be, and it
-      quickly became clear that I needed a deeper grasp of the fundamentals. Rather than rushing
-      into more competitions, I deliberately stepped back to strengthen my foundation through
-      structured coursework and hands-on experimentation, building several small projects to
-      understand electronics, software, and sensing at a fundamental level.
+      quickly became clear that I needed a deeper grasp of the fundamentals — so I deliberately
+      stepped back from competitions to strengthen my foundation through structured coursework and
+      hands-on experimentation, building small projects to understand electronics, software, and
+      sensing from the ground up.
     </p>
     <p>
-      Since then, I have applied these fundamentals to increasingly complex projects — including
-      autonomous vehicles and underwater robotics — often taking ownership of system design and
-      software development. Through this process, I have developed a strong preference for learning
-      by building, iterating, and testing ideas in the real world rather than relying purely on theory.
+      Since then, I've applied those fundamentals to increasingly complex projects — autonomous
+      vehicles, underwater robotics, and now agricultural sensing — often taking ownership of
+      system design and software development. I've developed a strong preference for learning by
+      building, iterating, and testing ideas in the real world rather than relying purely on theory.
     </p>
     <p>
-      I am now looking to transition from competition-based projects to a large-scale independent
-      robotics project, aiming to combine technical depth with real-world relevance. Alongside this,
-      I actively document my work to build a personal engineering brand and reflect on my learning
-      process. In the long term, I aspire to study engineering at a rigorous academic institution
-      and use that foundation to create impactful hardware-driven ventures.
+      I'm now transitioning from competition-based projects to a large-scale independent robotics
+      project — currently co-authoring an IEEE paper on agricultural sensing (FarmSense) — while
+      documenting my work publicly to build an engineering track record. Long-term, I want to study
+      engineering at a rigorous academic institution and use that foundation to build hardware-driven
+      ventures.
     </p>
   </section>
 
-  <!-- =================== EDUCATION =================== -->
-  <section id="education">
-    <h2 class="section-title">Education</h2>
-    <p class="section-sub">Cambridge curriculum · Inventure Academy, Bengaluru</p>
+  <!-- =================== ACADEMICS =================== -->
+  <section id="academics">
+    <div class="section-head">
+      <p class="section-title">Academics</p>
+      <p class="section-note">Cambridge curriculum · Inventure Academy, Bengaluru</p>
+    </div>
 
+    <div class="table-scroll">
     <table class="grades">
       <caption>A Level — Grade 12 (2026–27, Term 1 · predicted / target)</caption>
       <thead><tr><th>Subject</th><th>Target</th><th>Predicted</th></tr></thead>
@@ -87,221 +97,211 @@
         <tr><td>Physics</td><td><span class="grade-pill star">A*</span></td><td><span class="grade-pill star">A*</span></td></tr>
         <tr><td>Chemistry</td><td><span class="grade-pill star">A*</span></td><td><span class="grade-pill star">A*</span></td></tr>
         <tr><td>Computer Science</td><td><span class="grade-pill star">A*</span></td><td><span class="grade-pill star">A*</span></td></tr>
-        <tr><td>English</td><td><span class="grade-pill">B</span></td><td><span class="grade-pill">A</span></td></tr>
+        <tr><td>English</td><td><span class="grade-pill mid">B</span></td><td><span class="grade-pill a">A</span></td></tr>
       </tbody>
     </table>
+    </div>
+
+    <div class="table-scroll">
     <table class="grades">
       <caption>AS Level — Grade 11 (2025–26, final)</caption>
       <thead><tr><th>Subject</th><th>Final Grade</th></tr></thead>
       <tbody>
-        <tr><td>Computer Science</td><td><span class="grade-pill">A</span></td></tr>
-        <tr><td>Mathematics</td><td><span class="grade-pill">B</span></td></tr>
-        <tr><td>Chemistry</td><td><span class="grade-pill">C</span></td></tr>
-        <tr><td>Physics</td><td><span class="grade-pill">C</span></td></tr>
-        <tr><td>English</td><td><span class="grade-pill low">E</span></td></tr>
+        <tr><td>Computer Science</td><td><span class="grade-pill a">A</span></td></tr>
+        <tr><td>Mathematics</td><td><span class="grade-pill mid">B</span></td></tr>
+        <tr><td>Chemistry</td><td><span class="grade-pill low">C</span></td></tr>
+        <tr><td>Physics</td><td><span class="grade-pill low">C</span></td></tr>
+        <tr><td>English</td><td><span class="grade-pill warn">E</span></td></tr>
       </tbody>
     </table>
-    <p class="section-sub">
-      Context (for Additional Information): hospitalized late Nov 2025 with a bulged disc,
-      limited to ~30 min/day sitting during recovery — affecting Grade 11 results.
-      Inventure's English is the hardest-graded subject school-wide, where a B is the ceiling for most students.
-    </p>
+    </div>
+    <div class="context-box">
+      <span class="context-label">Context</span>
+      Hospitalized late November 2025 (bulged disc); limited to ~30 min/day sitting during recovery —
+      affecting Grade 11 results. English at Inventure is the hardest-graded subject school-wide;
+      a B is the ceiling for most students.
+    </div>
 
+    <div class="table-scroll">
     <table class="grades">
       <caption>IGCSE — Grade 10 (2024–25)</caption>
       <thead><tr><th>Subject</th><th>School Grade</th><th>IGCSE Board</th></tr></thead>
       <tbody>
         <tr><td>Extended Mathematics</td><td><span class="grade-pill star">A*</span></td><td><span class="grade-pill star">A*</span></td></tr>
-        <tr><td>Physics</td><td><span class="grade-pill">A</span></td><td><span class="grade-pill star">A*</span></td></tr>
-        <tr><td>Chemistry</td><td><span class="grade-pill">A</span></td><td><span class="grade-pill star">A*</span></td></tr>
-        <tr><td>Computer Science</td><td><span class="grade-pill">A</span></td><td><span class="grade-pill star">A*</span></td></tr>
-        <tr><td>English Language</td><td><span class="grade-pill">B</span></td><td><span class="grade-pill">A</span></td></tr>
-        <tr><td>English Literature</td><td><span class="grade-pill low">D</span></td><td><span class="grade-pill">A</span></td></tr>
-        <tr><td>French</td><td><span class="grade-pill">B</span></td><td><span class="grade-pill">B</span></td></tr>
-        <tr><td>Economics</td><td><span class="grade-pill">C</span></td><td><span class="grade-pill">A</span></td></tr>
+        <tr><td>Physics</td><td><span class="grade-pill a">A</span></td><td><span class="grade-pill star">A*</span></td></tr>
+        <tr><td>Chemistry</td><td><span class="grade-pill a">A</span></td><td><span class="grade-pill star">A*</span></td></tr>
+        <tr><td>Computer Science</td><td><span class="grade-pill a">A</span></td><td><span class="grade-pill star">A*</span></td></tr>
+        <tr><td>English Language</td><td><span class="grade-pill mid">B</span></td><td><span class="grade-pill a">A</span></td></tr>
+        <tr><td>English Literature</td><td><span class="grade-pill low">D</span></td><td><span class="grade-pill a">A</span></td></tr>
+        <tr><td>French</td><td><span class="grade-pill mid">B</span></td><td><span class="grade-pill mid">B</span></td></tr>
+        <tr><td>Economics</td><td><span class="grade-pill low">C</span></td><td><span class="grade-pill a">A</span></td></tr>
       </tbody>
     </table>
+    </div>
 
+    <div class="table-scroll">
     <table class="grades">
       <caption>Grade 9 (2023–24)</caption>
       <thead><tr><th>Subject</th><th>Grade</th></tr></thead>
       <tbody>
-        <tr><td>Computer Science</td><td><span class="grade-pill">A</span></td></tr>
-        <tr><td>Physics</td><td><span class="grade-pill">B</span></td></tr>
-        <tr><td>Chemistry</td><td><span class="grade-pill">B</span></td></tr>
-        <tr><td>Extended Mathematics</td><td><span class="grade-pill">B</span></td></tr>
-        <tr><td>French</td><td><span class="grade-pill">B</span></td></tr>
-        <tr><td>Economics</td><td><span class="grade-pill">C</span></td></tr>
-        <tr><td>English Language</td><td><span class="grade-pill">C</span></td></tr>
-        <tr><td>English Literature</td><td><span class="grade-pill">C</span></td></tr>
+        <tr><td>Computer Science</td><td><span class="grade-pill a">A</span></td></tr>
+        <tr><td>Physics</td><td><span class="grade-pill mid">B</span></td></tr>
+        <tr><td>Chemistry</td><td><span class="grade-pill mid">B</span></td></tr>
+        <tr><td>Extended Mathematics</td><td><span class="grade-pill mid">B</span></td></tr>
+        <tr><td>French</td><td><span class="grade-pill mid">B</span></td></tr>
+        <tr><td>Economics</td><td><span class="grade-pill low">C</span></td></tr>
+        <tr><td>English Language</td><td><span class="grade-pill low">C</span></td></tr>
+        <tr><td>English Literature</td><td><span class="grade-pill low">C</span></td></tr>
       </tbody>
     </table>
-  </section>
+    </div>
 
-  <!-- =================== STANDARDIZED TESTING =================== -->
-  <section id="testing">
-    <h2 class="section-title">Standardized Testing</h2>
+    <div class="table-scroll">
     <table class="grades">
-      <caption>SAT &amp; Advanced Placement</caption>
+      <caption>Standardized Testing</caption>
       <thead><tr><th>Test</th><th>Score</th><th>Date</th><th>Status</th></tr></thead>
       <tbody>
-        <tr>
-          <td>SAT (total)</td>
-          <td>1330 <span class="flag">need R/W + Math split</span></td>
-          <td>March 2026</td>
-          <td>Retaking</td>
-        </tr>
-        <tr>
-          <td>SAT (target)</td>
-          <td>1550+</td>
-          <td>August 2026</td>
-          <td>Scheduled retake</td>
-        </tr>
-        <tr>
-          <td>AP Computer Science A</td>
-          <td><span class="grade-pill star">5</span></td>
-          <td>2025</td>
-          <td>Completed</td>
-        </tr>
-        <tr>
-          <td>AP Calculus BC (self-studied)</td>
-          <td>Pending</td>
-          <td>May 2026</td>
-          <td>Awaiting result</td>
-        </tr>
+        <tr><td>SAT</td><td>1330</td><td>March 2026</td><td class="status-pending">Retaking Aug 22, 2026</td></tr>
+        <tr><td>SAT (target)</td><td>1550+</td><td>August 2026</td><td class="status-pending">Scheduled</td></tr>
+        <tr><td>AP Computer Science A</td><td><span class="grade-pill star">5</span></td><td>2025</td><td>Completed</td></tr>
+        <tr><td>AP Calculus BC (self-studied)</td><td class="status-pending">Pending</td><td>May 2026</td><td class="status-pending">Awaiting result</td></tr>
       </tbody>
     </table>
-    <p class="section-sub">SAT section split (Reading/Writing and Math) to be added once confirmed.</p>
+    </div>
   </section>
 
   <!-- =================== HONORS & AWARDS =================== -->
   <section id="honors">
-    <h2 class="section-title">Academic Honors &amp; Awards</h2>
-    <p class="section-sub">Reverse chronological. Certificates embed below each entry as files are added.</p>
-
-    <div class="honor">
-      <div class="year">2026</div>
-      <div class="body">
-        <h3>Sharkpedo Legacy Award — MATE ROV World Championship (Canada)</h3>
-        <p>Awarded to only ~1 of 120 competing teams at the World Championship — a distinction recognizing lasting contribution to the competition community.</p>
-        <div class="cert-slot"><span class="ico">📄</span> Certificate — <span class="needs">Physical Scan Pending</span></div>
-      </div>
+    <div class="section-head">
+      <p class="section-title">Honors &amp; Awards</p>
     </div>
 
-    <div class="honor">
-      <div class="year">2026</div>
-      <div class="body">
+    <p class="impact-line">2× 1st in India · 2× World Championship qualifier · Sharkpedo Legacy Award (1 of ~120 teams)</p>
+
+    <div class="timeline">
+      <div class="timeline-year">2026</div>
+      <div class="t-item tier1">
+        <h3><span class="star">★</span>Sharkpedo Legacy Award — MATE ROV World Championship (Canada)</h3>
+        <p>Awarded to only ~1 of ~120 competing teams at the World Championship — a distinction recognizing lasting contribution to the competition community.</p>
+      </div>
+      <div class="t-item tier1">
         <h3>1st in India — MATE ROV (Ranger Class)</h3>
         <p>Placed first nationally, qualifying for the World Championship. Second consecutive national win.</p>
-        <div class="cert-slot"><span class="ico">📄</span> Certificate — <span class="needs">Physical Scan Pending</span></div>
       </div>
-    </div>
 
-    <div class="honor">
-      <div class="year">2025</div>
-      <div class="body">
+      <div class="timeline-year">2025</div>
+      <div class="t-item tier1">
         <h3>US Navy Challenge Coin — MATE ROV World Championship</h3>
-        <p>A discretionary judges' award (not a placement) recognizing the team as the first Indian team to compete in the Ranger class; finished 36th at Worlds.</p>
-        <div class="cert-slot"><span class="ico">📄</span> Certificate / photo of coin — <span class="needs">Physical Scan Pending</span></div>
+        <p>A discretionary judges' award (not a placement) recognizing the team as the first Indian team to compete in the Ranger class; finished 36th at Worlds (Michigan, USA).</p>
       </div>
-    </div>
-
-    <div class="honor">
-      <div class="year">2025</div>
-      <div class="body">
+      <div class="t-item tier1">
         <h3>1st in India — MATE ROV (Ranger Class)</h3>
         <p>First national win; first Indian team to reach the Ranger class at the World Championship.</p>
-        <div class="cert-slot"><span class="ico">📄</span> Certificate — <span class="needs">Physical Scan Pending</span></div>
       </div>
-    </div>
-
-    <div class="honor">
-      <div class="year">Oct 2025</div>
-      <div class="body">
-        <h3>Harvard Crimson Global Quiz Bowl 2025 (Computer Science) — Global Third Place &amp; 2nd in India</h3>
+      <div class="t-item tier1">
+        <h3>Harvard Crimson Global Quiz Bowl 2025 (Computer Science) — Global 3rd &amp; 2nd in India</h3>
         <p>
-          High School category. Recognized as <strong>Global Third Place (Team)</strong> and
-          <strong>Second Place in India (Team)</strong>, along with Global Finalist, Global Semi-Finalist,
-          and individual Merit Recipient certificates.
+          High School category. Team awards: Global Third Place and Second Place in India, plus
+          Global Finalist and Global Semi-Finalist certificates; individual Merit Recipient.
         </p>
-        <div class="cert-slot"><span class="ico">📄</span> Certificates — <span class="needs">Physical Scan Pending</span></div>
       </div>
-    </div>
-
-    <div class="honor">
-      <div class="year">2025</div>
-      <div class="body">
+      <div class="t-item tier1">
         <h3>MIT Engineering Without Borders — Honors Recipient</h3>
         <p>~90th percentile of 670+ participants in a one-day olympiad-style competition.</p>
-        <div class="cert-slot"><span class="ico">📄</span> Certificate — <span class="needs">Physical Scan Pending</span></div>
       </div>
-    </div>
-
-    <div class="honor">
-      <div class="year">2025</div>
-      <div class="body">
+      <div class="t-item">
         <h3>iCode Global Hackathon — National Rank 66</h3>
         <p>Cleared zonals and advanced to the national round.</p>
-        <div class="cert-slot filled"><span class="ico">📄</span> <a href="assets/certificates/2025-icode-hackathon-nationals.pdf" target="_blank" rel="noopener">View certificate (PDF)</a></div>
+        <a class="cert-chip" href="assets/certificates/2025-icode-hackathon-nationals.pdf" target="_blank" rel="noopener">📄 iCode Certificate</a>
       </div>
-    </div>
 
-    <div class="honor">
-      <div class="year">2024</div>
-      <div class="body">
+      <div class="timeline-year">2024</div>
+      <div class="t-item">
         <h3>Extended Mathematics — Class Topper</h3>
         <p>Topped the class in Extended Mathematics with 92% (A*), Grade 10.</p>
       </div>
     </div>
 
-    <h3 style="margin-top:26px;font-size:1.05rem;color:var(--ink-soft);">Other Awards</h3>
-    <div class="honor">
-      <div class="year">2025</div>
-      <div class="body">
-        <h3>National Robotics League — Participation Award</h3>
+    <p class="other-awards-label">Other Awards</p>
+    <div class="timeline">
+      <div class="t-item">
+        <h3>National Robotics League — Participation Award (2025)</h3>
         <p>As team captain; RC car with gripper and servo arm.</p>
       </div>
-    </div>
-    <div class="honor">
-      <div class="year">2024</div>
-      <div class="body">
-        <h3>Interhouse Football — Silver Medal</h3>
+      <div class="t-item">
+        <h3>Interhouse Football — Silver Medal (2024)</h3>
         <p>Runner-up in the school interhouse tournament (Grade 10).</p>
       </div>
     </div>
   </section>
 
-  <!-- =================== EXTRACURRICULAR ACTIVITIES =================== -->
+  <!-- =================== ACTIVITIES =================== -->
   <section id="activities">
-    <h2 class="section-title">Extracurricular Activities</h2>
-    <p class="section-sub">
-      Robotics, competitions, and research. Exact month/year, staff verifier names, and
-      certificate/photo files are being collected — flagged inline where missing.
-    </p>
+    <div class="section-head">
+      <p class="section-title">Activities</p>
+    </div>
 
     <div class="cards">
 
-      <!-- MATE ROV -->
-      <div class="card">
+      <!-- MATE ROV — flagship -->
+      <div class="card flagship">
         <div class="card-head">
           <h3>MATE ROV — Underwater Robotics</h3>
           <span class="meta">Grades 10–12 · National → World level</span>
         </div>
-        <p class="role">CTO &amp; Arm Design Lead (2026 season)</p>
+        <p class="role">Software Lead (Year 1, 2025) → CTO &amp; Arm Design Lead (Year 2, 2026)</p>
         <p>
-          Designed and built competition underwater ROVs across two seasons — Leviathan Mark 1/2 (2025)
-          and The Orca (2026). First Indian team to compete in the Ranger class. Two-time national champion,
-          reaching the World Championship both years.
+          Designed and built competition underwater ROVs across two seasons — Leviathan Mark 1/2
+          (2025) and The Orca (2026). First Indian team to compete in the Ranger class. Two-time
+          national champion, reaching the World Championship both years.
         </p>
-        <div class="metric-line">
-          Built the 2025 bot for under $2,000 and the 2026 bot for roughly $600 — against competitor teams
-          spending $15,000–$20,000 in both years. 36th at Worlds (2025); Sharkpedo Legacy Award (2026).
+        <ul>
+          <li><strong>2025 season</strong> — Software Lead: wrote control-box and clamp logic (Arduino UNO R3, ESP-32) and owned all software systems. 1st in India; 36th at Worlds (Michigan, USA); US Navy Challenge Coin.</li>
+          <li><strong>2026 season</strong> — CTO &amp; Arm Design Lead: led technical direction and designed the manipulator arm for The Orca. 1st in India; Sharkpedo Legacy Award at Worlds (Canada).</li>
+        </ul>
+        <div class="metrics-row">
+          <span class="metrics-label">Key metrics</span>
+          2× 1st in India&nbsp; ·&nbsp; 2× World Championship&nbsp; ·&nbsp; $600 (2026 bot) vs. $15,000–$20,000 (competitor teams)
+          <span class="metric-award">★ Sharkpedo Legacy Award — 1 of ~120 teams</span>
         </div>
-        <div class="cert-slot"><span class="ico">🖼️</span> Team / bot photos &amp; certificates — <span class="needs">Physical Scan Pending</span></div>
         <div class="tag-row">
-          <span class="tag cat">Competition</span><span class="tag">technical</span><span class="tag">leadership</span><span class="tag">perseverance</span>
-          <span class="tag">Verifier: <span class="needs">name needed</span></span>
+          <span class="tag">Robotics</span><span class="tag">Technical</span><span class="tag">Leadership</span><span class="tag">Perseverance</span>
         </div>
+      </div>
+
+      <!-- IEEE Research -->
+      <div class="card">
+        <div class="card-head">
+          <h3>Research — IEEE Paper (FarmSense)</h3>
+          <span class="meta">Grades 11–12 · Ongoing since May 2026</span>
+        </div>
+        <p>
+          Co-authoring an agricultural-sensing paper, targeting publication before the October
+          early-application deadlines. Prior independent work (plants &amp; air-quality index)
+          posted to a public repository — 87 views, 16 downloads.
+        </p>
+        <div class="tag-row"><span class="tag">Research</span><span class="tag">Technical</span></div>
+      </div>
+
+      <!-- Roboprenr Lab -->
+      <div class="card">
+        <div class="card-head">
+          <h3>Roboprenr Lab — Robotics Institute</h3>
+          <span class="meta">Grades 10–12 · ~350 hours · all A+</span>
+        </div>
+        <p>Seven courses at a physical robotics institute (~4 hrs/week since 2024), including:</p>
+        <ul>
+          <li>Advanced Electronics</li>
+          <li>AI Robotics</li>
+          <li>PCB Designing</li>
+          <li>Autonomous Robotics</li>
+          <li>IoT</li>
+          <li>ROS 2 (ongoing)</li>
+        </ul>
+        <a class="cert-chip" href="assets/certificates/roboprenr-advanced-electronics.pdf" target="_blank" rel="noopener">📄 Advanced Electronics</a>
+        <a class="cert-chip" href="assets/certificates/roboprenr-ai-robotics.pdf" target="_blank" rel="noopener">📄 AI Robotics</a>
+        <a class="cert-chip" href="assets/certificates/roboprenr-pcb-designing.pdf" target="_blank" rel="noopener">📄 PCB Designing</a>
+        <div class="tag-row"><span class="tag">Robotics</span><span class="tag">Technical</span></div>
       </div>
 
       <!-- WRO -->
@@ -311,14 +311,11 @@
           <span class="meta">Grades 10–11 · National level</span>
         </div>
         <p>
-          Two-time national competitor. Built a self-driving car using a Raspberry Pi and OpenCV for
-          computer-vision navigation. (2026 season canceled; prior years stand.)
+          Two-time national competitor. Built a self-driving car using a Raspberry Pi and OpenCV
+          for computer-vision navigation. (2026 season canceled; prior years stand.)
         </p>
-        <div class="cert-slot filled"><span class="ico">📄</span> <a href="assets/certificates/2025-wro-future-engineers.pdf" target="_blank" rel="noopener">View 2025 certificate (PDF)</a></div>
-        <div class="tag-row">
-          <span class="tag cat">Competition</span><span class="tag">technical</span><span class="tag">perseverance</span>
-          <span class="tag">Verifier: <span class="needs">name needed</span></span>
-        </div>
+        <a class="cert-chip" href="assets/certificates/2025-wro-future-engineers.pdf" target="_blank" rel="noopener">📄 2025 Certificate</a>
+        <div class="tag-row"><span class="tag">Competition</span><span class="tag">Technical</span><span class="tag">Perseverance</span></div>
       </div>
 
       <!-- ICode -->
@@ -328,14 +325,21 @@
           <span class="meta">Grade 11 · National</span>
         </div>
         <p>Cleared zonals and advanced to nationals, finishing at National Rank 66.</p>
-        <div class="cert-slot filled"><span class="ico">📄</span> <a href="assets/certificates/2025-icode-hackathon-nationals.pdf" target="_blank" rel="noopener">View certificate (PDF)</a></div>
-        <div class="tag-row">
-          <span class="tag cat">Competition</span><span class="tag">technical</span>
-          <span class="tag">Verifier: <span class="needs">name needed</span></span>
-        </div>
+        <a class="cert-chip" href="assets/certificates/2025-icode-hackathon-nationals.pdf" target="_blank" rel="noopener">📄 Certificate</a>
+        <div class="tag-row"><span class="tag">Competition</span><span class="tag">Technical</span></div>
       </div>
 
-      <!-- National Robotics League -->
+      <!-- Harvard Quiz Bowl -->
+      <div class="card">
+        <div class="card-head">
+          <h3>Harvard Crimson Global Quiz Bowl (Computer Science)</h3>
+          <span class="meta">Grade 11 · Oct 2025</span>
+        </div>
+        <p>Competed in the high-school Computer Science category. Team: Global Third Place and Second Place in India. Individual: Merit Recipient.</p>
+        <div class="tag-row"><span class="tag">Academic</span><span class="tag">Competition</span></div>
+      </div>
+
+      <!-- NRL -->
       <div class="card">
         <div class="card-head">
           <h3>National Robotics League (NRL)</h3>
@@ -343,27 +347,18 @@
         </div>
         <p class="role">Team Captain</p>
         <p>Led the team building an RC car with a gripper and servo arm; earned a participation award (2025).</p>
-        <div class="tag-row">
-          <span class="tag cat">Competition</span><span class="tag">technical</span><span class="tag">leadership</span>
-          <span class="tag">Verifier: <span class="needs">name needed</span></span>
-        </div>
+        <div class="tag-row"><span class="tag">Competition</span><span class="tag">Technical</span><span class="tag">Leadership</span></div>
       </div>
 
-      <!-- IEEE Research -->
+      <!-- Robotics Club -->
       <div class="card">
         <div class="card-head">
-          <h3>Research — IEEE Paper (in progress)</h3>
-          <span class="meta">Grades 11–12 · Ongoing since May 2026</span>
+          <h3>Inventure Robotics Club</h3>
+          <span class="meta">Grades 11–12</span>
         </div>
-        <p>
-          Co-authoring an agricultural-sensing paper (FarmSense), targeting publication before the
-          October early-application deadlines. Prior independent work (plants &amp; air-quality index)
-          posted to a public repository — 87 views, 16 downloads.
-        </p>
-        <div class="tag-row">
-          <span class="tag cat">Research</span><span class="tag">research</span><span class="tag">technical</span>
-          <span class="tag">Verifier: <span class="needs">name needed</span></span>
-        </div>
+        <p class="role">Founder</p>
+        <p>Founded Inventure Academy's first robotics program; currently teaching ~6 students, ~3 hrs/week.</p>
+        <div class="tag-row"><span class="tag">Leadership</span><span class="tag">Technical</span><span class="tag">Communication</span></div>
       </div>
 
       <!-- Robotics Instagram -->
@@ -373,93 +368,56 @@
           <span class="meta">Grades 11–12 · Ongoing since Nov 2025</span>
         </div>
         <p>Runs a robotics account documenting the team's work — ~3,000 followers across 11 posts.</p>
-        <div class="tag-row">
-          <span class="tag cat">Outreach</span><span class="tag">communication</span><span class="tag">technical</span>
-        </div>
+        <div class="tag-row"><span class="tag">Outreach</span><span class="tag">Communication</span><span class="tag">Technical</span></div>
       </div>
 
-    </div>
-  </section>
-
-  <!-- =================== MUN =================== -->
-  <section id="mun">
-    <h2 class="section-title">Model United Nations</h2>
-    <p class="section-sub">Three conferences, Grades 9–11. No placements.</p>
-    <div class="cards">
-      <div class="card">
-        <ul>
-          <li><strong>2023</strong> — Delegate representing South Korea</li>
-          <li><strong>2024</strong> — Delegate representing North Korea</li>
-          <li><strong>2025</strong> — Delegate representing Germany, UN Security Council (UNSC) at INMUN</li>
-        </ul>
-        <div class="tag-row">
-          <span class="tag cat">Academic</span><span class="tag">communication</span>
-          <span class="tag">Verifier: <span class="needs">name needed</span></span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- =================== ONLINE COURSES =================== -->
-  <section id="courses">
-    <h2 class="section-title">Online Courses &amp; Subject Pursuits</h2>
-    <div class="cards">
+      <!-- MUN -->
       <div class="card">
         <div class="card-head">
-          <h3>Roboprenr Lab — Robotics Institute</h3>
-          <span class="meta">Grades 10–12 · ~350 hours · all A+</span>
+          <h3>Model United Nations</h3>
+          <span class="meta">Grades 9–11 · Three conferences</span>
         </div>
-        <p>Seven courses at a physical robotics institute (~4 hrs/week since 2024):</p>
+        <p class="role">Delegate</p>
         <ul>
-          <li>Advanced Electronics — <a href="assets/certificates/roboprenr-advanced-electronics.pdf" target="_blank" rel="noopener">certificate (PDF)</a></li>
-          <li>AI Robotics — <a href="assets/certificates/roboprenr-ai-robotics.pdf" target="_blank" rel="noopener">certificate (PDF)</a></li>
-          <li>PCB Designing — <a href="assets/certificates/roboprenr-pcb-designing.pdf" target="_blank" rel="noopener">certificate (PDF)</a></li>
-          <li>Autonomous Robotics</li>
-          <li>IoT</li>
-          <li>ROS 2 (ongoing)</li>
-          <li><span class="needs">7th course title — to confirm</span> <span class="flag">1 name missing</span></li>
+          <li><strong>2023</strong> — South Korea</li>
+          <li><strong>2024</strong> — North Korea</li>
+          <li><strong>2025</strong> — Germany, UN Security Council (UNSC) at INMUN</li>
         </ul>
-        <div class="cert-slot filled"><span class="ico">📄</span> 3 of 7 course certificates embedded above; remaining ones <span class="needs">Physical Scan Pending</span>.</div>
-        <div class="tag-row"><span class="tag cat">Robotics</span><span class="tag">technical</span></div>
+        <div class="tag-row"><span class="tag">Academic</span><span class="tag">Communication</span></div>
       </div>
 
-      <div class="card">
-        <div class="card-head">
-          <h3>Introduction to Mechanical Engineering — Self-study</h3>
-          <span class="meta">Udemy · Ongoing</span>
-        </div>
-        <p>Self-directed study building foundational mechanical-engineering knowledge ahead of university.</p>
-        <div class="tag-row"><span class="tag cat">Academic</span><span class="tag">technical</span></div>
-      </div>
     </div>
   </section>
 
-  <!-- =================== INTERNSHIPS =================== -->
+  <!-- =================== INTERNSHIPS & RESEARCH =================== -->
   <section id="internships">
-    <h2 class="section-title">Internships</h2>
+    <div class="section-head">
+      <p class="section-title">Internships &amp; Research</p>
+    </div>
     <div class="cards">
       <div class="card">
         <div class="card-head">
-          <h3>Scaler School of Technology</h3>
-          <span class="meta">YIIC — Young India Innovation Challenge <span class="flag">confirm dates</span></span>
+          <h3>Handheld NPK &amp; Plant Health Scanner</h3>
+          <span class="meta">Scaler School of Technology · YIIC</span>
         </div>
+        <p class="role">Young India Innovation Challenge (YIIC)</p>
         <p>
-          Internship undertaken as part of the Young India Innovation Challenge (YIIC) at
-          Scaler School of Technology.
-          <span class="needs">Role focus, project, and dates to be added.</span>
+          Developed a handheld agricultural sensor for measuring soil nitrogen, phosphorus, and
+          potassium (NPK) levels and plant health. Hardware is mostly functional; currently
+          integrating YOLOv8 on a Raspberry Pi for image-based plant health analysis, communicating
+          over I2C/UART/SPI.
         </p>
-        <div class="cert-slot"><span class="ico">📄</span> Completion certificate — <span class="needs">Physical Scan Pending</span></div>
-        <div class="tag-row">
-          <span class="tag cat">Internship</span><span class="tag">technical</span>
-          <span class="tag">Verifier: <span class="needs">name needed</span></span>
-        </div>
+        <div class="tag-row"><span class="tag">Internship</span><span class="tag">Technical</span></div>
       </div>
     </div>
   </section>
 
-  <!-- =================== VOLUNTEER / SERVICE =================== -->
+  <!-- =================== SERVICE & LEADERSHIP =================== -->
   <section id="service">
-    <h2 class="section-title">Volunteer &amp; Community Outreach</h2>
+    <div class="section-head">
+      <p class="section-title">Service &amp; Leadership</p>
+    </div>
+
     <div class="cards">
       <div class="card">
         <div class="card-head">
@@ -468,16 +426,12 @@
         </div>
         <p class="role">Co-founder</p>
         <p>
-          Community-health initiative co-founded at age 13. Raised ₹5 lakh, ran 4 medical camps, and
-          served ~750 underprivileged children (~700 Instagram followers). Launching a "Vita Juniors"
-          mentorship program in Grade 12. Early school fundraising stalls (Grade 9) raised ₹70,000+
-          donated to a local government school.
+          Community-health initiative co-founded at age 13. Raised ₹5 lakh, ran 4 medical camps,
+          and served ~750 underprivileged children (~700 Instagram followers). Launching a
+          "Vita Juniors" mentorship program in Grade 12. Early school fundraising stalls (Grade 9)
+          raised ₹70,000+, donated to a local government school.
         </p>
-        <div class="cert-slot"><span class="ico">🖼️</span> Camp photos / documentation — <span class="needs">Physical Scan Pending</span></div>
-        <div class="tag-row">
-          <span class="tag cat">Service</span><span class="tag">service</span><span class="tag">entrepreneurship</span><span class="tag">leadership</span>
-          <span class="tag">Verifier: <span class="needs">name needed</span></span>
-        </div>
+        <div class="tag-row"><span class="tag">Service</span><span class="tag">Entrepreneurship</span><span class="tag">Leadership</span></div>
       </div>
 
       <div class="card">
@@ -486,52 +440,49 @@
           <span class="meta">Grade 11 · Jul–Sep</span>
         </div>
         <p>Taught mathematics to 4th-grade students, ~2 hours/week.</p>
-        <div class="tag-row">
-          <span class="tag cat">Service</span><span class="tag">service</span><span class="tag">communication</span>
-          <span class="tag">Verifier: <span class="needs">name needed</span></span>
-        </div>
+        <div class="tag-row"><span class="tag">Service</span><span class="tag">Communication</span></div>
       </div>
-    </div>
-  </section>
 
-  <!-- =================== LEADERSHIP =================== -->
-  <section id="leadership">
-    <h2 class="section-title">Leadership Roles</h2>
-    <div class="cards two-col">
       <div class="card">
-        <h3>MATE ROV — CTO &amp; Arm Design Lead</h3>
-        <p>Led technical direction and the manipulator-arm design for the 2026 championship bot.</p>
-      </div>
-      <div class="card">
-        <h3>Inventure Robotics Club — Founder</h3>
-        <p>Founded Inventure Academy's first robotics program; currently teaching ~6 students (Grades 11–12).</p>
-      </div>
-      <div class="card">
-        <h3>National Robotics League — Team Captain</h3>
-        <p>Captained the NRL team (Grade 11).</p>
-      </div>
-      <div class="card">
-        <h3>Student Council — Sports Captain</h3>
-        <p>House-level position, Grade 12 (since July 2026).</p>
+        <div class="card-head">
+          <h3>Changemaker Committee</h3>
+          <span class="meta">Grade 11</span>
+        </div>
+        <p class="role">Member &amp; Emcee, Changemaker Challenge Round 2</p>
+        <p>Served on the school-wide changemaker committee for the full academic year; selected to emcee Round 2 of the Changemaker Challenge in front of the school.</p>
+        <div class="tag-row"><span class="tag">Leadership</span><span class="tag">Communication</span></div>
       </div>
     </div>
-    <p class="section-sub" style="margin-top:14px;">
-      Also: Changemaker Committee member (Grade 11) and emcee for the Changemaker Challenge Round 2;
-      SBC physics literature-review team lead (Grade 9).
-    </p>
+
+    <p class="other-awards-label" style="margin-top:34px;">Leadership Roles at a Glance</p>
+    <div class="table-scroll">
+    <table class="lead-table">
+      <thead><tr><th>Role</th><th>Organization</th><th>Period</th></tr></thead>
+      <tbody>
+        <tr><td>Software Lead (Yr 1) → CTO &amp; Arm Design Lead (Yr 2)</td><td>MATE ROV</td><td class="period">Gr. 10–12</td></tr>
+        <tr><td>Founder</td><td>Inventure Robotics Club</td><td class="period">Gr. 11–12</td></tr>
+        <tr><td>Team Captain</td><td>National Robotics League</td><td class="period">Gr. 11</td></tr>
+        <tr><td>Sports Captain (House-level)</td><td>Student Council</td><td class="period">Gr. 12</td></tr>
+        <tr><td>Member &amp; Emcee, Changemaker Challenge Rd. 2</td><td>Changemaker Committee</td><td class="period">Gr. 11</td></tr>
+        <tr><td>Physics Literature-Review Team Lead</td><td>SBC</td><td class="period">Gr. 9</td></tr>
+      </tbody>
+    </table>
+    </div>
   </section>
 
   <!-- =================== INTERESTS =================== -->
   <section id="interests">
-    <h2 class="section-title">Other Interests</h2>
+    <div class="section-head">
+      <p class="section-title">Interests</p>
+    </div>
     <div class="interests">
+      <div class="interest">
+        <h4>Football</h4>
+        <p>Four-year interhouse player and Sports Captain (Grade 12); silver medal (Grade 10).</p>
+      </div>
       <div class="interest">
         <h4>Swimming</h4>
         <p>One summer at a swimming academy (Grade 10), recreational.</p>
-      </div>
-      <div class="interest">
-        <h4>Football</h4>
-        <p>Interhouse football four consecutive years; silver medal (Grade 10).</p>
       </div>
       <div class="interest">
         <h4>Building &amp; tinkering</h4>
@@ -546,6 +497,10 @@
 
   <!-- =================== FOOTER =================== -->
   <footer class="footer">
+    <div class="footer-links">
+      <a href="mailto:mailtodakshsingh@gmail.com">mailtodakshsingh@gmail.com</a>
+      <a href="https://www.linkedin.com/in/daksh-singh-innovator/" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
     <p>Daksh Singh · Mechanical Engineering applicant, Class of 2027. This site replaces a paper resume — certificates and documentation are embedded here directly.</p>
     <p><a href="#top">Back to top ↑</a></p>
   </footer>
