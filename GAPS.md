@@ -1,43 +1,46 @@
 # Open items — needs Daksh's input
 
-Internal tracker only — nothing below appears on the public site. The site now
-omits certificate chips for anything not yet uploaded rather than showing a
-"pending" label, and never shows verifier-name placeholders.
+Internal tracker only — nothing below appears on the public site.
 
-## Confirmed / resolved this round
-- Objective + About rewritten in Daksh's voice; email set to `mailtodakshsingh@gmail.com`.
-- Further Mathematics removed from the Grade 12 table.
-- MATE ROV role arc corrected: Software Lead (Yr 1, 2025) → CTO & Arm Design Lead (Yr 2, 2026), with Arduino UNO R3 / ESP-32 detail.
-- CreatED / Scaler YIIC internship populated with the NPK + Plant Health Scanner project (Raspberry Pi, YOLOv8, I2C/UART/SPI).
-- Harvard Crimson Quiz Bowl confirmed via certificates: Global 3rd + 2nd in India (Team), Finalist/Semi-Finalist/Merit.
-- Site restructured: 7-item nav (About · Academics · Honors · Activities · Internships & Research · Service & Leadership · Interests), honors timeline with tier-1 highlighting, leadership summary table, flagship MATE ROV card.
+## Resolved this round
+- AS Level board exam results added (CS A, Physics A, Chemistry A, Math B — retaking).
+- AP Calculus BC removed entirely from the site (self-studied score deleted, not published).
+- SAT retake results date added (Sept 4, 2026).
+- National Robotics League corrected: actual placement was 22nd of 200 teams at IIT Bombay
+  (Nov–Dec 2025, not a mere "participation award"); hospitalization context added; new
+  September 2026 season (returning as captain) added.
+- FarmSense renamed to BLADE everywhere, with accurate project description (Notion: BLADE =
+  Botanical Leaf Analysis & Disease Evaluator — handheld device for plant disease ID + soil NPK
+  sensing; IEEE paper "Real-Time Plant-Based Vision System for Disease Detection in Smart
+  Agriculture," targeting peer review Oct 2026).
+- Roboprenr Lab: A+ badges added next to each course name.
+- WRO Future Engineers: top 15 (2024) and top 20 (2025) national placements added, in both
+  Activities and Honors.
+- iCode Global Hackathon: noted as a Python coding challenge.
+- Inventure Robotics Club: updated to Nov 2025 start, 10 students, 4 unique projects, ~3 hrs/week.
+- Instagram card renamed to "Personal Robotics Instagram Account"; now notes it's currently paused
+  for SAT prep/schoolwork.
+- Internships & Research corrected: the YIIC internship was a portfolio website + AI chatbot
+  (Certificate of Excellence in Problem Solving and Branding & Identity) — NOT the NPK scanner,
+  which was a misattribution. BLADE stays under Activities as the research project it actually is.
+- Project Vita: removed the "Vita Juniors" mention (no longer accurate).
+- Added "Adventurers Sports Captain" card (Annual Swim Meet, PTM, interhouse sports for 500+
+  students) — resolves the earlier open question about the house name.
 
 ## Still needed from Daksh
-1. **AP Calculus BC score** — currently shown as "Pending" (May 2026 self-study result).
-2. **7th Roboprenr Lab course name** — currently just lists the 6 known courses without asserting a 7th.
-3. **WRO Future Engineers role** — Team Lead or Team Member?
-4. **iCode Hackathon** — total national competitor count (for "Rank 66 of ___" framing).
-5. **Harvard Quiz Bowl** — total participating teams (for context framing).
-6. **FarmSense specifics** — what the sensor measures and any results so far.
-7. **Vita Juniors** — what's being taught once the mentorship program launches.
-8. **Inventure Robotics Club** — which grade levels are in the club.
-9. **MATE ROV 2025 bot cost** — confirm exact figure (site currently doesn't state a number for 2025, only 2026's ~$600 and competitors' $15–20K).
-10. **Scaler/YIIC internship** — exact dates and Daksh's specific role/title.
-11. **Student Council** — full name of the house Daksh captains.
-12. **SBC** — what the acronym stands for (Grade 9 leadership entry).
-13. **NRL in Grade 12** — is Daksh continuing this year?
+1. **7th Roboprenr Lab course name** — still just lists the 6 known courses.
+2. **iCode Hackathon** — total national competitor count (for "Rank 66 of ___" framing), if wanted.
+3. **Harvard Quiz Bowl** — total participating teams, if wanted for context.
+4. **MATE ROV 2025 bot cost** — exact figure (site currently only states 2026's ~$600 and
+   competitors' $15–20K in the metrics row).
+5. **SBC** — what the acronym stands for (Grade 9 leadership entry).
 
 ## Certificates & photos — still to embed
-Send scans/PDFs for: Sharkpedo Legacy Award, 1st in India (2025 & 2026), US Navy
-Challenge Coin, MATE ROV team/bot photos, Harvard Crimson (5 certs — these were
-sent as inline images earlier, need the actual files), MIT EWB Honors, remaining
-4 Roboprenr courses, Scaler/YIIC completion certificate, Extended Math topper
-certificate, Project Vita camp photos. Naming guides are in
-`assets/certificates/README.md` and `assets/photos/README.md`.
+Sharkpedo Legacy Award, 1st in India (2025 & 2026), US Navy Challenge Coin, MATE ROV team/bot
+photos, Harvard Crimson (5 certs — sent as inline images earlier, need the actual files), MIT EWB
+Honors, remaining 4 Roboprenr courses, YIIC completion certificate / Certificate of Excellence,
+Extended Math topper certificate, Project Vita camp photos, NRL certificate/result documentation.
 
 ## Links not added (no verified URL available)
-- Instagram handle for the robotics documentation account — only the follower
-  count is in Notion, not the actual @handle/URL. Send it and it'll go in the
-  hero and footer.
-- GitHub / public repo link for the plants & AQI project (87 views, 16 downloads
-  noted, but no URL given).
+- Instagram handle for the (currently paused) personal robotics account.
+- GitHub / public repo link for the plants & AQI project (87 views, 16 downloads noted, no URL given).

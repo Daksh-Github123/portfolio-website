@@ -223,6 +223,13 @@ table.grades td { font-variant-numeric: tabular-nums; }
   color: var(--tag-text); background: var(--tag-bg); padding: 3px 10px; border-radius: 20px; font-weight: 600;
 }
 
+.course-grade {
+  display: inline-flex; align-items: center; justify-content: center;
+  font-family: var(--font-mono); font-weight: 700; font-size: .68rem; color: #fff;
+  background: var(--heading); border-radius: 4px; padding: 1px 6px; margin-left: 6px;
+  vertical-align: middle; line-height: 1.5;
+}
+
 .cert-chip {
   display: inline-flex; align-items: center; gap: 6px; margin-top: 12px;
   font-family: var(--font-head); font-size: .82rem; font-weight: 600; color: var(--heading);
