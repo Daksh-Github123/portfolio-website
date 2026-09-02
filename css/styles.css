@@ -110,9 +110,17 @@ section { padding: 56px 0 12px; }
 .stat-num { display: block; font-family: var(--font-mono); font-weight: 600; font-size: 1.15rem; color: var(--heading); }
 .stat-label { display: block; font-family: var(--font-head); font-size: .74rem; color: var(--muted); margin-top: 2px; }
 
-.hero-links { display: flex; flex-wrap: wrap; gap: 8px 20px; font-family: var(--font-head); font-size: .9rem; }
+.hero-links { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 20px; font-family: var(--font-head); font-size: .9rem; }
 .hero-links a { color: var(--heading); font-weight: 600; }
 .hero-links a:hover { color: var(--accent); }
+
+.btn-link {
+  display: inline-flex; align-items: center; gap: 6px;
+  color: #fff !important; background: var(--heading);
+  padding: 8px 18px; border-radius: 6px; font-size: .86rem;
+  transition: background .15s ease, transform .15s ease;
+}
+.btn-link:hover { background: var(--accent); text-decoration: none; transform: translateY(-1px); }
 
 /* ---------- About narrative ---------- */
 .about-body p { font-size: 1rem; color: var(--text); max-width: 700px; }
