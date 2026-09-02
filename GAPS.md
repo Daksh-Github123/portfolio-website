@@ -36,10 +36,13 @@ Internal tracker only — nothing below appears on the public site.
 5. **SBC** — what the acronym stands for (Grade 9 leadership entry).
 
 ## Certificates & photos — still to embed
-Sharkpedo Legacy Award, 1st in India (2025 & 2026), US Navy Challenge Coin, MATE ROV team/bot
-photos, Harvard Crimson (5 certs — sent as inline images earlier, need the actual files), MIT EWB
-Honors, remaining 4 Roboprenr courses, YIIC completion certificate / Certificate of Excellence,
-Extended Math topper certificate, Project Vita camp photos, NRL certificate/result documentation.
+1st in India (2025 & 2026), US Navy Challenge Coin, MATE ROV team/bot photos, Harvard Crimson
+(5 certs — sent as inline images earlier, need the actual files), MIT EWB Honors, remaining 4
+Roboprenr courses, YIIC completion certificate / Certificate of Excellence, Extended Math topper
+certificate, Project Vita camp photos, NRL certificate/result documentation.
+
+Resolved: 2026 MATE ROV World Championship Certificate of Participation ("The Orcas" team) —
+embedded on the Sharkpedo Legacy Award honors entry and the MATE ROV flagship activity card.
 
 ## Links not added (no verified URL available)
 - Instagram handle for the (currently paused) personal robotics account.
