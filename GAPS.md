@@ -33,9 +33,14 @@ Internal tracker only — nothing below appears on the public site.
   embedded — only ROS 2 and the unnamed 7th course remain without one). Added a
   roboprenr.com/contact verification link on the card.
 
+## Resolved this round (cont. 2)
+- ROS 2 marked "in progress — completing October 2026" instead of implying it's already A+.
+- SAT retakes: September and October 2026 attempts added as pending rows (results not yet in);
+  August retake renamed "retake 1" for clarity now that there are three retakes total.
+
 ## Still needed from Daksh
 1. **7th Roboprenr Lab course name** — still just lists the 6 known courses; no cert for ROS 2
-   or the 7th yet.
+   (due October 2026) or the 7th yet.
 2. **iCode Hackathon** — total national competitor count (for "Rank 66 of ___" framing), if wanted.
 3. **Harvard Quiz Bowl** — total participating teams, if wanted for context.
 4. **MATE ROV 2025 bot cost** — exact figure (site currently only states 2026's ~$600 and
