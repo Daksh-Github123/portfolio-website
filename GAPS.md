@@ -27,8 +27,15 @@ Internal tracker only — nothing below appears on the public site.
 - Added "Adventurers Sports Captain" card (Annual Swim Meet, PTM, interhouse sports for 500+
   students) — resolves the earlier open question about the house name.
 
+## Resolved this round (cont.)
+- August SAT retake: 1470 (670 R/W, 800 Math) — table updated, status "Completed".
+- Roboprenr Lab: added Autonomous Robotics and IoT certificates (5 of 7 courses now have certs
+  embedded — only ROS 2 and the unnamed 7th course remain without one). Added a
+  roboprenr.com/contact verification link on the card.
+
 ## Still needed from Daksh
-1. **7th Roboprenr Lab course name** — still just lists the 6 known courses.
+1. **7th Roboprenr Lab course name** — still just lists the 6 known courses; no cert for ROS 2
+   or the 7th yet.
 2. **iCode Hackathon** — total national competitor count (for "Rank 66 of ___" framing), if wanted.
 3. **Harvard Quiz Bowl** — total participating teams, if wanted for context.
 4. **MATE ROV 2025 bot cost** — exact figure (site currently only states 2026's ~$600 and
@@ -37,12 +44,13 @@ Internal tracker only — nothing below appears on the public site.
 
 ## Certificates & photos — still to embed
 1st in India (2025 & 2026), US Navy Challenge Coin, MATE ROV team/bot photos, Harvard Crimson
-(5 certs — sent as inline images earlier, need the actual files), MIT EWB Honors, remaining 4
-Roboprenr courses, YIIC completion certificate / Certificate of Excellence, Extended Math topper
+(5 certs — sent as inline images earlier, need the actual files), MIT EWB Honors, ROS 2 + 7th
+Roboprenr course, YIIC completion certificate / Certificate of Excellence, Extended Math topper
 certificate, Project Vita camp photos, NRL certificate/result documentation.
 
 Resolved: 2026 MATE ROV World Championship Certificate of Participation ("The Orcas" team) —
 embedded on the Sharkpedo Legacy Award honors entry and the MATE ROV flagship activity card.
+Roboprenr — Advanced Electronics, AI Robotics, PCB Designing, Autonomous Robotics, IoT.
 
 ## Links not added (no verified URL available)
 - Instagram handle for the (currently paused) personal robotics account.
