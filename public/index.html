@@ -6,8 +6,8 @@
   <title>Daksh Singh | Mechanical Engineering Portfolio</title>
   <meta name="description" content="Mechanical engineering applicant, Class of 2027. Inventure Academy, Bengaluru.">
   <script>document.documentElement.classList.add('js');try{var t=localStorage.getItem('theme');if(t==='dark'||t==='light')document.documentElement.dataset.theme=t;}catch(e){}</script>
-    <link rel="preload" href="/fonts/ibm-plex-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="/fonts/ibm-plex-sans-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/ibm-plex-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/ibm-plex-sans-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/css/styles.css">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚙️</text></svg>">
 </head>
@@ -20,6 +20,7 @@
     <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false" aria-controls="navLinks">Menu</button>
     <div class="nav-links" id="navLinks">
       <a href="#projects">Projects</a>
+      <a href="/technical/">Technical Projects</a>
       <a href="#leadership">Leadership</a>
       <a href="#academics">Academics</a>
       <a href="#honors">Honors</a>
@@ -65,9 +66,10 @@
           <p class="org">Bangalore Bullsharks (2025), now The Orcas (2026). One team, same members. Self-funded and student-run.</p>
           <p class="role">CTO &amp; Arm Design Lead (2026) · Software Lead (2025)</p>
           <p class="result">India national champions in 2025 and 2026, and the only team of ~120 to receive the Sharkpedo Legacy Award at the 2026 World Championship.</p>
-          <ul class="bullets"><li><strong>2025:</strong> No prior competition experience. Our first two ROVs, Leviathan Mark 1 (India nationals) and Leviathan Mark 2 (Worlds), were built for under $2,000 combined. We won India nationals, then competed at the World Championship in Alpena, Michigan, USA as the first Indian team in the Ranger class. Judges awarded us the US Navy Challenge Coin (~4 of ~120 teams). We placed 36th.</li><li><strong>2026:</strong> We built The Orca in about two months for ~$600, against rival budgets of $15,000–20,000. India national champions with a national-record 280/375 points. At the World Championship in Canada, we were the only team of ~120 to receive the Sharkpedo Legacy Award.</li><li>As Arm Design Lead, I designed the manipulator arm. The Orca competed with a single-motor gripper.</li></ul>
+          <ul class="bullets"><li><strong>2025:</strong> No prior competition experience. Our first two ROVs, Leviathan Mark 1 (India nationals) and Leviathan Mark 2 (Worlds), were built for under $2,000 combined. We won India nationals, then competed at the World Championship in Alpena, Michigan, USA as the first Indian team in the Ranger class. Judges awarded us the US Navy Challenge Coin (~4 of ~120 teams). We placed 36th.</li><li><strong>2026:</strong> We built The Orca in about two months for ~$600, against rival budgets of $15,000–20,000. India national champions with a national-record 280/375 points. At the World Championship in Canada, we were the only team of ~120 to receive the Sharkpedo Legacy Award.</li><li>As Arm Design Lead, I designed and built The Orca's single-motor gripper.</li></ul>
           <p class="spec">Pixhawk 2.4.8 · ArduSub · 6 thrusters, vectored 6-DOF · ESP32 profiling float over ESP-NOW</p>
-          <div class="evidence"><a class="chip" href="https://www.linkedin.com/company/the-orcas/" target="_blank" rel="noopener"><span class="visually-hidden"></span>Team page <span aria-hidden="true">↗</span></a><a class="chip chip-cert" href="/assets/certificates/2026-mate-rov-worlds-participation.webp" target="_blank" rel="noopener"><span class="visually-hidden">Certificate: </span>2026 World Championship certificate</a></div>
+          <div class="evidence"><a class="chip" href="https://www.linkedin.com/company/the-orcas/" target="_blank" rel="noopener">Team page <span aria-hidden="true">↗</span></a><a class="chip chip-cert" href="/assets/certificates/2026-mate-rov-worlds-participation.webp" target="_blank" rel="noopener"><span class="visually-hidden">Certificate: </span>2026 World Championship participation certificate</a></div>
+          <a class="tech-link" href="/technical/#the-orca">Technical details <span aria-hidden="true">→</span></a>
         </article>
         <article class="card card-flagship" id="blade">
           
@@ -81,6 +83,7 @@
           <ul class="bullets"><li>Built on a Raspberry Pi 4B with a 5 MP camera, a touchscreen interface and a custom 3D-printed enclosure. A pretrained MobileNetV2 convolutional neural network classifies a leaf photo into 38 classes (26 diseases, 12 healthy states) across 14 crops.</li><li>The pipeline runs input checks, combines five augmented views of each image (test-time augmentation) and applies confidence thresholds, so the device answers &quot;uncertain&quot; rather than giving a wrong diagnosis.</li><li>I rebuilt the device (camera swap, reworked internal layout, full software audit, Git version control, speed optimization) and redesigned the study as a controlled experiment.</li><li><strong>Research question:</strong> why do plant-disease models that score ~99% on lab images fail in real fields? Is the cause the leaf or the background? BLADE photographs the same leaves while changing one condition at a time (background, framing, lighting), which turns a correlation found in earlier studies into a controlled test.</li></ul>
           <p class="spec">Raspberry Pi 4B · 38 classes · 14 crops · fully offline</p>
           
+          <a class="tech-link" href="/technical/#blade">Technical details <span aria-hidden="true">→</span></a>
         </article>
         <article class="card card-flagship" id="tech-for-change">
           
@@ -90,10 +93,11 @@
           </header>
           <p class="org">Inventure Academy</p>
           <p class="role">Founder &amp; Instructor</p>
-          <p class="result">The school's first senior robotics club, now at its signup cap of 10 students.</p>
-          <ul class="bullets"><li>Launched in the second term of Grade 11. One of only two of the school's 20+ Beyond Academics clubs run by a student; teachers run the rest.</li><li>I teach every beginner the basics (electronics, sensors, OpenCV). Students then form groups, build their own projects and present them at the school showcase each term.</li><li>Hit the school's signup cap: 5 students last term, 10 now.</li><li>Projects are meant to be used at school. The electronic voting machine I built will run the 2027 student council elections.</li></ul>
+          <p class="result">The school's first senior robotics club, and one of two of its 20+ clubs run by a student.</p>
+          <ul class="bullets"><li>Launched in the second term of Grade 11. I teach every beginner the basics (electronics, sensors, OpenCV). Students then form groups, build their own projects and present them at the school showcase each term.</li><li>Hit the school's signup cap: 5 students last term, 10 now.</li><li>Projects are meant to be used at school. The electronic voting machine I built will run the 2027 student council elections.</li></ul>
           
           
+          <a class="tech-link" href="/technical/#voting-machine">Technical details <span aria-hidden="true">→</span></a>
         </article>
       </div>
       <h3 class="subhead">More engineering &amp; research</h3>
@@ -110,6 +114,7 @@
           <ul class="bullets"><li>Built self-driving cars over two seasons with Raspberry Pi, OpenCV and Ackermann steering.</li><li>In 2025, built a custom differential from a disassembled RC truck.</li></ul>
           
           <div class="evidence"><a class="chip chip-cert" href="/assets/certificates/2025-wro-future-engineers.webp" target="_blank" rel="noopener"><span class="visually-hidden">Certificate: </span>2025 nationals certificate</a></div>
+          <a class="tech-link" href="/technical/#wro-car">Technical details <span aria-hidden="true">→</span></a>
         </article>
         <article class="card" id="nrl">
           
@@ -123,6 +128,7 @@
           <ul class="bullets"><li>Designed the robot's full autonomous mode (ESP32, infrared sensors, PID control), using sensors to self-correct its path.</li><li>2026: leading 10 students (Grades 7 and 9). Regionals in November 2026, nationals in December 2026.</li></ul>
           
           
+          <a class="tech-link" href="/technical/#nrl-robot">Technical details <span aria-hidden="true">→</span></a>
         </article>
         <article class="card" id="house-plants">
           
@@ -135,7 +141,8 @@
           <p class="result">Preprint on Zenodo.</p>
           <ul class="bullets"><li>Before-and-after measurements of CO2, formaldehyde and VOC levels in five rooms after adding common house plants. Found only small reductions.</li></ul>
           
-          <div class="evidence"><a class="chip" href="https://zenodo.org/records/18411365" target="_blank" rel="noopener"><span class="visually-hidden"></span>Read the preprint (Zenodo) <span aria-hidden="true">↗</span></a></div>
+          <div class="evidence"><a class="chip" href="https://zenodo.org/records/18411365" target="_blank" rel="noopener">Read the preprint (Zenodo) <span aria-hidden="true">↗</span></a></div>
+          
         </article>
         <article class="card" id="roboprenr">
           
@@ -145,10 +152,11 @@
           </header>
           <p class="org">Roboprenr Advanced Learning</p>
           <p class="role">Lab Student (Grades 10–11) &amp; Independent Maker</p>
-          <p class="result">7 hands-on lab courses, A+ in all (~350 hours), from electronics to AI robotics.</p>
-          <ul class="bullets"><li>ROS 2: in progress, completing November 2026.</li><li>Personal builds: 7 gadgets, including an LCD &quot;kind words&quot; gift for my mom.</li></ul>
+          <p class="result">5 hands-on lab courses completed, A+ in all, from electronics to AI robotics; ROS 2 in progress (completing November 2026).</p>
+          <ul class="bullets"><li>Personal builds: 7 gadgets, including an LCD &quot;kind words&quot; gift for my mom.</li></ul>
           
-          <div class="evidence"><a class="chip chip-cert" href="/assets/certificates/roboprenr-advanced-electronics.webp" target="_blank" rel="noopener"><span class="visually-hidden">Certificate: </span>Advanced Electronics</a><a class="chip chip-cert" href="/assets/certificates/roboprenr-ai-robotics.webp" target="_blank" rel="noopener"><span class="visually-hidden">Certificate: </span>AI Robotics</a><a class="chip chip-cert" href="/assets/certificates/roboprenr-pcb-designing.webp" target="_blank" rel="noopener"><span class="visually-hidden">Certificate: </span>PCB Designing</a><a class="chip chip-cert" href="/assets/certificates/roboprenr-autonomous-robotics.webp" target="_blank" rel="noopener"><span class="visually-hidden">Certificate: </span>Autonomous Robotics</a><a class="chip chip-cert" href="/assets/certificates/roboprenr-iot.webp" target="_blank" rel="noopener"><span class="visually-hidden">Certificate: </span>IoT</a><a class="chip" href="https://roboprenr.com/contact" target="_blank" rel="noopener"><span class="visually-hidden"></span>Verify with Roboprenr <span aria-hidden="true">↗</span></a></div>
+          <div class="evidence"><a class="chip chip-cert" href="/assets/certificates/roboprenr-advanced-electronics.webp" target="_blank" rel="noopener"><span class="visually-hidden">Certificate: </span>Advanced Electronics</a><a class="chip chip-cert" href="/assets/certificates/roboprenr-ai-robotics.webp" target="_blank" rel="noopener"><span class="visually-hidden">Certificate: </span>AI Robotics</a><a class="chip chip-cert" href="/assets/certificates/roboprenr-pcb-designing.webp" target="_blank" rel="noopener"><span class="visually-hidden">Certificate: </span>PCB Designing</a><a class="chip chip-cert" href="/assets/certificates/roboprenr-autonomous-robotics.webp" target="_blank" rel="noopener"><span class="visually-hidden">Certificate: </span>Autonomous Robotics</a><a class="chip chip-cert" href="/assets/certificates/roboprenr-iot.webp" target="_blank" rel="noopener"><span class="visually-hidden">Certificate: </span>IoT</a><a class="chip" href="https://roboprenr.com/contact" target="_blank" rel="noopener">Verify with Roboprenr <span aria-hidden="true">↗</span></a></div>
+          
         </article>
       </div>
       </div>
@@ -172,9 +180,9 @@
         <article class="card" id="project-vita">
           <header class="card-head">
             <h3>Project Vita</h3>
-            <span class="dates">2022–present</span>
+            <span class="dates">2023–present</span>
           </header>
-          <p class="org">Student-run nonprofit, co-founded at 13</p>
+          <p class="org">Student-run nonprofit, co-founded in Grade 9</p>
           <p class="role">Co-founder; On-Site Server &amp; Social Media Support</p>
           <ul class="bullets"><li>Ran 9+ food stalls raising ~$10,000 for 5 causes, including CareForAll medical camps for ~750 children.</li><li>I plan stall logistics, run the cash counter and design posters. Vita raises the money; partner organizations such as CareForAll run the camps.</li></ul>
         </article>
@@ -245,7 +253,7 @@
   <section id="honors" class="section">
     <div class="section-head"><h2>Honors &amp; Awards</h2></div>
     <ol class="honors">
-      <li><span class="honor-text">Sharkpedo Legacy Award, MATE ROV World Championship (sole recipient, ~120 teams) <a class="chip chip-cert chip-sm" href="/assets/certificates/2026-mate-rov-worlds-participation.webp" target="_blank" rel="noopener">Certificate</a></span><span class="dates">2026</span></li>
+      <li><span class="honor-text">Sharkpedo Legacy Award, MATE ROV World Championship (sole recipient, ~120 teams)</span><span class="dates">2026</span></li>
       <li><span class="honor-text">US Navy Challenge Coin, MATE ROV World Championship (~4 of ~120 teams)</span><span class="dates">2025</span></li>
       <li><span class="honor-text">1st place, MATE ROV India Nationals (national record 280/375 in 2026)</span><span class="dates">2025, 2026</span></li>
       <li><span class="honor-text">Harvard Crimson Global Quiz Bowl, Computer Science (High School): Global Third Place, Team</span><span class="dates">2025</span></li>
@@ -262,6 +270,7 @@
       <a href="mailto:mailtodakshsingh@gmail.com">mailtodakshsingh@gmail.com</a>
       <a href="https://www.linkedin.com/in/daksh-singh-innovator/" target="_blank" rel="noopener">LinkedIn</a>
       <a href="https://www.linkedin.com/company/the-orcas/" target="_blank" rel="noopener">The Orcas (team page)</a>
+      <a href="/technical/">Technical Projects</a>
       <a href="/resume/">Resume (web version)</a>
     </div>
     <p>Last updated: October 2026</p>

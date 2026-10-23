@@ -33,9 +33,21 @@
     });
   }
 
-  var navAnchors = Array.prototype.slice.call(document.querySelectorAll('.nav-links a'));
+  var jump = document.querySelector('.toc-mobile');
+  if (jump) {
+    jump.querySelectorAll('a').forEach(function (a) {
+      a.addEventListener('click', function () { jump.removeAttribute('open'); });
+    });
+  }
+
+  // Highlight the nav or table-of-contents link for the section in view (in-page #links only).
+  var navAnchors = Array.prototype.slice.call(document.querySelectorAll('.nav-links a, .toc-list a'));
   var targets = navAnchors
-    .map(function (a) { var el = document.getElementById(a.getAttribute('href').slice(1)); return el ? { a: a, el: el } : null; })
+    .map(function (a) {
+      var href = a.getAttribute('href');
+      var el = href.charAt(0) === '#' ? document.getElementById(href.slice(1)) : null;
+      return el ? { a: a, el: el } : null;
+    })
     .filter(Boolean);
   if (!('IntersectionObserver' in window) || !targets.length) return;
   var observer = new IntersectionObserver(function (entries) {

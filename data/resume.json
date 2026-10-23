@@ -12,7 +12,7 @@
     "identity": "Mechanical engineering applicant, Class of 2027. Inventure Academy, Bengaluru.",
     "bio": "I build robots that have to work in real conditions: underwater ROVs, a handheld crop-disease scanner, and self-driving cars. I want to study mechanical engineering, work in industry on robots that operate outside the lab, and later start a hardware company.",
     "email": "mailtodakshsingh@gmail.com",
-    "emailOnPdf": false,
+    "emailOnPdf": true,
     "linkedin": "https://www.linkedin.com/in/daksh-singh-innovator/",
     "teamPage": "https://www.linkedin.com/company/the-orcas/",
     "teamPageLabel": "linkedin.com/company/the-orcas"
@@ -47,7 +47,7 @@
       "bullets": [
         "**2025:** No prior competition experience. Our first two ROVs, Leviathan Mark 1 (India nationals) and Leviathan Mark 2 (Worlds), were built for under $2,000 combined. We won India nationals, then competed at the World Championship in Alpena, Michigan, USA as the first Indian team in the Ranger class. Judges awarded us the US Navy Challenge Coin (~4 of ~120 teams). We placed 36th.",
         "**2026:** We built The Orca in about two months for ~$600, against rival budgets of $15,000–20,000. India national champions with a national-record 280/375 points. At the World Championship in Canada, we were the only team of ~120 to receive the Sharkpedo Legacy Award.",
-        "As Arm Design Lead, I designed the manipulator arm. The Orca competed with a single-motor gripper."
+        "As Arm Design Lead, I designed and built The Orca's single-motor gripper."
       ],
       "spec": "Pixhawk 2.4.8 · ArduSub · 6 thrusters, vectored 6-DOF · ESP32 profiling float over ESP-NOW",
       "evidence": [
@@ -57,20 +57,21 @@
           "external": true
         },
         {
-          "label": "2026 World Championship certificate",
+          "label": "2026 World Championship participation certificate",
           "href": "/assets/certificates/2026-mate-rov-worlds-participation.webp",
           "cert": true
         }
       ],
       "pdf": {
-        "title": "MATE ROV World Championship",
+        "title": "MATE ROV",
         "subtitle": "Bangalore Bullsharks (2025), The Orcas (2026)",
-        "role": "CTO & Arm Design Lead (2026); Software Lead (2025)",
+        "role": "CTO (2026)",
         "bullets": [
-          "Won India nationals in 2025 and 2026 (national-record 280/375 in 2026); sole recipient of the Sharkpedo Legacy Award at the 2026 World Championship (~120 teams).",
-          "First Indian team to compete in the Ranger class at Worlds (2025); US Navy Challenge Coin (~4 of ~120 teams). Built The Orca in about two months for ~$600 against rival budgets of $15,000–20,000."
+          "First Indian team to compete in the Ranger class at the MATE ROV World Championship (2025). Built The Orca (2026) in about two months for ~$600, against rival budgets of $15,000–20,000.",
+          "Led arm design: designed and built The Orca's single-motor gripper; Software Lead on the 2025 ROVs."
         ]
-      }
+      },
+      "technical": "the-orca"
     },
     {
       "id": "blade",
@@ -90,13 +91,14 @@
       "evidence": [],
       "pdf": {
         "title": "BLADE: Botanical Leaf Analysis & Disease Evaluator",
-        "subtitle": "Independent research project",
+        "subtitle": "",
         "role": "Lead Engineer & Co-researcher",
         "bullets": [
           "Built a handheld, fully offline crop-disease scanner (Raspberry Pi 4B, 5 MP camera, touchscreen, 3D-printed enclosure); a pretrained MobileNetV2 classifies leaf photos into 38 classes across 14 crops.",
           "Designed a controlled experiment that photographs the same leaves while changing one condition at a time, to test why lab-trained models fail in real fields. Paper under review."
         ]
-      }
+      },
+      "technical": "blade"
     },
     {
       "id": "tech-for-change",
@@ -105,15 +107,15 @@
       "org": "Inventure Academy",
       "role": "Founder & Instructor",
       "dates": "2025–present",
-      "result": "The school's first senior robotics club, now at its signup cap of 10 students.",
+      "result": "The school's first senior robotics club, and one of two of its 20+ clubs run by a student.",
       "bullets": [
-        "Launched in the second term of Grade 11. One of only two of the school's 20+ Beyond Academics clubs run by a student; teachers run the rest.",
-        "I teach every beginner the basics (electronics, sensors, OpenCV). Students then form groups, build their own projects and present them at the school showcase each term.",
+        "Launched in the second term of Grade 11. I teach every beginner the basics (electronics, sensors, OpenCV). Students then form groups, build their own projects and present them at the school showcase each term.",
         "Hit the school's signup cap: 5 students last term, 10 now.",
         "Projects are meant to be used at school. The electronic voting machine I built will run the 2027 student council elections."
       ],
       "evidence": [],
-      "pdf": null
+      "pdf": null,
+      "technical": "voting-machine"
     },
     {
       "id": "wro",
@@ -140,7 +142,8 @@
         "bullets": [
           "Placed 19th of 40+ at the 2025 national championship. Built self-driving cars with Raspberry Pi, OpenCV and Ackermann steering, including a custom differential from a disassembled RC truck."
         ]
-      }
+      },
+      "technical": "wro-car"
     },
     {
       "id": "nrl",
@@ -159,9 +162,10 @@
         "subtitle": "",
         "role": "Team Captain (2025, 2026)",
         "bullets": [
-          "Placed 20th of 50 in division (2025). Designed the robot's autonomous mode (ESP32, infrared sensors, PID control); leading 10 students in the 2026 season."
+          "Placed 20th of 50 in division (2025). Designed the autonomous mode: ESP32, infrared sensors, PID control."
         ]
-      }
+      },
+      "technical": "nrl-robot"
     },
     {
       "id": "house-plants",
@@ -185,7 +189,7 @@
         "subtitle": "",
         "role": "First author; preprint on Zenodo",
         "bullets": [
-          "Measured CO2, formaldehyde and VOC in five rooms before and after adding plants; found only small reductions."
+          "Measured CO2, formaldehyde and VOC in five rooms after adding plants: only small reductions."
         ]
       }
     },
@@ -195,9 +199,8 @@
       "org": "Roboprenr Advanced Learning",
       "role": "Lab Student (Grades 10–11) & Independent Maker",
       "dates": "2024–26",
-      "result": "7 hands-on lab courses, A+ in all (~350 hours), from electronics to AI robotics.",
+      "result": "5 hands-on lab courses completed, A+ in all, from electronics to AI robotics; ROS 2 in progress (completing November 2026).",
       "bullets": [
-        "ROS 2: in progress, completing November 2026.",
         "Personal builds: 7 gadgets, including an LCD \"kind words\" gift for my mom."
       ],
       "evidence": [
@@ -233,11 +236,11 @@
         }
       ],
       "pdf": {
-        "title": "Roboprenr Lab & personal builds",
+        "title": "Roboprenr Lab",
         "subtitle": "",
-        "role": "Lab Student & Independent Maker",
+        "role": "Lab Student",
         "bullets": [
-          "7 hands-on lab courses, A+ in all (~350 hours), from electronics to AI robotics; built 7 personal gadgets."
+          "5 hands-on lab courses completed, A+ in all, from electronics to AI robotics; ROS 2 in progress (completing November 2026)."
         ]
       }
     }
@@ -256,16 +259,16 @@
       "pdf": {
         "role": "House Sports Captain & Acting Activities Captain, Adventurers House",
         "bullets": [
-          "Co-ran the swim meet (200 athletes; house won 1st), parent-teacher day (350) and Tournament of Minds (500)."
+          "Co-ran swim meet (200 athletes; house won 1st), parent-teacher day (350), Tournament of Minds (500)."
         ]
       }
     },
     {
       "id": "project-vita",
       "title": "Project Vita",
-      "org": "Student-run nonprofit, co-founded at 13",
+      "org": "Student-run nonprofit, co-founded in Grade 9",
       "role": "Co-founder; On-Site Server & Social Media Support",
-      "dates": "2022–present",
+      "dates": "2023–present",
       "bullets": [
         "Ran 9+ food stalls raising ~$10,000 for 5 causes, including CareForAll medical camps for ~750 children.",
         "I plan stall logistics, run the cash counter and design posters. Vita raises the money; partner organizations such as CareForAll run the camps."
@@ -350,7 +353,9 @@
           "B"
         ]
       ],
-      "note": "Retaking AS Mathematics, Oct/Nov 2026 series (result January 2027)."
+      "note": "Retaking AS Mathematics, Oct/Nov 2026 series (result January 2027).",
+      "pdfNote": "retake Oct/Nov 2026",
+      "pdfLabel": "AS Level (2026)"
     },
     "igcse": {
       "label": "Cambridge IGCSE (2025)",
@@ -368,7 +373,8 @@
           "French"
         ]
       ],
-      "note": "Cambridge ICE Distinction; Extended Mathematics class topper (Grade 10)."
+      "note": "Cambridge ICE Distinction; Extended Mathematics class topper (Grade 10).",
+      "pdfSuffix": "ICE Distinction"
     },
     "sat": {
       "score": "1500",
@@ -379,13 +385,13 @@
       "label": "AP Computer Science A",
       "score": "5",
       "note": "Self-studied, Grade 10; Inventure offers no AP courses."
-    }
+    },
+    "currentPdf": "A Level Mathematics, Physics, Chemistry, Computer Science; AS English Language."
   },
   "honors": [
     {
       "text": "Sharkpedo Legacy Award, MATE ROV World Championship (sole recipient, ~120 teams)",
-      "year": "2026",
-      "cert": "/assets/certificates/2026-mate-rov-worlds-participation.webp"
+      "year": "2026"
     },
     {
       "text": "US Navy Challenge Coin, MATE ROV World Championship (~4 of ~120 teams)",
@@ -414,5 +420,598 @@
       "year": "2025",
       "cert": "/assets/certificates/2025-icode-hackathon-nationals.webp"
     }
-  ]
+  ],
+  "technicalIntro": "How each system works, the design decisions behind it, what broke and what we changed, and exactly what I did. Awards and placements are on the home page; here each project gets one results line.",
+  "technicalProjects": [
+    {
+      "id": "the-orca",
+      "toc": "The Orca (2026)",
+      "name": "The Orca",
+      "years": "2026",
+      "team": "The Orcas",
+      "role": "CTO & Arm Design Lead",
+      "summary": "Our 2026 underwater ROV, built in about two months for ~$600, against rival budgets of $15,000–20,000.",
+      "specs": [
+        [
+          "Flight controller",
+          "Pixhawk 2.4.8"
+        ],
+        [
+          "Firmware",
+          "ArduSub (Sub V4.5.7)"
+        ],
+        [
+          "Configured in",
+          "Mission Planner 1.3.83"
+        ],
+        [
+          "Frame configuration",
+          "Vectored 6-DOF (FRAME_CONFIG = 2)"
+        ],
+        [
+          "Propulsion",
+          "6 thrusters"
+        ],
+        [
+          "Manipulator",
+          "Single-motor gripper"
+        ],
+        [
+          "Profiling float",
+          "ESP32 · ESP-NOW · syringe buoyancy engine"
+        ],
+        [
+          "Build time / cost",
+          "~2 months · ~$600"
+        ]
+      ],
+      "diagrams": [
+        {
+          "title": "The Orca: propulsion control",
+          "nodes": [
+            {
+              "label": "Topside controller"
+            },
+            {
+              "label": "Pixhawk 2.4.8",
+              "sub": "ArduSub 4.5.7"
+            },
+            {
+              "label": "ESCs"
+            },
+            {
+              "label": "6 thrusters",
+              "sub": "vectored 6-DOF"
+            }
+          ],
+          "edges": [
+            "tether",
+            null,
+            null
+          ]
+        },
+        {
+          "title": "The Orca: profiling float",
+          "nodes": [
+            {
+              "label": "ESP32",
+              "sub": "float controller"
+            }
+          ],
+          "outputs": [
+            {
+              "label": "Buoyancy engine",
+              "sub": "syringe; DC-thruster backup"
+            },
+            {
+              "label": "Wireless link",
+              "sub": "ESP-NOW"
+            }
+          ]
+        }
+      ],
+      "subsystems": [
+        [
+          "Mechanical",
+          "The manipulator is a single-motor gripper. Its gripping surface is a kitchen sponge combined with M-seal epoxy putty, and we replaced the putty after every run. Sealing the servo motors was a recurring problem: too much sealant jammed the gears, and too little let water in."
+        ],
+        [
+          "Electronics and control",
+          "A Pixhawk 2.4.8 flight controller runs ArduSub (Sub V4.5.7), configured in Mission Planner 1.3.83 for the vectored 6-DOF frame (FRAME_CONFIG = 2) and its six thrusters. We flashed the Pixhawk using Mission Planner's Force Bootloader option."
+        ],
+        [
+          "Profiling float",
+          "A NEMO-style vertical profiling float changes depth with a syringe-based buoyancy engine, with a DC-thruster version as the backup. It runs on an ESP32 and communicates over ESP-NOW."
+        ]
+      ],
+      "decisions": [
+        {
+          "decision": "Sponge plus M-seal epoxy putty as the gripping surface",
+          "why": "3D-printed jaws, sponge alone and putty alone each failed underwater.",
+          "tradeoff": "The putty had to be replaced after every run."
+        },
+        {
+          "decision": "A DC-thruster version of the float's buoyancy engine as backup",
+          "why": "A second way to drive the float if the syringe engine failed."
+        }
+      ],
+      "changes": [
+        "Manipulator: we planned a worm-gear jaw with wrist rotation, then dropped it for time and built the single-motor gripper instead.",
+        "Servo waterproofing stayed a recurring problem: too much sealant jammed the gears, and too little let water in.",
+        "Float link: we replaced the float's earlier Bluetooth link with ESP-NOW."
+      ],
+      "myRole": [
+        "As Arm Design Lead, designed and built The Orca's single-motor gripper.",
+        "As CTO, led the 25-page Technical Documentation Paper (TDP), the company spec sheet and the engineering presentation script."
+      ],
+      "result": "India national champions with a national-record 280/375 points; Sharkpedo Legacy Award at the 2026 World Championship.",
+      "evidence": [
+        {
+          "label": "Team page",
+          "href": "https://www.linkedin.com/company/the-orcas/",
+          "external": true
+        },
+        {
+          "label": "2026 World Championship participation certificate",
+          "href": "/assets/certificates/2026-mate-rov-worlds-participation.webp",
+          "cert": true
+        }
+      ]
+    },
+    {
+      "id": "leviathans",
+      "toc": "Leviathan Mk 1 & Mk 2 (2025)",
+      "name": "Leviathan Mark 1 & Mark 2",
+      "years": "2025",
+      "team": "Bangalore Bullsharks",
+      "role": "Software Lead",
+      "summary": "Our first two ROVs. Mark 1 competed at India nationals and Mark 2 at the World Championship in Alpena, Michigan.",
+      "specs": [
+        [
+          "Builds",
+          "Mark 1 (India nationals) · Mark 2 (World Championship)"
+        ],
+        [
+          "Frame",
+          "Largely PVC pipe"
+        ],
+        [
+          "Cost",
+          "Under $2,000 for both"
+        ]
+      ],
+      "diagrams": [],
+      "subsystems": [
+        [
+          "Mechanical",
+          "Both ROVs were built largely from PVC pipe, for under $2,000 combined."
+        ],
+        [
+          "Software",
+          "I owned the code that kept the robot stable in the water."
+        ]
+      ],
+      "decisions": [],
+      "changes": [],
+      "myRole": [
+        "As Software Lead, owned the code that kept the robot stable in the water."
+      ],
+      "result": "India national champions; first Indian team in the Ranger class at the World Championship; US Navy Challenge Coin.",
+      "evidence": [
+        {
+          "label": "Team page",
+          "href": "https://www.linkedin.com/company/the-orcas/",
+          "external": true
+        }
+      ]
+    },
+    {
+      "id": "blade",
+      "toc": "BLADE",
+      "name": "BLADE",
+      "subtitle": "Botanical Leaf Analysis & Disease Evaluator",
+      "years": "2026",
+      "team": "Independent research project",
+      "role": "Lead Engineer & Co-researcher",
+      "summary": "A handheld, fully offline crop-disease scanner that classifies a leaf photo, or answers \"uncertain\" instead of guessing.",
+      "specs": [
+        [
+          "Computer",
+          "Raspberry Pi 4B"
+        ],
+        [
+          "Camera",
+          "5 MP OV5647"
+        ],
+        [
+          "Interface",
+          "Touchscreen GUI"
+        ],
+        [
+          "Power",
+          "Battery"
+        ],
+        [
+          "Enclosure",
+          "Custom 3D-printed"
+        ],
+        [
+          "Connectivity",
+          "Fully offline"
+        ],
+        [
+          "Model",
+          "MobileNetV2, pretrained on PlantVillage"
+        ],
+        [
+          "Classes",
+          "38 (26 diseases, 12 healthy) · 14 crops"
+        ],
+        [
+          "Inference",
+          "5-view test-time augmentation"
+        ],
+        [
+          "Logging",
+          "Every scan to a spreadsheet"
+        ]
+      ],
+      "diagrams": [
+        {
+          "title": "BLADE: diagnosis pipeline",
+          "nodes": [
+            {
+              "label": "Camera",
+              "sub": "OV5647, 5 MP"
+            },
+            {
+              "label": "Input checks",
+              "sub": "colour · object · face"
+            },
+            {
+              "label": "5-view TTA"
+            },
+            {
+              "label": "MobileNetV2",
+              "sub": "pretrained"
+            },
+            {
+              "label": "Thresholds",
+              "sub": "confidence · margin"
+            }
+          ],
+          "edges": [
+            "leaf photo",
+            null,
+            null,
+            null
+          ],
+          "outputs": [
+            {
+              "label": "Touchscreen",
+              "sub": "diagnosis or \"uncertain\""
+            },
+            {
+              "label": "Spreadsheet log",
+              "sub": "every scan"
+            }
+          ]
+        }
+      ],
+      "subsystems": [
+        [
+          "Hardware",
+          "A Raspberry Pi 4B with a 5 MP OV5647 camera, a touchscreen GUI and a battery, in a custom 3D-printed enclosure. Everything runs offline."
+        ],
+        [
+          "Software pipeline",
+          "Input checks run first: a plant-colour check, an object filter, and a face/privacy filter. A pretrained MobileNetV2 (trained on PlantVillage) then classifies the leaf into 38 classes (26 diseases, 12 healthy states) across 14 crops, combining five augmented views of each image (test-time augmentation). Confidence and margin thresholds decide whether to show a diagnosis or answer \"uncertain\". Every scan is logged to a spreadsheet."
+        ],
+        [
+          "Study design",
+          "The study photographs the same physical leaves while changing one variable at a time: background, framing and lighting. It compares lab-to-field accuracy (PlantVillage → PlantDoc) and measures image statistics: colour saturation, border edge density and leaf fill fraction."
+        ]
+      ],
+      "decisions": [
+        {
+          "decision": "Confidence and margin thresholds that can answer \"uncertain\"",
+          "why": "A wrong diagnosis is worse than no diagnosis.",
+          "tradeoff": "Some scans end without a diagnosis."
+        },
+        {
+          "decision": "Input checks before the model sees the image",
+          "why": "Only plant images reach the classifier, and the face filter protects privacy."
+        },
+        {
+          "decision": "Five augmented views per image (test-time augmentation)",
+          "tradeoff": "Five model passes per scan instead of one."
+        }
+      ],
+      "changes": [
+        "The original camera's board shifted inside the case. I swapped the camera and reworked the internal layout.",
+        "I ran a full software audit and put the code under Git version control with a restore point.",
+        "Speed: I added per-stage timing, moved logging to the background and batched inference. Quantized TFLite is in progress."
+      ],
+      "myRole": [
+        "Rebuilt the device: camera swap and a reworked internal layout.",
+        "Audited the software, added Git version control, instrumented per-stage timing and optimized speed.",
+        "Redesigned the study as a controlled experiment."
+      ],
+      "result": "Paper under review.",
+      "evidence": []
+    },
+    {
+      "id": "wro-car",
+      "toc": "WRO self-driving car",
+      "name": "WRO Future Engineers self-driving car",
+      "years": "2024, 2025",
+      "team": "3-person team (2025)",
+      "role": "Team Member (2024) · Team Lead (2025)",
+      "task": [
+        "The car must be fully autonomous: no remote control, and radios and Wi-Fi off during runs. It starts with a single button press.",
+        "The arena is a 3 × 3 m track with walls. **Open Challenge:** 3 laps with a randomized driving direction, starting position and inner-wall placement, without touching the walls.",
+        "**Obstacle Challenge:** 3 laps around red and green pillars (pass red on the right, green on the left). The last pillar of lap 2 decides whether lap 3 continues or reverses direction. Then the car finds a magenta-marked parking lot and parallel parks. Moving a pillar costs points, and each run has a 3-minute limit.",
+        "Vehicle limits: 300 × 200 × 300 mm and 1.5 kg; four wheels, one driving axle and one steering actuator. Car-style steering is required; differential-drive steering is banned."
+      ],
+      "taskSource": {
+        "label": "WRO Future Engineers General Rules",
+        "href": "https://delta.ut.ee/sites/default/files/2024-11/WRO-2024-Future-Engineers-Self-Driving-Cars-General-Rules.pdf"
+      },
+      "specs": [
+        [
+          "Computer",
+          "Raspberry Pi"
+        ],
+        [
+          "Vision",
+          "OpenCV colour detection (Python)"
+        ],
+        [
+          "Detection",
+          "Contour analysis · size-threshold filtering"
+        ],
+        [
+          "Steering",
+          "Ackermann"
+        ],
+        [
+          "Drive",
+          "Rear drive motor"
+        ],
+        [
+          "Differential",
+          "Lego (2024) · custom, from an RC truck (2025)"
+        ]
+      ],
+      "diagrams": [
+        {
+          "title": "WRO car: perception to actuation",
+          "nodes": [
+            {
+              "label": "Camera"
+            },
+            {
+              "label": "Raspberry Pi",
+              "sub": "Python · OpenCV"
+            }
+          ],
+          "edges": [
+            null
+          ],
+          "outputs": [
+            {
+              "label": "Steering",
+              "sub": "Ackermann"
+            },
+            {
+              "label": "Rear drive motor",
+              "sub": "via differential"
+            }
+          ]
+        }
+      ],
+      "subsystems": [
+        [
+          "Vision",
+          "Python with OpenCV colour detection finds the red and green pillars, using contour analysis and size-threshold filtering."
+        ],
+        [
+          "Drivetrain",
+          "Ackermann steering and a rear drive motor. 2024 used a store-bought Lego differential; in 2025 we built a custom differential from a disassembled RC truck and its single large motor."
+        ]
+      ],
+      "decisions": [
+        {
+          "decision": "Ackermann steering",
+          "why": "The rules require car-style steering with one steering actuator; differential-drive steering is banned."
+        },
+        {
+          "decision": "Contour analysis with size-threshold filtering on colour detections",
+          "why": "Pillars are identified by colour, and the size threshold drops detections too small to be a pillar."
+        }
+      ],
+      "changes": [
+        "2024 → 2025: replaced the store-bought Lego differential with a custom differential built from a disassembled RC truck and its single large motor.",
+        "Duct tape proved too weak to hold the custom differential, so a teammate modelled custom structural supports in CAD."
+      ],
+      "myRole": [
+        "2024 (team member): mostly physical work, including soldering and testing.",
+        "2025 (team lead): led the 3-person team through the custom-differential rebuild."
+      ],
+      "result": "19th of 40+ at the 2025 nationals.",
+      "evidence": [
+        {
+          "label": "2025 nationals certificate",
+          "href": "/assets/certificates/2025-wro-future-engineers.webp",
+          "cert": true
+        }
+      ]
+    },
+    {
+      "id": "nrl-robot",
+      "toc": "NRL robot",
+      "name": "National Robotics League robot",
+      "years": "2025, 2026",
+      "team": "National Robotics League",
+      "role": "Team Captain",
+      "summary": "The 2025 robot was RC-driven with a gripper and a servo arm, plus an autonomous challenge mode that I designed.",
+      "specs": [
+        [
+          "Controller",
+          "ESP32"
+        ],
+        [
+          "Sensors",
+          "Infrared"
+        ],
+        [
+          "Control",
+          "PID"
+        ],
+        [
+          "Modes",
+          "RC driving (gripper, servo arm) · autonomous"
+        ]
+      ],
+      "diagrams": [
+        {
+          "title": "NRL robot: autonomous mode",
+          "nodes": [
+            {
+              "label": "Infrared sensors"
+            },
+            {
+              "label": "ESP32",
+              "sub": "PID control"
+            },
+            {
+              "label": "Drive",
+              "sub": "path self-correction"
+            }
+          ],
+          "edges": [
+            null,
+            null
+          ]
+        }
+      ],
+      "subsystems": [
+        [
+          "Autonomous mode",
+          "An ESP32 reads infrared sensors and runs PID control, so the robot uses its sensors to self-correct its path."
+        ],
+        [
+          "2026 season",
+          "Leading 10 students (Grades 7 and 9). Regionals in November 2026, nationals in December 2026."
+        ]
+      ],
+      "decisions": [
+        {
+          "decision": "PID control on the infrared sensor readings",
+          "why": "It lets the robot correct its own path in autonomous mode."
+        }
+      ],
+      "changes": [],
+      "myRole": [
+        "As Team Captain, designed the robot's full autonomous mode (ESP32, infrared sensors, PID control).",
+        "2026: leading a team of 10 students."
+      ],
+      "result": "20th of 50 in division (2025). 2026 results to come.",
+      "evidence": []
+    },
+    {
+      "id": "voting-machine",
+      "toc": "Electronic voting machine",
+      "name": "Electronic voting machine",
+      "years": "2025–26",
+      "team": "Tech for Change Robotics Club",
+      "role": "Builder",
+      "summary": "An RFID-based voting machine built on a dual-microcontroller setup. It will run the 2027 student council elections; it hasn't been used in an election yet.",
+      "specs": [
+        [
+          "Voter input",
+          "RFID-based"
+        ],
+        [
+          "Architecture",
+          "Dual microcontroller"
+        ],
+        [
+          "Status",
+          "Will run the 2027 student council elections"
+        ]
+      ],
+      "diagrams": [],
+      "subsystems": [
+        [
+          "The hard part",
+          "The hard part wasn't the electronics. It was getting the two processors to agree reliably on a shared state, such as the vote counts."
+        ]
+      ],
+      "decisions": [],
+      "changes": [],
+      "myRole": [],
+      "result": "",
+      "evidence": []
+    },
+    {
+      "id": "pace",
+      "toc": "P.A.C.E. (software)",
+      "label": "Software project",
+      "name": "P.A.C.E.",
+      "subtitle": "Practice And Correct Everyday",
+      "years": "",
+      "team": "",
+      "role": "",
+      "summary": "A web app I built as an SAT practice question bank, with a web interface for practising questions and correcting mistakes daily. It is my only software project.",
+      "specs": [],
+      "diagrams": [],
+      "subsystems": [
+        [
+          "How it was built",
+          "Built with AI-assisted development (Claude Code). I designed the features and workflow and tested it on my own SAT prep."
+        ],
+        [
+          "Availability",
+          "Not publicly available."
+        ]
+      ],
+      "decisions": [],
+      "changes": [],
+      "myRole": [],
+      "result": "",
+      "evidence": []
+    }
+  ],
+  "smallBuilds": [
+    {
+      "name": "IoT station",
+      "text": "ESP32-WROOM-32E streaming DHT11 temperature and humidity readings to Arduino Cloud; an RFID tag triggers an OLED display."
+    },
+    {
+      "name": "Line-follower robots",
+      "text": "Two line-follower robots."
+    },
+    {
+      "name": "RC car",
+      "text": "A remote-control car with no microcontroller."
+    },
+    {
+      "name": "Stopwatch",
+      "text": "A stopwatch."
+    },
+    {
+      "name": "Thermometer",
+      "text": "A thermometer."
+    },
+    {
+      "name": "Light-up spin toy",
+      "text": "A spinning toy that lights up."
+    },
+    {
+      "name": "\"Kind words\" message box",
+      "text": "An LCD message box I built as a Mother's Day gift."
+    }
+  ],
+  "interestsOnPdf": false
 }

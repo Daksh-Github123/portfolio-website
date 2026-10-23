@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Technical Projects | Daksh Singh</title>
+  <meta name="description" content="Engineering case studies: how each system works, the design decisions, what broke and what changed.">
+  <script>document.documentElement.classList.add('js');try{var t=localStorage.getItem('theme');if(t==='dark'||t==='light')document.documentElement.dataset.theme=t;}catch(e){}</script>
+  <link rel="preload" href="/fonts/ibm-plex-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/ibm-plex-sans-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚙️</text></svg>">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<nav class="nav" aria-label="Main">
+  <div class="nav-inner">
+    <a class="nav-brand" href="/">Daksh Singh</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false" aria-controls="navLinks">Menu</button>
+    <div class="nav-links" id="navLinks">
+      <a href="/#projects">Projects</a>
+      <a href="/technical/" class="active" aria-current="page">Technical Projects</a>
+      <a href="/#leadership">Leadership</a>
+      <a href="/#academics">Academics</a>
+      <a href="/#honors">Honors</a>
+    </div>
+    <div class="nav-actions">
+      <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch to dark mode">Dark</button>
+      <a class="btn btn-primary btn-sm" href="/Daksh_Singh_Resume.pdf" download>Resume<span class="hide-sm"> (PDF)</span></a>
+    </div>
+  </div>
+</nav>
+
+<main id="main" class="wrap tp-page">
+  <header class="tp-intro">
+    <h1>Technical Projects</h1>
+    <p>How each system works, the design decisions behind it, what broke and what we changed, and exactly what I did. Awards and placements are on the home page; here each project gets one results line.</p>
+  </header>
+
+  <details class="toc-mobile">
+    <summary>Jump to a project</summary>
+    <ol class="toc-list"><li><a href="#the-orca">The Orca (2026)</a></li><li><a href="#leviathans">Leviathan Mk 1 &amp; Mk 2 (2025)</a></li><li><a href="#blade">BLADE</a></li><li><a href="#wro-car">WRO self-driving car</a></li><li><a href="#nrl-robot">NRL robot</a></li><li><a href="#voting-machine">Electronic voting machine</a></li><li><a href="#pace">P.A.C.E. (software)</a></li><li><a href="#small-builds">Smaller builds</a></li></ol>
+  </details>
+
+  <div class="tp-layout">
+    <aside class="toc" aria-label="Projects on this page">
+      <p class="toc-title">On this page</p>
+      <ol class="toc-list"><li><a href="#the-orca">The Orca (2026)</a></li><li><a href="#leviathans">Leviathan Mk 1 &amp; Mk 2 (2025)</a></li><li><a href="#blade">BLADE</a></li><li><a href="#wro-car">WRO self-driving car</a></li><li><a href="#nrl-robot">NRL robot</a></li><li><a href="#voting-machine">Electronic voting machine</a></li><li><a href="#pace">P.A.C.E. (software)</a></li><li><a href="#small-builds">Smaller builds</a></li></ol>
+    </aside>
+    <div class="tp-content">
+      <section class="tp" id="the-orca" aria-labelledby="the-orca-h">
+        <header class="tp-head">
+          
+          <p class="tp-meta">2026 · The Orcas</p>
+          <h2 id="the-orca-h">The Orca</h2>
+          <p class="role">CTO &amp; Arm Design Lead</p>
+          <p class="tp-summary">Our 2026 underwater ROV, built in about two months for ~$600, against rival budgets of $15,000–20,000.</p>
+        </header>
+        <div class="tp-block">
+          <h3>At a glance</h3>
+          <table class="spec-table"><tbody><tr><th scope="row">Flight controller</th><td>Pixhawk 2.4.8</td></tr><tr><th scope="row">Firmware</th><td>ArduSub (Sub V4.5.7)</td></tr><tr><th scope="row">Configured in</th><td>Mission Planner 1.3.83</td></tr><tr><th scope="row">Frame configuration</th><td>Vectored 6-DOF (FRAME_CONFIG = 2)</td></tr><tr><th scope="row">Propulsion</th><td>6 thrusters</td></tr><tr><th scope="row">Manipulator</th><td>Single-motor gripper</td></tr><tr><th scope="row">Profiling float</th><td>ESP32 · ESP-NOW · syringe buoyancy engine</td></tr><tr><th scope="row">Build time / cost</th><td>~2 months · ~$600</td></tr></tbody></table>
+        </div>
+        <figure class="diagram">
+          <figcaption>The Orca: propulsion control</figcaption>
+          <svg class="dg dg-h" viewBox="0 0 691 60" width="691" style="max-width:100%;height:auto" role="img" aria-labelledby="the-orca-0-h-t the-orca-0-h-d">
+            <title id="the-orca-0-h-t">The Orca: propulsion control</title>
+            <desc id="the-orca-0-h-d">Block diagram: Topside controller (via tether) → Pixhawk 2.4.8 [ArduSub 4.5.7] → ESCs → 6 thrusters [vectored 6-DOF].</desc>
+            <defs><marker id="the-orca-0-h" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="dg-head" d="M0 0L10 5L0 10z"/></marker></defs><rect class="dg-box" x="4" y="11" width="165" height="38" rx="7"/><text class="dg-label" x="86.5" y="34.5" text-anchor="middle">Topside controller</text><line class="dg-edge" x1="171" y1="30" x2="226.4" y2="30" marker-end="url(#the-orca-0-h)"/><text class="dg-edge-label" x="199.2" y="23" text-anchor="middle">tether</text><rect class="dg-box" x="229.4" y="4" width="127" height="52" rx="7"/><text class="dg-label" x="292.9" y="25" text-anchor="middle">Pixhawk 2.4.8</text><text class="dg-sub" x="292.9" y="42" text-anchor="middle">ArduSub 4.5.7</text><line class="dg-edge" x1="358.4" y1="30" x2="409.4" y2="30" marker-end="url(#the-orca-0-h)"/><rect class="dg-box" x="412.4" y="11" width="96" height="38" rx="7"/><text class="dg-label" x="460.4" y="34.5" text-anchor="middle">ESCs</text><line class="dg-edge" x1="510.4" y1="30" x2="561.4" y2="30" marker-end="url(#the-orca-0-h)"/><rect class="dg-box" x="564.4" y="4" width="122" height="52" rx="7"/><text class="dg-label" x="625.4" y="25" text-anchor="middle">6 thrusters</text><text class="dg-sub" x="625.4" y="42" text-anchor="middle">vectored 6-DOF</text>
+          </svg>
+          <svg class="dg dg-v" viewBox="0 0 274 290" width="274" style="max-width:100%;height:auto" role="img" aria-labelledby="the-orca-0-v-t the-orca-0-v-d">
+            <title id="the-orca-0-v-t">The Orca: propulsion control</title>
+            <desc id="the-orca-0-v-d">Block diagram: Topside controller (via tether) → Pixhawk 2.4.8 [ArduSub 4.5.7] → ESCs → 6 thrusters [vectored 6-DOF].</desc>
+            <defs><marker id="the-orca-0-v" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="dg-head" d="M0 0L10 5L0 10z"/></marker></defs><rect class="dg-box" x="54.5" y="4" width="165" height="38" rx="7"/><text class="dg-label" x="137" y="27.5" text-anchor="middle">Topside controller</text><line class="dg-edge" x1="137" y1="44" x2="137" y2="73" marker-end="url(#the-orca-0-v)"/><text class="dg-edge-label" x="145" y="63">tether</text><rect class="dg-box" x="73.5" y="76" width="127" height="52" rx="7"/><text class="dg-label" x="137" y="97" text-anchor="middle">Pixhawk 2.4.8</text><text class="dg-sub" x="137" y="114" text-anchor="middle">ArduSub 4.5.7</text><line class="dg-edge" x1="137" y1="130" x2="137" y2="159" marker-end="url(#the-orca-0-v)"/><rect class="dg-box" x="89" y="162" width="96" height="38" rx="7"/><text class="dg-label" x="137" y="185.5" text-anchor="middle">ESCs</text><line class="dg-edge" x1="137" y1="202" x2="137" y2="231" marker-end="url(#the-orca-0-v)"/><rect class="dg-box" x="76" y="234" width="122" height="52" rx="7"/><text class="dg-label" x="137" y="255" text-anchor="middle">6 thrusters</text><text class="dg-sub" x="137" y="272" text-anchor="middle">vectored 6-DOF</text>
+          </svg>
+        </figure>
+        <figure class="diagram">
+          <figcaption>The Orca: profiling float</figcaption>
+          <svg class="dg dg-h" viewBox="0 0 417 126" width="417" style="max-width:100%;height:auto" role="img" aria-labelledby="the-orca-1-h-t the-orca-1-h-d">
+            <title id="the-orca-1-h-t">The Orca: profiling float</title>
+            <desc id="the-orca-1-h-d">Block diagram: ESP32 [float controller] → outputs: Buoyancy engine [syringe; DC-thruster backup]; Wireless link [ESP-NOW].</desc>
+            <defs><marker id="the-orca-1-h" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="dg-head" d="M0 0L10 5L0 10z"/></marker></defs><rect class="dg-box" x="4" y="37" width="136" height="52" rx="7"/><text class="dg-label" x="72" y="58" text-anchor="middle">ESP32</text><text class="dg-sub" x="72" y="75" text-anchor="middle">float controller</text><line class="dg-edge" x1="142" y1="63" x2="201" y2="30" marker-end="url(#the-orca-1-h)"/><rect class="dg-box" x="204" y="4" width="209" height="52" rx="7"/><text class="dg-label" x="308.5" y="25" text-anchor="middle">Buoyancy engine</text><text class="dg-sub" x="308.5" y="42" text-anchor="middle">syringe; DC-thruster backup</text><line class="dg-edge" x1="142" y1="63" x2="201" y2="96" marker-end="url(#the-orca-1-h)"/><rect class="dg-box" x="204" y="70" width="127" height="52" rx="7"/><text class="dg-label" x="267.5" y="91" text-anchor="middle">Wireless link</text><text class="dg-sub" x="267.5" y="108" text-anchor="middle">ESP-NOW</text>
+          </svg>
+          <svg class="dg dg-v" viewBox="0 0 360 152" width="360" style="max-width:100%;height:auto" role="img" aria-labelledby="the-orca-1-v-t the-orca-1-v-d">
+            <title id="the-orca-1-v-t">The Orca: profiling float</title>
+            <desc id="the-orca-1-v-d">Block diagram: ESP32 [float controller] → outputs: Buoyancy engine [syringe; DC-thruster backup]; Wireless link [ESP-NOW].</desc>
+            <defs><marker id="the-orca-1-v" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="dg-head" d="M0 0L10 5L0 10z"/></marker></defs><rect class="dg-box" x="112" y="4" width="136" height="52" rx="7"/><text class="dg-label" x="180" y="25" text-anchor="middle">ESP32</text><text class="dg-sub" x="180" y="42" text-anchor="middle">float controller</text><line class="dg-edge" x1="180" y1="58" x2="108.5" y2="93" marker-end="url(#the-orca-1-v)"/><rect class="dg-box" x="4" y="96" width="209" height="52" rx="7"/><text class="dg-label" x="108.5" y="117" text-anchor="middle">Buoyancy engine</text><text class="dg-sub" x="108.5" y="134" text-anchor="middle">syringe; DC-thruster backup</text><line class="dg-edge" x1="180" y1="58" x2="292.5" y2="93" marker-end="url(#the-orca-1-v)"/><rect class="dg-box" x="229" y="96" width="127" height="52" rx="7"/><text class="dg-label" x="292.5" y="117" text-anchor="middle">Wireless link</text><text class="dg-sub" x="292.5" y="134" text-anchor="middle">ESP-NOW</text>
+          </svg>
+        </figure>
+        <div class="tp-block">
+          <h3>How it works</h3><h4>Mechanical</h4><p>The manipulator is a single-motor gripper. Its gripping surface is a kitchen sponge combined with M-seal epoxy putty, and we replaced the putty after every run. Sealing the servo motors was a recurring problem: too much sealant jammed the gears, and too little let water in.</p><h4>Electronics and control</h4><p>A Pixhawk 2.4.8 flight controller runs ArduSub (Sub V4.5.7), configured in Mission Planner 1.3.83 for the vectored 6-DOF frame (FRAME_CONFIG = 2) and its six thrusters. We flashed the Pixhawk using Mission Planner's Force Bootloader option.</p><h4>Profiling float</h4><p>A NEMO-style vertical profiling float changes depth with a syringe-based buoyancy engine, with a DC-thruster version as the backup. It runs on an ESP32 and communicates over ESP-NOW.</p>
+        </div>
+        <div class="tp-block">
+          <h3>Design decisions</h3>
+          <ol class="decisions"><li><p class="decision">Sponge plus M-seal epoxy putty as the gripping surface</p><dl><div><dt>Why</dt><dd>3D-printed jaws, sponge alone and putty alone each failed underwater.</dd></div><div><dt>Trade-off</dt><dd>The putty had to be replaced after every run.</dd></div></dl></li><li><p class="decision">A DC-thruster version of the float's buoyancy engine as backup</p><dl><div><dt>Why</dt><dd>A second way to drive the float if the syringe engine failed.</dd></div></dl></li></ol>
+        </div>
+        <div class="tp-block">
+          <h3>What broke and what we changed</h3>
+          <ul class="bullets"><li>Manipulator: we planned a worm-gear jaw with wrist rotation, then dropped it for time and built the single-motor gripper instead.</li><li>Servo waterproofing stayed a recurring problem: too much sealant jammed the gears, and too little let water in.</li><li>Float link: we replaced the float's earlier Bluetooth link with ESP-NOW.</li></ul>
+        </div>
+        <div class="tp-block">
+          <h3>My role</h3>
+          <ul class="bullets"><li>As Arm Design Lead, designed and built The Orca's single-motor gripper.</li><li>As CTO, led the 25-page Technical Documentation Paper (TDP), the company spec sheet and the engineering presentation script.</li></ul>
+        </div>
+        <p class="tp-result"><strong>Result:</strong> India national champions with a national-record 280/375 points; Sharkpedo Legacy Award at the 2026 World Championship.</p>
+        <div class="evidence"><a class="chip" href="https://www.linkedin.com/company/the-orcas/" target="_blank" rel="noopener">Team page <span aria-hidden="true">↗</span></a><a class="chip chip-cert" href="/assets/certificates/2026-mate-rov-worlds-participation.webp" target="_blank" rel="noopener"><span class="visually-hidden">Certificate: </span>2026 World Championship participation certificate</a></div>
+      </section>
+      <section class="tp" id="leviathans" aria-labelledby="leviathans-h">
+        <header class="tp-head">
+          
+          <p class="tp-meta">2025 · Bangalore Bullsharks</p>
+          <h2 id="leviathans-h">Leviathan Mark 1 &amp; Mark 2</h2>
+          <p class="role">Software Lead</p>
+          <p class="tp-summary">Our first two ROVs. Mark 1 competed at India nationals and Mark 2 at the World Championship in Alpena, Michigan.</p>
+        </header>
+        <div class="tp-block">
+          <h3>At a glance</h3>
+          <table class="spec-table"><tbody><tr><th scope="row">Builds</th><td>Mark 1 (India nationals) · Mark 2 (World Championship)</td></tr><tr><th scope="row">Frame</th><td>Largely PVC pipe</td></tr><tr><th scope="row">Cost</th><td>Under $2,000 for both</td></tr></tbody></table>
+        </div>
+        <div class="tp-block">
+          <h3>How it works</h3><h4>Mechanical</h4><p>Both ROVs were built largely from PVC pipe, for under $2,000 combined.</p><h4>Software</h4><p>I owned the code that kept the robot stable in the water.</p>
+        </div>
+        <div class="tp-block">
+          <h3>My role</h3>
+          <ul class="bullets"><li>As Software Lead, owned the code that kept the robot stable in the water.</li></ul>
+        </div>
+        <p class="tp-result"><strong>Result:</strong> India national champions; first Indian team in the Ranger class at the World Championship; US Navy Challenge Coin.</p>
+        <div class="evidence"><a class="chip" href="https://www.linkedin.com/company/the-orcas/" target="_blank" rel="noopener">Team page <span aria-hidden="true">↗</span></a></div>
+      </section>
+      <section class="tp" id="blade" aria-labelledby="blade-h">
+        <header class="tp-head">
+          
+          <p class="tp-meta">2026 · Independent research project</p>
+          <h2 id="blade-h">BLADE<span class="tp-subtitle">Botanical Leaf Analysis &amp; Disease Evaluator</span></h2>
+          <p class="role">Lead Engineer &amp; Co-researcher</p>
+          <p class="tp-summary">A handheld, fully offline crop-disease scanner that classifies a leaf photo, or answers &quot;uncertain&quot; instead of guessing.</p>
+        </header>
+        <div class="tp-block">
+          <h3>At a glance</h3>
+          <table class="spec-table"><tbody><tr><th scope="row">Computer</th><td>Raspberry Pi 4B</td></tr><tr><th scope="row">Camera</th><td>5 MP OV5647</td></tr><tr><th scope="row">Interface</th><td>Touchscreen GUI</td></tr><tr><th scope="row">Power</th><td>Battery</td></tr><tr><th scope="row">Enclosure</th><td>Custom 3D-printed</td></tr><tr><th scope="row">Connectivity</th><td>Fully offline</td></tr><tr><th scope="row">Model</th><td>MobileNetV2, pretrained on PlantVillage</td></tr><tr><th scope="row">Classes</th><td>38 (26 diseases, 12 healthy) · 14 crops</td></tr><tr><th scope="row">Inference</th><td>5-view test-time augmentation</td></tr><tr><th scope="row">Logging</th><td>Every scan to a spreadsheet</td></tr></tbody></table>
+        </div>
+        <figure class="diagram diagram-tall">
+          <figcaption>BLADE: diagnosis pipeline</figcaption>
+          <svg class="dg dg-h" viewBox="0 0 1172 126" width="1172" style="max-width:100%;height:auto" role="img" aria-labelledby="blade-0-h-t blade-0-h-d">
+            <title id="blade-0-h-t">BLADE: diagnosis pipeline</title>
+            <desc id="blade-0-h-d">Block diagram: Camera [OV5647, 5 MP] (via leaf photo) → Input checks [colour · object · face] → 5-view TTA → MobileNetV2 [pretrained] → Thresholds [confidence · margin] → outputs: Touchscreen [diagnosis or &quot;uncertain&quot;]; Spreadsheet log [every scan].</desc>
+            <defs><marker id="blade-0-h" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="dg-head" d="M0 0L10 5L0 10z"/></marker></defs><rect class="dg-box" x="4" y="37" width="109" height="52" rx="7"/><text class="dg-label" x="58.5" y="58" text-anchor="middle">Camera</text><text class="dg-sub" x="58.5" y="75" text-anchor="middle">OV5647, 5 MP</text><line class="dg-edge" x1="115" y1="63" x2="196" y2="63" marker-end="url(#blade-0-h)"/><text class="dg-edge-label" x="156" y="56" text-anchor="middle">leaf photo</text><rect class="dg-box" x="199" y="37" width="176" height="52" rx="7"/><text class="dg-label" x="287" y="58" text-anchor="middle">Input checks</text><text class="dg-sub" x="287" y="75" text-anchor="middle">colour · object · face</text><line class="dg-edge" x1="377" y1="63" x2="428" y2="63" marker-end="url(#blade-0-h)"/><rect class="dg-box" x="431" y="44" width="104" height="38" rx="7"/><text class="dg-label" x="483" y="67.5" text-anchor="middle">5-view TTA</text><line class="dg-edge" x1="537" y1="63" x2="588" y2="63" marker-end="url(#blade-0-h)"/><rect class="dg-box" x="591" y="37" width="112" height="52" rx="7"/><text class="dg-label" x="647" y="58" text-anchor="middle">MobileNetV2</text><text class="dg-sub" x="647" y="75" text-anchor="middle">pretrained</text><line class="dg-edge" x1="705" y1="63" x2="756" y2="63" marker-end="url(#blade-0-h)"/><rect class="dg-box" x="759" y="37" width="156" height="52" rx="7"/><text class="dg-label" x="837" y="58" text-anchor="middle">Thresholds</text><text class="dg-sub" x="837" y="75" text-anchor="middle">confidence · margin</text><line class="dg-edge" x1="917" y1="63" x2="976" y2="30" marker-end="url(#blade-0-h)"/><rect class="dg-box" x="979" y="4" width="189" height="52" rx="7"/><text class="dg-label" x="1073.5" y="25" text-anchor="middle">Touchscreen</text><text class="dg-sub" x="1073.5" y="42" text-anchor="middle">diagnosis or &quot;uncertain&quot;</text><line class="dg-edge" x1="917" y1="63" x2="976" y2="96" marker-end="url(#blade-0-h)"/><rect class="dg-box" x="979" y="70" width="142" height="52" rx="7"/><text class="dg-label" x="1050" y="91" text-anchor="middle">Spreadsheet log</text><text class="dg-sub" x="1050" y="108" text-anchor="middle">every scan</text>
+          </svg>
+          <svg class="dg dg-v" viewBox="0 0 355 482" width="355" style="max-width:100%;height:auto" role="img" aria-labelledby="blade-0-v-t blade-0-v-d">
+            <title id="blade-0-v-t">BLADE: diagnosis pipeline</title>
+            <desc id="blade-0-v-d">Block diagram: Camera [OV5647, 5 MP] (via leaf photo) → Input checks [colour · object · face] → 5-view TTA → MobileNetV2 [pretrained] → Thresholds [confidence · margin] → outputs: Touchscreen [diagnosis or &quot;uncertain&quot;]; Spreadsheet log [every scan].</desc>
+            <defs><marker id="blade-0-v" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="dg-head" d="M0 0L10 5L0 10z"/></marker></defs><rect class="dg-box" x="123" y="4" width="109" height="52" rx="7"/><text class="dg-label" x="177.5" y="25" text-anchor="middle">Camera</text><text class="dg-sub" x="177.5" y="42" text-anchor="middle">OV5647, 5 MP</text><line class="dg-edge" x1="177.5" y1="58" x2="177.5" y2="87" marker-end="url(#blade-0-v)"/><text class="dg-edge-label" x="185.5" y="77">leaf photo</text><rect class="dg-box" x="89.5" y="90" width="176" height="52" rx="7"/><text class="dg-label" x="177.5" y="111" text-anchor="middle">Input checks</text><text class="dg-sub" x="177.5" y="128" text-anchor="middle">colour · object · face</text><line class="dg-edge" x1="177.5" y1="144" x2="177.5" y2="173" marker-end="url(#blade-0-v)"/><rect class="dg-box" x="125.5" y="176" width="104" height="38" rx="7"/><text class="dg-label" x="177.5" y="199.5" text-anchor="middle">5-view TTA</text><line class="dg-edge" x1="177.5" y1="216" x2="177.5" y2="245" marker-end="url(#blade-0-v)"/><rect class="dg-box" x="121.5" y="248" width="112" height="52" rx="7"/><text class="dg-label" x="177.5" y="269" text-anchor="middle">MobileNetV2</text><text class="dg-sub" x="177.5" y="286" text-anchor="middle">pretrained</text><line class="dg-edge" x1="177.5" y1="302" x2="177.5" y2="331" marker-end="url(#blade-0-v)"/><rect class="dg-box" x="99.5" y="334" width="156" height="52" rx="7"/><text class="dg-label" x="177.5" y="355" text-anchor="middle">Thresholds</text><text class="dg-sub" x="177.5" y="372" text-anchor="middle">confidence · margin</text><line class="dg-edge" x1="177.5" y1="388" x2="98.5" y2="423" marker-end="url(#blade-0-v)"/><rect class="dg-box" x="4" y="426" width="189" height="52" rx="7"/><text class="dg-label" x="98.5" y="447" text-anchor="middle">Touchscreen</text><text class="dg-sub" x="98.5" y="464" text-anchor="middle">diagnosis or &quot;uncertain&quot;</text><line class="dg-edge" x1="177.5" y1="388" x2="280" y2="423" marker-end="url(#blade-0-v)"/><rect class="dg-box" x="209" y="426" width="142" height="52" rx="7"/><text class="dg-label" x="280" y="447" text-anchor="middle">Spreadsheet log</text><text class="dg-sub" x="280" y="464" text-anchor="middle">every scan</text>
+          </svg>
+        </figure>
+        <div class="tp-block">
+          <h3>How it works</h3><h4>Hardware</h4><p>A Raspberry Pi 4B with a 5 MP OV5647 camera, a touchscreen GUI and a battery, in a custom 3D-printed enclosure. Everything runs offline.</p><h4>Software pipeline</h4><p>Input checks run first: a plant-colour check, an object filter, and a face/privacy filter. A pretrained MobileNetV2 (trained on PlantVillage) then classifies the leaf into 38 classes (26 diseases, 12 healthy states) across 14 crops, combining five augmented views of each image (test-time augmentation). Confidence and margin thresholds decide whether to show a diagnosis or answer &quot;uncertain&quot;. Every scan is logged to a spreadsheet.</p><h4>Study design</h4><p>The study photographs the same physical leaves while changing one variable at a time: background, framing and lighting. It compares lab-to-field accuracy (PlantVillage → PlantDoc) and measures image statistics: colour saturation, border edge density and leaf fill fraction.</p>
+        </div>
+        <div class="tp-block">
+          <h3>Design decisions</h3>
+          <ol class="decisions"><li><p class="decision">Confidence and margin thresholds that can answer &quot;uncertain&quot;</p><dl><div><dt>Why</dt><dd>A wrong diagnosis is worse than no diagnosis.</dd></div><div><dt>Trade-off</dt><dd>Some scans end without a diagnosis.</dd></div></dl></li><li><p class="decision">Input checks before the model sees the image</p><dl><div><dt>Why</dt><dd>Only plant images reach the classifier, and the face filter protects privacy.</dd></div></dl></li><li><p class="decision">Five augmented views per image (test-time augmentation)</p><dl><div><dt>Trade-off</dt><dd>Five model passes per scan instead of one.</dd></div></dl></li></ol>
+        </div>
+        <div class="tp-block">
+          <h3>What broke and what we changed</h3>
+          <ul class="bullets"><li>The original camera's board shifted inside the case. I swapped the camera and reworked the internal layout.</li><li>I ran a full software audit and put the code under Git version control with a restore point.</li><li>Speed: I added per-stage timing, moved logging to the background and batched inference. Quantized TFLite is in progress.</li></ul>
+        </div>
+        <div class="tp-block">
+          <h3>My role</h3>
+          <ul class="bullets"><li>Rebuilt the device: camera swap and a reworked internal layout.</li><li>Audited the software, added Git version control, instrumented per-stage timing and optimized speed.</li><li>Redesigned the study as a controlled experiment.</li></ul>
+        </div>
+        <p class="tp-result"><strong>Result:</strong> Paper under review.</p>
+        
+      </section>
+      <section class="tp" id="wro-car" aria-labelledby="wro-car-h">
+        <header class="tp-head">
+          
+          <p class="tp-meta">2024, 2025 · 3-person team (2025)</p>
+          <h2 id="wro-car-h">WRO Future Engineers self-driving car</h2>
+          <p class="role">Team Member (2024) · Team Lead (2025)</p>
+          
+        </header>
+        <div class="tp-task">
+          <h3>The task</h3><p>The car must be fully autonomous: no remote control, and radios and Wi-Fi off during runs. It starts with a single button press.</p><p>The arena is a 3 × 3 m track with walls. <strong>Open Challenge:</strong> 3 laps with a randomized driving direction, starting position and inner-wall placement, without touching the walls.</p><p><strong>Obstacle Challenge:</strong> 3 laps around red and green pillars (pass red on the right, green on the left). The last pillar of lap 2 decides whether lap 3 continues or reverses direction. Then the car finds a magenta-marked parking lot and parallel parks. Moving a pillar costs points, and each run has a 3-minute limit.</p><p>Vehicle limits: 300 × 200 × 300 mm and 1.5 kg; four wheels, one driving axle and one steering actuator. Car-style steering is required; differential-drive steering is banned.</p>
+          <p class="tp-source">Source: <a href="https://delta.ut.ee/sites/default/files/2024-11/WRO-2024-Future-Engineers-Self-Driving-Cars-General-Rules.pdf" target="_blank" rel="noopener">WRO Future Engineers General Rules <span aria-hidden="true">↗</span></a></p>
+        </div>
+        <div class="tp-block">
+          <h3>At a glance</h3>
+          <table class="spec-table"><tbody><tr><th scope="row">Computer</th><td>Raspberry Pi</td></tr><tr><th scope="row">Vision</th><td>OpenCV colour detection (Python)</td></tr><tr><th scope="row">Detection</th><td>Contour analysis · size-threshold filtering</td></tr><tr><th scope="row">Steering</th><td>Ackermann</td></tr><tr><th scope="row">Drive</th><td>Rear drive motor</td></tr><tr><th scope="row">Differential</th><td>Lego (2024) · custom, from an RC truck (2025)</td></tr></tbody></table>
+        </div>
+        <figure class="diagram">
+          <figcaption>WRO car: perception to actuation</figcaption>
+          <svg class="dg dg-h" viewBox="0 0 503 126" width="503" style="max-width:100%;height:auto" role="img" aria-labelledby="wro-car-0-h-t wro-car-0-h-d">
+            <title id="wro-car-0-h-t">WRO car: perception to actuation</title>
+            <desc id="wro-car-0-h-d">Block diagram: Camera → Raspberry Pi [Python · OpenCV] → outputs: Steering [Ackermann]; Rear drive motor [via differential].</desc>
+            <defs><marker id="wro-car-0-h" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="dg-head" d="M0 0L10 5L0 10z"/></marker></defs><rect class="dg-box" x="4" y="44" width="96" height="38" rx="7"/><text class="dg-label" x="52" y="67.5" text-anchor="middle">Camera</text><line class="dg-edge" x1="102" y1="63" x2="153" y2="63" marker-end="url(#wro-car-0-h)"/><rect class="dg-box" x="156" y="37" width="129" height="52" rx="7"/><text class="dg-label" x="220.5" y="58" text-anchor="middle">Raspberry Pi</text><text class="dg-sub" x="220.5" y="75" text-anchor="middle">Python · OpenCV</text><line class="dg-edge" x1="287" y1="63" x2="346" y2="30" marker-end="url(#wro-car-0-h)"/><rect class="dg-box" x="349" y="4" width="96" height="52" rx="7"/><text class="dg-label" x="397" y="25" text-anchor="middle">Steering</text><text class="dg-sub" x="397" y="42" text-anchor="middle">Ackermann</text><line class="dg-edge" x1="287" y1="63" x2="346" y2="96" marker-end="url(#wro-car-0-h)"/><rect class="dg-box" x="349" y="70" width="150" height="52" rx="7"/><text class="dg-label" x="424" y="91" text-anchor="middle">Rear drive motor</text><text class="dg-sub" x="424" y="108" text-anchor="middle">via differential</text>
+          </svg>
+          <svg class="dg dg-v" viewBox="0 0 270 224" width="270" style="max-width:100%;height:auto" role="img" aria-labelledby="wro-car-0-v-t wro-car-0-v-d">
+            <title id="wro-car-0-v-t">WRO car: perception to actuation</title>
+            <desc id="wro-car-0-v-d">Block diagram: Camera → Raspberry Pi [Python · OpenCV] → outputs: Steering [Ackermann]; Rear drive motor [via differential].</desc>
+            <defs><marker id="wro-car-0-v" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="dg-head" d="M0 0L10 5L0 10z"/></marker></defs><rect class="dg-box" x="87" y="4" width="96" height="38" rx="7"/><text class="dg-label" x="135" y="27.5" text-anchor="middle">Camera</text><line class="dg-edge" x1="135" y1="44" x2="135" y2="73" marker-end="url(#wro-car-0-v)"/><rect class="dg-box" x="70.5" y="76" width="129" height="52" rx="7"/><text class="dg-label" x="135" y="97" text-anchor="middle">Raspberry Pi</text><text class="dg-sub" x="135" y="114" text-anchor="middle">Python · OpenCV</text><line class="dg-edge" x1="135" y1="130" x2="52" y2="165" marker-end="url(#wro-car-0-v)"/><rect class="dg-box" x="4" y="168" width="96" height="52" rx="7"/><text class="dg-label" x="52" y="189" text-anchor="middle">Steering</text><text class="dg-sub" x="52" y="206" text-anchor="middle">Ackermann</text><line class="dg-edge" x1="135" y1="130" x2="191" y2="165" marker-end="url(#wro-car-0-v)"/><rect class="dg-box" x="116" y="168" width="150" height="52" rx="7"/><text class="dg-label" x="191" y="189" text-anchor="middle">Rear drive motor</text><text class="dg-sub" x="191" y="206" text-anchor="middle">via differential</text>
+          </svg>
+        </figure>
+        <div class="tp-block">
+          <h3>How it works</h3><h4>Vision</h4><p>Python with OpenCV colour detection finds the red and green pillars, using contour analysis and size-threshold filtering.</p><h4>Drivetrain</h4><p>Ackermann steering and a rear drive motor. 2024 used a store-bought Lego differential; in 2025 we built a custom differential from a disassembled RC truck and its single large motor.</p>
+        </div>
+        <div class="tp-block">
+          <h3>Design decisions</h3>
+          <ol class="decisions"><li><p class="decision">Ackermann steering</p><dl><div><dt>Why</dt><dd>The rules require car-style steering with one steering actuator; differential-drive steering is banned.</dd></div></dl></li><li><p class="decision">Contour analysis with size-threshold filtering on colour detections</p><dl><div><dt>Why</dt><dd>Pillars are identified by colour, and the size threshold drops detections too small to be a pillar.</dd></div></dl></li></ol>
+        </div>
+        <div class="tp-block">
+          <h3>What broke and what we changed</h3>
+          <ul class="bullets"><li>2024 → 2025: replaced the store-bought Lego differential with a custom differential built from a disassembled RC truck and its single large motor.</li><li>Duct tape proved too weak to hold the custom differential, so a teammate modelled custom structural supports in CAD.</li></ul>
+        </div>
+        <div class="tp-block">
+          <h3>My role</h3>
+          <ul class="bullets"><li>2024 (team member): mostly physical work, including soldering and testing.</li><li>2025 (team lead): led the 3-person team through the custom-differential rebuild.</li></ul>
+        </div>
+        <p class="tp-result"><strong>Result:</strong> 19th of 40+ at the 2025 nationals.</p>
+        <div class="evidence"><a class="chip chip-cert" href="/assets/certificates/2025-wro-future-engineers.webp" target="_blank" rel="noopener"><span class="visually-hidden">Certificate: </span>2025 nationals certificate</a></div>
+      </section>
+      <section class="tp" id="nrl-robot" aria-labelledby="nrl-robot-h">
+        <header class="tp-head">
+          
+          <p class="tp-meta">2025, 2026 · National Robotics League</p>
+          <h2 id="nrl-robot-h">National Robotics League robot</h2>
+          <p class="role">Team Captain</p>
+          <p class="tp-summary">The 2025 robot was RC-driven with a gripper and a servo arm, plus an autonomous challenge mode that I designed.</p>
+        </header>
+        <div class="tp-block">
+          <h3>At a glance</h3>
+          <table class="spec-table"><tbody><tr><th scope="row">Controller</th><td>ESP32</td></tr><tr><th scope="row">Sensors</th><td>Infrared</td></tr><tr><th scope="row">Control</th><td>PID</td></tr><tr><th scope="row">Modes</th><td>RC driving (gripper, servo arm) · autonomous</td></tr></tbody></table>
+        </div>
+        <figure class="diagram">
+          <figcaption>NRL robot: autonomous mode</figcaption>
+          <svg class="dg dg-h" viewBox="0 0 534 60" width="534" style="max-width:100%;height:auto" role="img" aria-labelledby="nrl-robot-0-h-t nrl-robot-0-h-d">
+            <title id="nrl-robot-0-h-t">NRL robot: autonomous mode</title>
+            <desc id="nrl-robot-0-h-d">Block diagram: Infrared sensors → ESP32 [PID control] → Drive [path self-correction].</desc>
+            <defs><marker id="nrl-robot-0-h" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="dg-head" d="M0 0L10 5L0 10z"/></marker></defs><rect class="dg-box" x="4" y="11" width="150" height="38" rx="7"/><text class="dg-label" x="79" y="34.5" text-anchor="middle">Infrared sensors</text><line class="dg-edge" x1="156" y1="30" x2="207" y2="30" marker-end="url(#nrl-robot-0-h)"/><rect class="dg-box" x="210" y="4" width="102" height="52" rx="7"/><text class="dg-label" x="261" y="25" text-anchor="middle">ESP32</text><text class="dg-sub" x="261" y="42" text-anchor="middle">PID control</text><line class="dg-edge" x1="314" y1="30" x2="365" y2="30" marker-end="url(#nrl-robot-0-h)"/><rect class="dg-box" x="368" y="4" width="162" height="52" rx="7"/><text class="dg-label" x="449" y="25" text-anchor="middle">Drive</text><text class="dg-sub" x="449" y="42" text-anchor="middle">path self-correction</text>
+          </svg>
+          <svg class="dg dg-v" viewBox="0 0 170 218" width="170" style="max-width:100%;height:auto" role="img" aria-labelledby="nrl-robot-0-v-t nrl-robot-0-v-d">
+            <title id="nrl-robot-0-v-t">NRL robot: autonomous mode</title>
+            <desc id="nrl-robot-0-v-d">Block diagram: Infrared sensors → ESP32 [PID control] → Drive [path self-correction].</desc>
+            <defs><marker id="nrl-robot-0-v" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="dg-head" d="M0 0L10 5L0 10z"/></marker></defs><rect class="dg-box" x="10" y="4" width="150" height="38" rx="7"/><text class="dg-label" x="85" y="27.5" text-anchor="middle">Infrared sensors</text><line class="dg-edge" x1="85" y1="44" x2="85" y2="73" marker-end="url(#nrl-robot-0-v)"/><rect class="dg-box" x="34" y="76" width="102" height="52" rx="7"/><text class="dg-label" x="85" y="97" text-anchor="middle">ESP32</text><text class="dg-sub" x="85" y="114" text-anchor="middle">PID control</text><line class="dg-edge" x1="85" y1="130" x2="85" y2="159" marker-end="url(#nrl-robot-0-v)"/><rect class="dg-box" x="4" y="162" width="162" height="52" rx="7"/><text class="dg-label" x="85" y="183" text-anchor="middle">Drive</text><text class="dg-sub" x="85" y="200" text-anchor="middle">path self-correction</text>
+          </svg>
+        </figure>
+        <div class="tp-block">
+          <h3>How it works</h3><h4>Autonomous mode</h4><p>An ESP32 reads infrared sensors and runs PID control, so the robot uses its sensors to self-correct its path.</p><h4>2026 season</h4><p>Leading 10 students (Grades 7 and 9). Regionals in November 2026, nationals in December 2026.</p>
+        </div>
+        <div class="tp-block">
+          <h3>Design decisions</h3>
+          <ol class="decisions"><li><p class="decision">PID control on the infrared sensor readings</p><dl><div><dt>Why</dt><dd>It lets the robot correct its own path in autonomous mode.</dd></div></dl></li></ol>
+        </div>
+        <div class="tp-block">
+          <h3>My role</h3>
+          <ul class="bullets"><li>As Team Captain, designed the robot's full autonomous mode (ESP32, infrared sensors, PID control).</li><li>2026: leading a team of 10 students.</li></ul>
+        </div>
+        <p class="tp-result"><strong>Result:</strong> 20th of 50 in division (2025). 2026 results to come.</p>
+        
+      </section>
+      <section class="tp" id="voting-machine" aria-labelledby="voting-machine-h">
+        <header class="tp-head">
+          
+          <p class="tp-meta">2025–26 · Tech for Change Robotics Club</p>
+          <h2 id="voting-machine-h">Electronic voting machine</h2>
+          <p class="role">Builder</p>
+          <p class="tp-summary">An RFID-based voting machine built on a dual-microcontroller setup. It will run the 2027 student council elections; it hasn't been used in an election yet.</p>
+        </header>
+        <div class="tp-block">
+          <h3>At a glance</h3>
+          <table class="spec-table"><tbody><tr><th scope="row">Voter input</th><td>RFID-based</td></tr><tr><th scope="row">Architecture</th><td>Dual microcontroller</td></tr><tr><th scope="row">Status</th><td>Will run the 2027 student council elections</td></tr></tbody></table>
+        </div>
+        <div class="tp-block">
+          <h3>How it works</h3><h4>The hard part</h4><p>The hard part wasn't the electronics. It was getting the two processors to agree reliably on a shared state, such as the vote counts.</p>
+        </div>
+        
+        
+      </section>
+      <section class="tp" id="pace" aria-labelledby="pace-h">
+        <header class="tp-head">
+          <p class="tp-label">Software project</p>
+          
+          <h2 id="pace-h">P.A.C.E.<span class="tp-subtitle">Practice And Correct Everyday</span></h2>
+          
+          <p class="tp-summary">A web app I built as an SAT practice question bank, with a web interface for practising questions and correcting mistakes daily. It is my only software project.</p>
+        </header>
+        <div class="tp-block">
+          <h3>How it works</h3><h4>How it was built</h4><p>Built with AI-assisted development (Claude Code). I designed the features and workflow and tested it on my own SAT prep.</p><h4>Availability</h4><p>Not publicly available.</p>
+        </div>
+        
+        
+      </section>
+      <section class="tp" id="small-builds" aria-labelledby="small-builds-h">
+        <header class="tp-head"><h2 id="small-builds-h">Smaller builds</h2></header>
+        <div class="small-builds">
+          <div class="small-build"><h3>IoT station</h3><p>ESP32-WROOM-32E streaming DHT11 temperature and humidity readings to Arduino Cloud; an RFID tag triggers an OLED display.</p></div>
+          <div class="small-build"><h3>Line-follower robots</h3><p>Two line-follower robots.</p></div>
+          <div class="small-build"><h3>RC car</h3><p>A remote-control car with no microcontroller.</p></div>
+          <div class="small-build"><h3>Stopwatch</h3><p>A stopwatch.</p></div>
+          <div class="small-build"><h3>Thermometer</h3><p>A thermometer.</p></div>
+          <div class="small-build"><h3>Light-up spin toy</h3><p>A spinning toy that lights up.</p></div>
+          <div class="small-build"><h3>&quot;Kind words&quot; message box</h3><p>An LCD message box I built as a Mother's Day gift.</p></div>
+        </div>
+      </section>
+    </div>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-links">
+      <a href="mailto:mailtodakshsingh@gmail.com">mailtodakshsingh@gmail.com</a>
+      <a href="https://www.linkedin.com/in/daksh-singh-innovator/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://www.linkedin.com/company/the-orcas/" target="_blank" rel="noopener">The Orcas (team page)</a>
+      <a href="/technical/">Technical Projects</a>
+      <a href="/resume/">Resume (web version)</a>
+    </div>
+    <p>Last updated: October 2026</p>
+  </div>
+</footer>
+
+<script src="/js/main.js" defer></script>
+</body>
+</html>

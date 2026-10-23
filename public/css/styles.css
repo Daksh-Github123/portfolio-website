@@ -229,3 +229,92 @@ a:hover { text-decoration-thickness: 2px; }
   .card, .headline-facts li { box-shadow: none; break-inside: avoid; }
   a { color: #000; text-decoration: none; }
 }
+
+/* ---------- Technical details link (home cards) ---------- */
+.tech-link { display: inline-block; margin-top: 14px; font-weight: 600; font-size: .9rem; text-decoration: none; }
+.tech-link:hover { text-decoration: underline; }
+
+/* ---------- Technical Projects page ---------- */
+.tp-intro { padding: 48px 0 8px; }
+.tp-intro h1 { font-size: clamp(2rem, 5vw, 2.6rem); letter-spacing: -.02em; }
+.tp-intro p { margin-top: 12px; max-width: 66ch; color: var(--muted); font-size: 1.05rem; }
+
+.tp-layout { display: grid; grid-template-columns: 210px minmax(0, 1fr); gap: 40px; margin-top: 32px; align-items: start; }
+.toc { position: sticky; top: 76px; }
+.toc-title { font-size: .75rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; }
+.toc-list { list-style: none; margin: 0; padding: 0; }
+.toc-list a { display: block; padding: 6px 0 6px 12px; border-left: 2px solid var(--border); color: var(--text); text-decoration: none; font-size: .9rem; }
+.toc-list a:hover { color: var(--teal); border-left-color: var(--teal); }
+.toc-list a.active { color: var(--teal); border-left-color: var(--teal); font-weight: 600; }
+.toc-mobile { display: none; }
+
+.tp { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 28px 30px; box-shadow: var(--shadow); margin-bottom: 24px; scroll-margin-top: 76px; }
+.tp-label { display: inline-block; font-size: .75rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--accent); margin-bottom: 6px; }
+.tp-meta { font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: .82rem; color: var(--muted); }
+.tp-head h2 { font-size: 1.55rem; margin-top: 4px; }
+.tp-subtitle { display: block; font-size: 1rem; font-weight: 500; color: var(--muted); margin-top: 4px; }
+.tp-summary { margin-top: 12px; max-width: 70ch; }
+.tp-block { margin-top: 26px; }
+.tp h3 { font-size: .78rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; }
+.tp h4 { font-size: 1rem; color: var(--heading); margin: 14px 0 4px; }
+.tp-block p { max-width: 72ch; }
+.tp-task { margin-top: 22px; background: var(--teal-soft); border-radius: 10px; padding: 16px 18px; }
+.tp-task p + p { margin-top: 8px; }
+.tp-source { font-size: .88rem; }
+.tp-result { margin-top: 24px; padding-top: 14px; border-top: 1px solid var(--border); }
+.tp .evidence { margin-top: 12px; }
+
+.spec-table { width: 100%; border-collapse: collapse; font-size: .92rem; }
+.spec-table th, .spec-table td { text-align: left; padding: 8px 0; border-bottom: 1px solid var(--border); vertical-align: top; }
+.spec-table th { width: 38%; font-weight: 500; color: var(--muted); padding-right: 16px; }
+.spec-table td { font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: .86rem; color: var(--heading); }
+.spec-table tr:last-child th, .spec-table tr:last-child td { border-bottom: none; }
+
+.diagram { margin: 26px 0 0; padding: 18px; border: 1px solid var(--border); border-radius: 10px; background: var(--bg); overflow-x: auto; }
+.diagram figcaption { font-size: .82rem; font-weight: 600; color: var(--muted); margin-bottom: 12px; }
+.dg { display: block; margin: 0 auto; }
+.dg-v { display: none; }
+.dg-box { fill: var(--surface); stroke: var(--teal); stroke-width: 1.5; }
+.dg-label { fill: var(--heading); font-family: 'IBM Plex Sans', sans-serif; font-size: 13px; font-weight: 600; }
+.dg-sub { fill: var(--muted); font-family: 'IBM Plex Mono', monospace; font-size: 11px; }
+.dg-edge { stroke: var(--muted); stroke-width: 1.5; }
+.dg-head { fill: var(--muted); }
+.dg-edge-label { fill: var(--teal); font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; }
+
+.decisions { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
+.decisions li { border: 1px solid var(--border); border-radius: 8px; padding: 12px 14px; }
+.decision { font-weight: 600; color: var(--heading); }
+.decisions dl { margin: 6px 0 0; display: grid; gap: 4px; }
+.decisions dl > div { display: grid; grid-template-columns: 82px minmax(0, 1fr); gap: 10px; }
+.decisions dt { font-size: .8rem; font-weight: 600; text-transform: uppercase; letter-spacing: .06em; color: var(--teal); padding-top: 2px; }
+.decisions dd { margin: 0; }
+
+.small-builds { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin-top: 16px; }
+.small-build { border: 1px solid var(--border); border-radius: 8px; padding: 12px 14px; }
+.small-build h3 { font-size: .95rem; text-transform: none; letter-spacing: 0; color: var(--heading); margin-bottom: 4px; }
+.small-build p { font-size: .9rem; color: var(--muted); }
+
+@media (max-width: 860px) {
+  .tp-layout { grid-template-columns: 1fr; gap: 0; }
+  .toc { display: none; }
+  .toc-mobile { display: block; margin-top: 20px; border: 1px solid var(--border); border-radius: 10px; background: var(--surface); padding: 12px 16px; position: sticky; top: 64px; z-index: 10; }
+  .toc-mobile summary { cursor: pointer; font-weight: 600; color: var(--heading); }
+  .toc-mobile .toc-list { margin-top: 8px; }
+  .tp-layout { margin-top: 20px; }
+  .small-builds { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+  .dg-h { display: none; }
+  .dg-v { display: block; }
+  .tp { padding: 20px 18px; }
+  .decisions dl > div { grid-template-columns: 1fr; gap: 0; }
+  .spec-table th { width: 44%; }
+  .small-builds { grid-template-columns: 1fr; }
+}
+@media print {
+  .toc, .toc-mobile, .tech-link { display: none !important; }
+  .tp-layout { grid-template-columns: 1fr; }
+  .tp { box-shadow: none; break-inside: avoid-page; }
+}
+.diagram-tall .dg-h { display: none; }
+.diagram-tall .dg-v { display: block; }
