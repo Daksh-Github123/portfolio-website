@@ -1,46 +1,42 @@
 # Daksh Singh — Portfolio Website
 
-A clean, single-page portfolio site that replaces the paper resume for US university
-applications (Mechanical Engineering). Wherever a resume would say "link to
-certificate / website / photos," the file is embedded on this site directly.
+Portfolio site and downloadable resume for US university applications (Mechanical Engineering).
 
-## Structure
+**Live URL (in submitted applications — never rename or remove):**
+https://portfolio-website-gamma-ivory-77.vercel.app
 
-```
-index.html              Single-page site (all sections)
-css/styles.css          Styles — no external dependencies, print-friendly
-js/main.js              Active-nav highlighting only
-assets/certificates/    Drop award/certificate files here (see its README)
-assets/photos/          Drop team/bot/event photos here (see its README)
-```
+## How it works
 
-## Viewing locally
-
-It's a static site — just open `index.html` in a browser, or:
+All content lives in one file, `data/resume.json`. Both the website and the PDF resume
+are generated from it, so they can't disagree.
 
 ```
-python3 -m http.server 8000   # then visit http://localhost:8000
+data/resume.json          Single source of truth for every fact on the site and in the PDF
+scripts/build.mjs         Renders public/index.html and public/resume/index.html
+scripts/resume-pdf.mjs    Renders /resume to public/Daksh_Singh_Resume.pdf (headless Chromium)
+scripts/redact_certs.py   Renders certificate PDFs to WebP with signatures / ID codes blurred
+public/                   Everything Vercel serves (and nothing else)
+source/certificates/      Original certificate PDFs (not deployed)
 ```
 
-## Deploying
+## Updating content
 
-Static site — no build step. Two easy options:
+```
+npm install
+npm run resume:pdf      # rebuilds the site AND regenerates the PDF
+```
 
-### Vercel (recommended — hosts the certificate PDFs too)
-1. Go to vercel.com → **Add New… → Project → Import Git Repository**.
-2. Select `Daksh-Github123/portfolio-website`, branch `claude/daksh-portfolio-site-i0r0eo`.
-3. Framework preset: **Other**. Build command: none. Output directory: `./` (root).
-4. Deploy. The certificate PDFs under `assets/certificates/` are served automatically.
+Commit everything in `public/` (including the PDF). Vercel serves `public/` as-is; there is no
+build step at deploy time, so the PDF can never fail at request time.
 
-(Programmatic deploy from this session was blocked by a Vercel "permission to create a
-project" error — a team/role restriction on the connected account. Importing from the
-dashboard uses your own account permissions and avoids it.)
+## Deploying safely
 
-### GitHub Pages
-Enable Pages on this repo/branch, root folder. Also zero-config.
+Production deploys from `claude/daksh-portfolio-site-i0r0eo`. Do work on a separate branch, which
+gives a Vercel preview URL; merge into the production branch only after Daksh approves.
 
-## Data provenance
+## Adding a certificate
 
-Every fact traces to the Notion "Activities & Honors" database and "Academics &
-Scores" page, or to Daksh's direct answers. Items still awaiting Daksh's input are
-marked inline with an amber **flag** and listed in `GAPS.md`.
+1. Put the original PDF in `source/certificates/`.
+2. Add its blur regions (signatures, QR/ID codes) to `scripts/redact_certs.py` and run
+   `python3 scripts/redact_certs.py source/certificates public/assets/certificates /tmp/certs`.
+3. Reference the `.webp` from `data/resume.json`.

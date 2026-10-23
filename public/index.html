@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daksh Singh | Mechanical Engineering Portfolio</title>
+  <meta name="description" content="Mechanical engineering applicant, Class of 2027. Inventure Academy, Bengaluru.">
+  <script>document.documentElement.classList.add('js');try{var t=localStorage.getItem('theme');if(t==='dark'||t==='light')document.documentElement.dataset.theme=t;}catch(e){}</script>
+    <link rel="preload" href="/fonts/ibm-plex-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/fonts/ibm-plex-sans-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚙️</text></svg>">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<nav class="nav" aria-label="Main">
+  <div class="nav-inner">
+    <a class="nav-brand" href="#top">Daksh Singh</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false" aria-controls="navLinks">Menu</button>
+    <div class="nav-links" id="navLinks">
+      <a href="#projects">Projects</a>
+      <a href="#leadership">Leadership</a>
+      <a href="#academics">Academics</a>
+      <a href="#honors">Honors</a>
+    </div>
+    <div class="nav-actions">
+      <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch to dark mode">Dark</button>
+      <a class="btn btn-primary btn-sm" href="/Daksh_Singh_Resume.pdf" download>Resume<span class="hide-sm"> (PDF)</span></a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <h1>Daksh Singh</h1>
+    <p class="identity">Mechanical engineering applicant, Class of 2027. Inventure Academy, Bengaluru.</p>
+    <p class="bio">I build robots that have to work in real conditions: underwater ROVs, a handheld crop-disease scanner, and self-driving cars. I want to study mechanical engineering, work in industry on robots that operate outside the lab, and later start a hardware company.</p>
+    <ul class="headline-facts">
+      <li><span class="fact-key">1 of ~120</span><span class="fact-text">Sharkpedo Legacy Award, MATE ROV World Championship 2026. The only team to receive it.</span></li>
+      <li><span class="fact-key">2025 &amp; 2026</span><span class="fact-text">India national champions, MATE ROV. National-record 280/375 in 2026.</span></li>
+      <li><span class="fact-key">First</span><span class="fact-text">Indian team to compete in the Ranger class at the MATE ROV World Championship (2025).</span></li>
+      <li><span class="fact-key">~$600</span><span class="fact-text">Build cost of The Orca, against rival budgets of $15,000–20,000.</span></li>
+    </ul>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="/Daksh_Singh_Resume.pdf" download>Download resume (PDF)</a>
+      <a class="btn btn-secondary" href="#projects">View projects</a>
+    </div>
+  </div>
+</header>
+
+<main id="main" class="wrap">
+
+  <section id="projects" class="section">
+    <details class="collapsible" open>
+      <summary class="section-head"><h2>Projects</h2><span class="chevron" aria-hidden="true"></span></summary>
+      <div class="collapsible-body">
+      <div class="cards">
+        <article class="card card-flagship" id="mate-rov">
+          
+          <header class="card-head">
+            <h3>MATE ROV: Underwater Robotics</h3>
+            <span class="dates">2025–26</span>
+          </header>
+          <p class="org">Bangalore Bullsharks (2025), now The Orcas (2026). One team, same members. Self-funded and student-run.</p>
+          <p class="role">CTO &amp; Arm Design Lead (2026) · Software Lead (2025)</p>
+          <p class="result">India national champions in 2025 and 2026, and the only team of ~120 to receive the Sharkpedo Legacy Award at the 2026 World Championship.</p>
+          <ul class="bullets"><li><strong>2025:</strong> No prior competition experience. Our first two ROVs, Leviathan Mark 1 (India nationals) and Leviathan Mark 2 (Worlds), were built for under $2,000 combined. We won India nationals, then competed at the World Championship in Alpena, Michigan, USA as the first Indian team in the Ranger class. Judges awarded us the US Navy Challenge Coin (~4 of ~120 teams). We placed 36th.</li><li><strong>2026:</strong> We built The Orca in about two months for ~$600, against rival budgets of $15,000–20,000. India national champions with a national-record 280/375 points. At the World Championship in Canada, we were the only team of ~120 to receive the Sharkpedo Legacy Award.</li><li>As Arm Design Lead, I designed the manipulator arm. The Orca competed with a single-motor gripper.</li></ul>
+          <p class="spec">Pixhawk 2.4.8 · ArduSub · 6 thrusters, vectored 6-DOF · ESP32 profiling float over ESP-NOW</p>
+          <div class="evidence"><a class="chip" href="https://www.linkedin.com/company/the-orcas/" target="_blank" rel="noopener"><span class="visually-hidden"></span>Team page <span aria-hidden="true">↗</span></a><a class="chip chip-cert" href="/assets/certificates/2026-mate-rov-worlds-participation.webp" target="_blank" rel="noopener"><span class="visually-hidden">Certificate: </span>2026 World Championship certificate</a></div>
+        </article>
+        <article class="card card-flagship" id="blade">
+          
+          <header class="card-head">
+            <h3>BLADE: Botanical Leaf Analysis &amp; Disease Evaluator</h3>
+            <span class="dates">2026</span>
+          </header>
+          <p class="org">Independent research project</p>
+          <p class="role">Lead Engineer &amp; Co-researcher</p>
+          <p class="result">A handheld, fully offline crop-disease scanner. Paper under review.</p>
+          <ul class="bullets"><li>Built on a Raspberry Pi 4B with a 5 MP camera, a touchscreen interface and a custom 3D-printed enclosure. A pretrained MobileNetV2 convolutional neural network classifies a leaf photo into 38 classes (26 diseases, 12 healthy states) across 14 crops.</li><li>The pipeline runs input checks, combines five augmented views of each image (test-time augmentation) and applies confidence thresholds, so the device answers &quot;uncertain&quot; rather than giving a wrong diagnosis.</li><li>I rebuilt the device (camera swap, reworked internal layout, full software audit, Git version control, speed optimization) and redesigned the study as a controlled experiment.</li><li><strong>Research question:</strong> why do plant-disease models that score ~99% on lab images fail in real fields? Is the cause the leaf or the background? BLADE photographs the same leaves while changing one condition at a time (background, framing, lighting), which turns a correlation found in earlier studies into a controlled test.</li></ul>
+          <p class="spec">Raspberry Pi 4B · 38 classes · 14 crops · fully offline</p>
+          
+        </article>
+        <article class="card card-flagship" id="tech-for-change">
+          
+          <header class="card-head">
+            <h3>Tech for Change Robotics Club</h3>
+            <span class="dates">2025–present</span>
+          </header>
+          <p class="org">Inventure Academy</p>
+          <p class="role">Founder &amp; Instructor</p>
+          <p class="result">The school's first senior robotics club, now at its signup cap of 10 students.</p>
+          <ul class="bullets"><li>Launched in the second term of Grade 11. One of only two of the school's 20+ Beyond Academics clubs run by a student; teachers run the rest.</li><li>I teach every beginner the basics (electronics, sensors, OpenCV). Students then form groups, build their own projects and present them at the school showcase each term.</li><li>Hit the school's signup cap: 5 students last term, 10 now.</li><li>Projects are meant to be used at school. The electronic voting machine I built will run the 2027 student council elections.</li></ul>
+          
+          
+        </article>
+      </div>
+      <h3 class="subhead">More engineering &amp; research</h3>
+      <div class="cards cards-2">
+        <article class="card" id="wro">
+          
+          <header class="card-head">
+            <h3>WRO Future Engineers: Self-Driving Car</h3>
+            <span class="dates">2024–25</span>
+          </header>
+          <p class="org">World Robot Olympiad India</p>
+          <p class="role">Team Lead (2025) · Team Member (2024)</p>
+          <p class="result">19th of 40+ teams at the 2025 national championship.</p>
+          <ul class="bullets"><li>Built self-driving cars over two seasons with Raspberry Pi, OpenCV and Ackermann steering.</li><li>In 2025, built a custom differential from a disassembled RC truck.</li></ul>
+          
+          <div class="evidence"><a class="chip chip-cert" href="/assets/certificates/2025-wro-future-engineers.webp" target="_blank" rel="noopener"><span class="visually-hidden">Certificate: </span>2025 nationals certificate</a></div>
+        </article>
+        <article class="card" id="nrl">
+          
+          <header class="card-head">
+            <h3>National Robotics League (NRL)</h3>
+            <span class="dates">2025–26</span>
+          </header>
+          
+          <p class="role">Team Captain (2025 and 2026)</p>
+          <p class="result">20th of 50 in division (2025). 2026 season in progress.</p>
+          <ul class="bullets"><li>Designed the robot's full autonomous mode (ESP32, infrared sensors, PID control), using sensors to self-correct its path.</li><li>2026: leading 10 students (Grades 7 and 9). Regionals in November 2026, nationals in December 2026.</li></ul>
+          
+          
+        </article>
+        <article class="card" id="house-plants">
+          
+          <header class="card-head">
+            <h3>Which House Plants Actually Improve Indoor Air Quality?</h3>
+            <span class="dates">2024–25</span>
+          </header>
+          <p class="org">Earlier research, Grade 10</p>
+          <p class="role">First author (with two co-authors)</p>
+          <p class="result">Preprint on Zenodo.</p>
+          <ul class="bullets"><li>Before-and-after measurements of CO2, formaldehyde and VOC levels in five rooms after adding common house plants. Found only small reductions.</li></ul>
+          
+          <div class="evidence"><a class="chip" href="https://zenodo.org/records/18411365" target="_blank" rel="noopener"><span class="visually-hidden"></span>Read the preprint (Zenodo) <span aria-hidden="true">↗</span></a></div>
+        </article>
+        <article class="card" id="roboprenr">
+          
+          <header class="card-head">
+            <h3>Roboprenr Lab &amp; Personal Builds</h3>
+            <span class="dates">2024–26</span>
+          </header>
+          <p class="org">Roboprenr Advanced Learning</p>
+          <p class="role">Lab Student (Grades 10–11) &amp; Independent Maker</p>
+          <p class="result">7 hands-on lab courses, A+ in all (~350 hours), from electronics to AI robotics.</p>
+          <ul class="bullets"><li>ROS 2: in progress, completing November 2026.</li><li>Personal builds: 7 gadgets, including an LCD &quot;kind words&quot; gift for my mom.</li></ul>
+          
+          <div class="evidence"><a class="chip chip-cert" href="/assets/certificates/roboprenr-advanced-electronics.webp" target="_blank" rel="noopener"><span class="visually-hidden">Certificate: </span>Advanced Electronics</a><a class="chip chip-cert" href="/assets/certificates/roboprenr-ai-robotics.webp" target="_blank" rel="noopener"><span class="visually-hidden">Certificate: </span>AI Robotics</a><a class="chip chip-cert" href="/assets/certificates/roboprenr-pcb-designing.webp" target="_blank" rel="noopener"><span class="visually-hidden">Certificate: </span>PCB Designing</a><a class="chip chip-cert" href="/assets/certificates/roboprenr-autonomous-robotics.webp" target="_blank" rel="noopener"><span class="visually-hidden">Certificate: </span>Autonomous Robotics</a><a class="chip chip-cert" href="/assets/certificates/roboprenr-iot.webp" target="_blank" rel="noopener"><span class="visually-hidden">Certificate: </span>IoT</a><a class="chip" href="https://roboprenr.com/contact" target="_blank" rel="noopener"><span class="visually-hidden"></span>Verify with Roboprenr <span aria-hidden="true">↗</span></a></div>
+        </article>
+      </div>
+      </div>
+    </details>
+  </section>
+
+  <section id="leadership" class="section">
+    <details class="collapsible" open>
+      <summary class="section-head"><h2>Leadership &amp; Service</h2><span class="chevron" aria-hidden="true"></span></summary>
+      <div class="collapsible-body">
+      <div class="cards cards-2">
+        <article class="card" id="student-council">
+          <header class="card-head">
+            <h3>Student Council</h3>
+            <span class="dates">2026–27</span>
+          </header>
+          <p class="org">Inventure Academy</p>
+          <p class="role">House Sports Captain &amp; Acting Activities Captain, Adventurers House</p>
+          <ul class="bullets"><li>Co-ran the swim meet (200 athletes; our house won 1st), the parent-teacher day (350 attendees) and the Tournament of Minds (500 attendees).</li><li>Now organizing Sports Day (800 attendees, November 2026).</li></ul>
+        </article>
+        <article class="card" id="project-vita">
+          <header class="card-head">
+            <h3>Project Vita</h3>
+            <span class="dates">2022–present</span>
+          </header>
+          <p class="org">Student-run nonprofit, co-founded at 13</p>
+          <p class="role">Co-founder; On-Site Server &amp; Social Media Support</p>
+          <ul class="bullets"><li>Ran 9+ food stalls raising ~$10,000 for 5 causes, including CareForAll medical camps for ~750 children.</li><li>I plan stall logistics, run the cash counter and design posters. Vita raises the money; partner organizations such as CareForAll run the camps.</li></ul>
+        </article>
+        <article class="card" id="changemaker">
+          <header class="card-head">
+            <h3>Changemaker Committee</h3>
+            <span class="dates">2025–26</span>
+          </header>
+          <p class="org">Inventure Academy</p>
+          <p class="role">Member; Emcee, Changemaker Challenge Round 2</p>
+          <ul class="bullets"><li>Served on the school's Changemaker Committee for the full year and emceed Round 2 of the Changemaker Challenge.</li></ul>
+        </article>
+      </div>
+      </div>
+    </details>
+  </section>
+
+  <section id="activities" class="section">
+    <details class="collapsible" open>
+      <summary class="section-head"><h2>Other Activities</h2><span class="chevron" aria-hidden="true"></span></summary>
+      <div class="collapsible-body">
+      <div class="cards cards-3">
+        <article class="card" id="content">
+          <header class="card-head">
+            <h3>Content Creation</h3>
+            
+          </header>
+          
+          
+          <ul class="bullets"><li>Instagram @dakshdoesrobotics: robotics builds (20+ posts, ~2,000 followers since 2025).</li><li>YouTube gaming channel: 100+ videos, 120k+ views, ~550 subscribers.</li></ul>
+        </article>
+        <article class="card" id="football">
+          <header class="card-head">
+            <h3>Interhouse Football</h3>
+            
+          </header>
+          
+          
+          <ul class="bullets"><li>Every interhouse tournament since Grade 8: 2 silver, 1 bronze.</li><li>Moved from right-back to right midfielder; led my team in assists (Grade 11).</li></ul>
+        </article>
+        <article class="card" id="mun">
+          <header class="card-head">
+            <h3>Model United Nations</h3>
+            
+          </header>
+          
+          
+          <ul class="bullets"><li>Delegate at 3 conferences: South Korea (2023), North Korea (2024), and Germany on the UN Security Council at INMUN (2025).</li></ul>
+        </article>
+      </div>
+      <p class="interests"><strong>Interests:</strong> Football, swimming, building things, Pokémon cards.</p>
+      </div>
+    </details>
+  </section>
+
+  <section id="academics" class="section">
+    <div class="section-head"><h2>Academics</h2></div>
+    <dl class="facts-list">
+      <div><dt>School</dt><dd>Inventure Academy, Bengaluru, India. Cambridge curriculum. Class of 2027.</dd></div>
+      <div><dt>Current courses (Grade 12)</dt><dd>A Level Mathematics, Physics, Chemistry, Computer Science; AS Level English Language.</dd></div>
+      <div><dt>Cambridge AS Level (June 2026)</dt><dd>Physics <span class="grade">A</span>, Chemistry <span class="grade">A</span>, Computer Science <span class="grade">A</span>, Mathematics <span class="grade">B</span><span class="note">Retaking AS Mathematics, Oct/Nov 2026 series (result January 2027).</span></dd></div>
+      <div><dt>Cambridge IGCSE (2025)</dt><dd><span class="grade">A*</span> Mathematics (Extended), Physics, Chemistry, Computer Science<br><span class="grade">A</span> English Language, English Literature, Economics<br><span class="grade">B</span> French<span class="note">Cambridge ICE Distinction; Extended Mathematics class topper (Grade 10).</span></dd></div>
+      <div><dt>SAT</dt><dd><span class="grade">1500</span> (superscore; Math 800, Reading &amp; Writing 700)<span class="note">Next sitting: November 2026.</span></dd></div>
+      <div><dt>AP Computer Science A</dt><dd><span class="grade">5</span><span class="note">Self-studied, Grade 10; Inventure offers no AP courses.</span></dd></div>
+    </dl>
+  </section>
+
+  <section id="honors" class="section">
+    <div class="section-head"><h2>Honors &amp; Awards</h2></div>
+    <ol class="honors">
+      <li><span class="honor-text">Sharkpedo Legacy Award, MATE ROV World Championship (sole recipient, ~120 teams) <a class="chip chip-cert chip-sm" href="/assets/certificates/2026-mate-rov-worlds-participation.webp" target="_blank" rel="noopener">Certificate</a></span><span class="dates">2026</span></li>
+      <li><span class="honor-text">US Navy Challenge Coin, MATE ROV World Championship (~4 of ~120 teams)</span><span class="dates">2025</span></li>
+      <li><span class="honor-text">1st place, MATE ROV India Nationals (national record 280/375 in 2026)</span><span class="dates">2025, 2026</span></li>
+      <li><span class="honor-text">Harvard Crimson Global Quiz Bowl, Computer Science (High School): Global Third Place, Team</span><span class="dates">2025</span></li>
+      <li><span class="honor-text">AP Computer Science A: 5</span><span class="dates">2025</span></li>
+      <li><span class="honor-text">Cambridge ICE Distinction; IGCSE Extended Mathematics class topper</span><span class="dates">2025</span></li>
+      <li><span class="honor-text">iCode Global Hackathon (Python): national finalist <a class="chip chip-cert chip-sm" href="/assets/certificates/2025-icode-hackathon-nationals.webp" target="_blank" rel="noopener">Certificate</a></span><span class="dates">2025</span></li>
+    </ol>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-links">
+      <a href="mailto:mailtodakshsingh@gmail.com">mailtodakshsingh@gmail.com</a>
+      <a href="https://www.linkedin.com/in/daksh-singh-innovator/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://www.linkedin.com/company/the-orcas/" target="_blank" rel="noopener">The Orcas (team page)</a>
+      <a href="/resume/">Resume (web version)</a>
+    </div>
+    <p>Last updated: October 2026</p>
+  </div>
+</footer>
+
+<script src="/js/main.js" defer></script>
+</body>
+</html>

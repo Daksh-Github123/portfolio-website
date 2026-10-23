@@ -1,62 +1,33 @@
-# Open items — needs Daksh's input
+# Open items (internal; not deployed)
 
-Internal tracker only — nothing below appears on the public site.
+Tracks the Oct 24, 2026 update brief. `data/resume.json` is the source of truth.
 
-## Resolved this round
-- AS Level board exam results added (CS A, Physics A, Chemistry A, Math B — retaking).
-- AP Calculus BC removed entirely from the site (self-studied score deleted, not published).
-- SAT retake results date added (Sept 4, 2026).
-- National Robotics League corrected: actual placement was 22nd of 200 teams at IIT Bombay
-  (Nov–Dec 2025, not a mere "participation award"); hospitalization context added; new
-  September 2026 season (returning as captain) added.
-- FarmSense renamed to BLADE everywhere, with accurate project description (Notion: BLADE =
-  Botanical Leaf Analysis & Disease Evaluator — handheld device for plant disease ID + soil NPK
-  sensing; IEEE paper "Real-Time Plant-Based Vision System for Disease Detection in Smart
-  Agriculture," targeting peer review Oct 2026).
-- Roboprenr Lab: A+ badges added next to each course name.
-- WRO Future Engineers: top 15 (2024) and top 20 (2025) national placements added, in both
-  Activities and Honors.
-- iCode Global Hackathon: noted as a Python coding challenge.
-- Inventure Robotics Club: updated to Nov 2025 start, 10 students, 4 unique projects, ~3 hrs/week.
-- Instagram card renamed to "Personal Robotics Instagram Account"; now notes it's currently paused
-  for SAT prep/schoolwork.
-- Internships & Research corrected: the YIIC internship was a portfolio website + AI chatbot
-  (Certificate of Excellence in Problem Solving and Branding & Identity) — NOT the NPK scanner,
-  which was a misattribution. BLADE stays under Activities as the research project it actually is.
-- Project Vita: removed the "Vita Juniors" mention (no longer accurate).
-- Added "Adventurers Sports Captain" card (Annual Swim Meet, PTM, interhouse sports for 500+
-  students) — resolves the earlier open question about the house name.
+## CONFIRM items: left OFF the site/PDF until Daksh answers
+1. Instagram status: brief says remove the "currently paused" line (done). Is @dakshdoesrobotics active?
+2. Private-candidate registration for A Level Further Mathematics (May/June 2027)?
+3. MIT Engineers Without Borders: exact certificate wording (honor currently omitted).
+4. iCode: rank and field size. Site shows "national finalist" only. The certificate itself says Rank #66.
+5. Government school tutoring numbers (item omitted).
+6. Scaler / YIIC internship (item omitted). Daksh earlier gave: "Selected for YIIC. Built and deployed a
+   portfolio website and integrated a custom AI chatbot using no-code AI tools... Certificate of Excellence
+   in Problem Solving and Branding & Identity." Restore if he confirms.
+7. Technical skills list for the PDF (omitted).
+8. Email on the PDF: mailtodakshsingh@gmail.com isn't firstname.lastname style, so it's omitted from the PDF.
+   It still appears on the website footer.
+9. noindex for the site (Daksh's call). /resume already has noindex.
 
-## Resolved this round (cont.)
-- August SAT retake: 1470 (670 R/W, 800 Math) — table updated, status "Completed".
-- Roboprenr Lab: added Autonomous Robotics and IoT certificates (5 of 7 courses now have certs
-  embedded — only ROS 2 and the unnamed 7th course remain without one). Added a
-  roboprenr.com/contact verification link on the card.
+## Judgment calls to review
+- Project Vita dates shown as "2022–present" (co-founded at 13 = Grade 8). Confirm the start year.
+- BLADE dates shown as "2026"; house-plant preprint as "2024–25" (Grade 10).
+- Roboprenr: "7 courses, A+ in all" alongside "ROS 2 in progress". Is ROS 2 one of the 7 or an 8th?
+- Removed the long About narrative (it said "IEEE" and predates BLADE's scope); hero bio replaces it.
+- Email/LinkedIn moved from the hero to the footer ("above the fold: nothing else").
+- AS Maths retake note is on the website, not the PDF (resume lists results, not plans).
+- PDF honors omit AP CS A and ICE Distinction because they're already in the PDF's Education block.
 
-## Resolved this round (cont. 2)
-- ROS 2 marked "in progress — completing October 2026" instead of implying it's already A+.
-- SAT retakes: September and October 2026 attempts added as pending rows (results not yet in);
-  August retake renamed "retake 1" for clarity now that there are three retakes total.
-
-## Still needed from Daksh
-1. **7th Roboprenr Lab course name** — still just lists the 6 known courses; no cert for ROS 2
-   (due October 2026) or the 7th yet.
-2. **iCode Hackathon** — total national competitor count (for "Rank 66 of ___" framing), if wanted.
-3. **Harvard Quiz Bowl** — total participating teams, if wanted for context.
-4. **MATE ROV 2025 bot cost** — exact figure (site currently only states 2026's ~$600 and
-   competitors' $15–20K in the metrics row).
-5. **SBC** — what the acronym stands for (Grade 9 leadership entry).
-
-## Certificates & photos — still to embed
-1st in India (2025 & 2026), US Navy Challenge Coin, MATE ROV team/bot photos, Harvard Crimson
-(5 certs — sent as inline images earlier, need the actual files), MIT EWB Honors, ROS 2 + 7th
-Roboprenr course, YIIC completion certificate / Certificate of Excellence, Extended Math topper
-certificate, Project Vita camp photos, NRL certificate/result documentation.
-
-Resolved: 2026 MATE ROV World Championship Certificate of Participation ("The Orcas" team) —
-embedded on the Sharkpedo Legacy Award honors entry and the MATE ROV flagship activity card.
-Roboprenr — Advanced Electronics, AI Robotics, PCB Designing, Autonomous Robotics, IoT.
-
-## Links not added (no verified URL available)
-- Instagram handle for the (currently paused) personal robotics account.
-- GitHub / public repo link for the plants & AQI project (87 views, 16 downloads noted, no URL given).
+## Still needed
+- Real photos: The Orca, the Leviathans, BLADE, club showcase, competitions (cards support a photo field).
+- Update NRL 2026 with regionals (Nov) / nationals (Dec) results.
+- AS Maths retake result (Jan 2027): replace the B and remove the retake note.
+- SAT November result: remove "Next sitting"; update the superscore only if a section improves.
+- Remaining certificates: Sharkpedo, US Navy coin, India nationals, Harvard Crimson, ROS 2.
