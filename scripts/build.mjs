@@ -23,6 +23,7 @@ const head = (title, description) => `<!DOCTYPE html>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>${esc(title)}</title>
   <meta name="description" content="${esc(description)}">
+  <meta name="robots" content="noindex">
   <script>document.documentElement.classList.add('js');try{var t=localStorage.getItem('theme');if(t==='dark'||t==='light')document.documentElement.dataset.theme=t;}catch(e){}</script>
   <link rel="preload" href="/fonts/ibm-plex-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/ibm-plex-sans-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
@@ -440,10 +441,11 @@ const projectById = Object.fromEntries(d.projects.map((p) => [p.id, p]));
 const leaderById = Object.fromEntries(d.leadership.map((x) => [x.id, x]));
 
 // Roles share the title line when they fit (~one printed line), otherwise get their own line.
+// `inlineRole: true` forces the role onto the title line (it may wrap there).
 const INLINE_ROLE_MAX = 86;
-const entry = ({ title, subtitle, role, dates, bullets }) => {
+const entry = ({ title, subtitle, role, dates, bullets, inlineRole }) => {
   const headHtml = `${esc(title)}${subtitle ? `<span class="r-sub">, ${esc(subtitle)}</span>` : ''}`;
-  const inline = role && `${title}${subtitle ? `, ${subtitle}` : ''} | ${role}`.length <= INLINE_ROLE_MAX;
+  const inline = role && (inlineRole || `${title}${subtitle ? `, ${subtitle}` : ''} | ${role}`.length <= INLINE_ROLE_MAX);
   return `
       <div class="r-entry">
         <div class="r-line"><span class="r-title">${headHtml}${inline ? `<span class="r-role"> | ${esc(role)}</span>` : ''}</span><span class="r-date">${esc(dates)}</span></div>

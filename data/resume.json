@@ -120,7 +120,7 @@
     {
       "id": "wro",
       "title": "WRO Future Engineers: Self-Driving Car",
-      "org": "World Robot Olympiad India",
+      "org": "World Robot Olympiad India · Team Yo_Zephyrus (2024), team Huayra (2025)",
       "role": "Team Lead (2025) · Team Member (2024)",
       "dates": "2024–25",
       "result": "19th of 40+ teams at the 2025 national championship.",
@@ -187,10 +187,11 @@
       "pdf": {
         "title": "\"Which House Plants Actually Improve Indoor Air Quality?\"",
         "subtitle": "",
-        "role": "First author; preprint on Zenodo",
+        "role": "First author, Zenodo preprint",
         "bullets": [
           "Measured CO2, formaldehyde and VOC in five rooms after adding plants: only small reductions."
-        ]
+        ],
+        "inlineRole": true
       }
     },
     {
@@ -240,7 +241,7 @@
         "subtitle": "",
         "role": "Lab Student",
         "bullets": [
-          "5 hands-on lab courses completed, A+ in all, from electronics to AI robotics; ROS 2 in progress (completing November 2026)."
+          "5 hands-on lab courses completed, A+ in all, from electronics to AI robotics; ROS 2 in progress."
         ]
       }
     }
@@ -421,7 +422,7 @@
       "cert": "/assets/certificates/2025-icode-hackathon-nationals.webp"
     }
   ],
-  "technicalIntro": "How each system works, the design decisions behind it, what broke and what we changed, and exactly what I did. Awards and placements are on the home page; here each project gets one results line.",
+  "technicalIntro": "How each system works, the design decisions behind it, what broke and what we changed, and exactly what I did.",
   "technicalProjects": [
     {
       "id": "the-orca",
@@ -470,14 +471,15 @@
           "title": "The Orca: propulsion control",
           "nodes": [
             {
-              "label": "Topside controller"
+              "label": "Pilot controls",
+              "sub": "topside"
             },
             {
               "label": "Pixhawk 2.4.8",
-              "sub": "ArduSub 4.5.7"
+              "sub": "ArduSub"
             },
             {
-              "label": "ESCs"
+              "label": "Motor controllers"
             },
             {
               "label": "6 thrusters",
@@ -485,7 +487,7 @@
             }
           ],
           "edges": [
-            "tether",
+            null,
             null,
             null
           ]
@@ -513,7 +515,7 @@
       "subsystems": [
         [
           "Mechanical",
-          "The manipulator is a single-motor gripper. Its gripping surface is a kitchen sponge combined with M-seal epoxy putty, and we replaced the putty after every run. Sealing the servo motors was a recurring problem: too much sealant jammed the gears, and too little let water in."
+          "The manipulator is a single-motor gripper. Its gripping surface is a kitchen sponge combined with M-seal epoxy putty, and we replaced the putty after every run."
         ],
         [
           "Electronics and control",
@@ -541,8 +543,7 @@
         "Float link: we replaced the float's earlier Bluetooth link with ESP-NOW."
       ],
       "myRole": [
-        "As Arm Design Lead, designed and built The Orca's single-motor gripper.",
-        "As CTO, led the 25-page Technical Documentation Paper (TDP), the company spec sheet and the engineering presentation script."
+        "As Arm Design Lead, designed and built The Orca's single-motor gripper."
       ],
       "result": "India national champions with a national-record 280/375 points; Sharkpedo Legacy Award at the 2026 World Championship.",
       "evidence": [
@@ -578,13 +579,45 @@
         [
           "Cost",
           "Under $2,000 for both"
+        ],
+        [
+          "Manipulator",
+          "Single-moving-jaw clamp, motor-driven lead screw"
+        ],
+        [
+          "Control",
+          "ESP32 control box"
         ]
       ],
-      "diagrams": [],
+      "diagrams": [
+        {
+          "title": "Leviathan: clamp",
+          "nodes": [
+            {
+              "label": "ESP32 control box"
+            },
+            {
+              "label": "Motor"
+            },
+            {
+              "label": "Lead screw"
+            },
+            {
+              "label": "Moving jaw",
+              "sub": "fixed jaw opposite"
+            }
+          ],
+          "edges": [
+            null,
+            null,
+            null
+          ]
+        }
+      ],
       "subsystems": [
         [
           "Mechanical",
-          "Both ROVs were built largely from PVC pipe, for under $2,000 combined."
+          "Both ROVs were built largely from PVC pipe, for under $2,000 combined. Clamp: a motor turns a lead screw that moves one jaw to open and close it, while the other jaw stays fixed."
         ],
         [
           "Software",
@@ -594,7 +627,8 @@
       "decisions": [],
       "changes": [],
       "myRole": [
-        "As Software Lead, owned the code that kept the robot stable in the water."
+        "As Software Lead, owned the code that kept the robot stable in the water.",
+        "One of two main contributors to the 2025 Technical Documentation Paper."
       ],
       "result": "India national champions; first Indian team in the Ranger class at the World Championship; US Navy Challenge Coin.",
       "evidence": [
@@ -745,7 +779,7 @@
       "toc": "WRO self-driving car",
       "name": "WRO Future Engineers self-driving car",
       "years": "2024, 2025",
-      "team": "3-person team (2025)",
+      "team": "Team Yo_Zephyrus (2024) · Team Huayra (2025)",
       "role": "Team Member (2024) · Team Lead (2025)",
       "task": [
         "The car must be fully autonomous: no remote control, and radios and Wi-Fi off during runs. It starts with a single button press.",
@@ -758,6 +792,10 @@
         "href": "https://delta.ut.ee/sites/default/files/2024-11/WRO-2024-Future-Engineers-Self-Driving-Cars-General-Rules.pdf"
       },
       "specs": [
+        [
+          "Cars",
+          "Zephyrus (2024) · Huayra (2025)"
+        ],
         [
           "Computer",
           "Raspberry Pi"
@@ -836,7 +874,8 @@
       ],
       "myRole": [
         "2024 (team member): mostly physical work, including soldering and testing.",
-        "2025 (team lead): led the 3-person team through the custom-differential rebuild."
+        "2025 (team lead): led the 3-person team through the custom-differential rebuild.",
+        "Did most of the design and strategy for the 2025 car."
       ],
       "result": "19th of 40+ at the 2025 nationals.",
       "evidence": [
@@ -989,28 +1028,12 @@
       "text": "ESP32-WROOM-32E streaming DHT11 temperature and humidity readings to Arduino Cloud; an RFID tag triggers an OLED display."
     },
     {
-      "name": "Line-follower robots",
-      "text": "Two line-follower robots."
-    },
-    {
-      "name": "RC car",
-      "text": "A remote-control car with no microcontroller."
-    },
-    {
-      "name": "Stopwatch",
-      "text": "A stopwatch."
-    },
-    {
-      "name": "Thermometer",
-      "text": "A thermometer."
-    },
-    {
-      "name": "Light-up spin toy",
-      "text": "A spinning toy that lights up."
-    },
-    {
       "name": "\"Kind words\" message box",
       "text": "An LCD message box I built as a Mother's Day gift."
+    },
+    {
+      "name": "Early electronics builds",
+      "text": "Two line-follower robots, a remote-control car with no microcontroller, a stopwatch, a thermometer and a light-up spin toy."
     }
   ],
   "interestsOnPdf": false

@@ -2,35 +2,39 @@
 
 `data/resume.json` is the source of truth for the site, the Technical Projects page and the PDF.
 
-## Review round 2: done
-- A: PDF de-duplicated (MATE awards now only in Honors), email added, AS retake note, IGCSE on one line,
-  Roboprenr "5 courses completed", Project Vita 2023–present. Still one page.
-- B: all 8 website fixes (gripper wording, Sharkpedo certificate chip removed, Roboprenr 5 courses,
-  Tech for Change signup cap once, Project Vita Grade 9 / 2023–present, no photos, PDF honors de-duplicated).
-- E: /technical/ page generated from `technicalProjects` + `smallBuilds` in the data file; not in the PDF.
+## Review round 3: done (preview only, not promoted)
+- PDF: house-plant role now inline ("| First author, Zenodo preprint"); Roboprenr bullet shortened to one line
+  (November date kept on the website only). No entries cut, font still 10.5 pt.
+- Technical page: Orca TDP bullet removed and credited to Leviathans (2025, no page count); Orca propulsion
+  diagram relabelled generically (Pilot controls (topside) → Pixhawk 2.4.8 / ArduSub → Motor controllers →
+  6 thrusters); servo sealing only under "What broke"; WRO "Did most of the design and strategy for the 2025
+  car."; small builds merged into "Early electronics builds"; intro's second sentence cut; WRO team and car
+  names on the technical page, spec table and home card; Leviathans clamp, ESP32 control box, spec rows and
+  diagram.
+- `noindex` now on every page (home, technical, resume), production included once promoted.
 
-## PDF spacing: trade-off to decide
-A3's spacing at 10.5 pt doesn't fit one page with every entry, even after de-duplication (~16 lines over).
-Shipped: 10.5 pt (font not shrunk), 0.65 in margins, 20 pt name, line-height 1.24, 10 pt above sections,
-5 pt above entries. PDF-only trims (facts unchanged): MATE role inline as "CTO (2026)" (bullet 2 carries the
-rest), BLADE's "Independent research project" subtitle dropped, Interests line dropped, shorter wording on
-Education / house plants / NRL / Student Council lines.
-To get the full A3 spacing plus ~0.5 in at the bottom, cut ~1 entry, e.g. the house-plant preprint or Roboprenr.
+## PDF spacing: measured result
+The requested spacing (line-height 1.3, 7 pt above entries, 13 pt above sections) overflows to 2 pages.
+Before round 3 the PDF had ~0.04 in spare, not ~0.9 in. The two saved lines give ~0.4 in. Spending any
+of that on spacing drops below the 0.4–0.5 in target (e.g. 1.26 / 11 pt / 6 pt leaves 0.18 in), so per
+"step the spacing back" the PDF ships at line-height 1.24, 11 pt above sections (was 10), 5 pt above entries:
+one page with 0.39 in below the last line. If Daksh prefers more air over bottom space, 1.26 / 11 / 6 also fits.
 
 ## Waiting on Daksh
-1. Photos: The Orca, Leviathan Mk 1/2, BLADE, club showcase, physical Sharkpedo award + certificate.
-2. Does "~350 hours" still apply to the 5 completed Roboprenr courses? (Removed everywhere until confirmed.)
-3. Technical Projects answers. The page shows only confirmed facts; sections are thin where facts are missing:
-   - Leviathans: control hardware, what changed Mk 1 → Mk 2, what broke (Daksh earlier mentioned Arduino UNO R3 /
-     ESP32 control-box and clamp logic; not used because the brief limits the page to E3 facts; confirm to add).
-   - WRO car names (Zephyrus 2024, Huayra 2025)? Note the 2025 certificate lists the team as "Huayra".
-   - Voting machine: microcontrollers, RFID voter identification, vote storage/tally, double-vote prevention, display.
-   - P.A.C.E.: stack, features, dates.
-   - NRL 2026 regionals (Nov) and nationals (Dec) results.
-   - BLADE: is quantized TFLite done? Any real result numbers for the lab-to-field comparison?
-4. Earlier CONFIRM list still open: Further Maths private candidate; MIT EWB wording; iCode field size;
-   government school tutoring numbers; Scaler/YIIC internship; technical skills for the PDF; noindex.
+1. Approve the preview before promotion to production.
+2. Photos: The Orca, Leviathan Mk 1/2, BLADE, club showcase, physical Sharkpedo award + certificate.
+3. "~350 hours" for Roboprenr: removed everywhere until confirmed.
+4. The Orca: confirm the propulsion chain (tether? ESCs?) to restore specific labels.
+5. Leviathans: Arduino UNO R3 (left out), what changed Mk 1 → Mk 2, what broke.
+6. Voting machine: microcontrollers, RFID voter identification, vote storage/tally, double-vote prevention, display.
+7. P.A.C.E.: stack, features, dates.
+8. NRL 2026 regionals (Nov) and nationals (Dec) results.
+9. BLADE: is quantized TFLite done? Any real result numbers for the lab-to-field comparison?
+10. Earlier CONFIRM list still open: Further Maths private candidate; MIT EWB wording; iCode field size;
+    government school tutoring numbers; Scaler/YIIC internship; technical skills for the PDF.
+These stay out; the site ships without them.
 
 ## Later updates
 - AS Maths retake result (Jan 2027): replace the B and remove the retake note.
 - SAT November result: remove "Next sitting"; update the superscore only if a section improves.
+- Roboprenr ROS 2 completion (Nov 2026): update the website and PDF lines.
