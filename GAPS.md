@@ -9,10 +9,12 @@
   confirm the new content is served (no stale cache).
 
 ## Review round 4: done (promoted)
-- Technical Skills line (confirmed by Daksh, with Onshape as the CAD tool) added after Honors & Awards, PDF only.
-  The full list wraps, so items were dropped from the end until it fit on one line:
-  `Python, OpenCV, TensorFlow/TFLite, Raspberry Pi, ESP32, Pixhawk/ArduSub, Onshape`
-  (dropped: PCB design, 3D printing, soldering, Git). Spacing back to 1.24 / 11 pt / 5 pt; one page, ~0.06 in spare.
+- Technical Skills line (PDF only, after Honors & Awards), per Daksh:
+  `Python, OpenCV, Raspberry Pi, ESP32, Pixhawk/ArduSub, Onshape, PCB design, 3D printing` (one line).
+  TensorFlow/TFLite removed: the model is pretrained and TFLite conversion is still in progress.
+  Spacing 1.24 / 11 pt / 5 pt; one page, ~0.06 in spare.
+- Daksh's follow-ups: P.A.C.E. "only software project" sentence removed; Leviathans "Software" subsection removed
+  (kept under "My role"); "Acting Activities Captain" renamed "Beyond Academics Captain" on the site and PDF.
 
 ## Closed (no longer tracked)
 - Scaler / YIIC internship: left out permanently.

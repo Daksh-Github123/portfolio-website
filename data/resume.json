@@ -251,14 +251,14 @@
       "id": "student-council",
       "title": "Student Council",
       "org": "Inventure Academy",
-      "role": "House Sports Captain & Acting Activities Captain, Adventurers House",
+      "role": "House Sports Captain & Beyond Academics Captain, Adventurers House",
       "dates": "2026–27",
       "bullets": [
         "Co-ran the swim meet (200 athletes; our house won 1st), the parent-teacher day (350 attendees) and the Tournament of Minds (500 attendees).",
         "Now organizing Sports Day (800 attendees, November 2026)."
       ],
       "pdf": {
-        "role": "House Sports Captain & Acting Activities Captain, Adventurers House",
+        "role": "House Sports Captain & Beyond Academics Captain, Adventurers House",
         "bullets": [
           "Co-ran swim meet (200 athletes; house won 1st), parent-teacher day (350), Tournament of Minds (500)."
         ]
@@ -618,10 +618,6 @@
         [
           "Mechanical",
           "Both ROVs were built largely from PVC pipe, for under $2,000 combined. Clamp: a motor turns a lead screw that moves one jaw to open and close it, while the other jaw stays fixed."
-        ],
-        [
-          "Software",
-          "I owned the code that kept the robot stable in the water."
         ]
       ],
       "decisions": [],
@@ -1002,7 +998,7 @@
       "years": "",
       "team": "",
       "role": "",
-      "summary": "A web app I built as an SAT practice question bank, with a web interface for practising questions and correcting mistakes daily. It is my only software project.",
+      "summary": "A web app I built as an SAT practice question bank, with a web interface for practising questions and correcting mistakes daily.",
       "specs": [],
       "diagrams": [],
       "subsystems": [
@@ -1037,5 +1033,5 @@
     }
   ],
   "interestsOnPdf": false,
-  "pdfSkills": "Python, OpenCV, TensorFlow/TFLite, Raspberry Pi, ESP32, Pixhawk/ArduSub, Onshape"
+  "pdfSkills": "Python, OpenCV, Raspberry Pi, ESP32, Pixhawk/ArduSub, Onshape, PCB design, 3D printing"
 }
