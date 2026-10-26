@@ -1036,5 +1036,6 @@
       "text": "Two line-follower robots, a remote-control car with no microcontroller, a stopwatch, a thermometer and a light-up spin toy."
     }
   ],
-  "interestsOnPdf": false
+  "interestsOnPdf": false,
+  "pdfSkills": "Python, OpenCV, TensorFlow/TFLite, Raspberry Pi, ESP32, Pixhawk/ArduSub, Onshape"
 }

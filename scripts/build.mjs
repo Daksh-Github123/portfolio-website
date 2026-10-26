@@ -523,6 +523,7 @@ const resume = `<!DOCTYPE html>
       .join('')}</ul>
   </section>
 
+  ${d.pdfSkills ? `<p class="r-interests r-skills"><strong>Technical Skills:</strong> ${esc(d.pdfSkills)}</p>` : ''}
   ${d.interestsOnPdf ? `<p class="r-interests"><strong>Interests:</strong> ${esc(d.interests)}</p>` : ''}
 </main>
 </body>

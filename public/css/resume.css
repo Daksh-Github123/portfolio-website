@@ -10,7 +10,7 @@
 html { -webkit-text-size-adjust: 100%; }
 body {
   margin: 0; background: #e9edf1; color: #111;
-  font-family: 'IBM Plex Sans', Arial, sans-serif; font-size: 10.5pt; line-height: 1.26;
+  font-family: 'IBM Plex Sans', Arial, sans-serif; font-size: 10.5pt; line-height: 1.24;
 }
 a { color: inherit; text-decoration: none; }
 
@@ -32,7 +32,7 @@ h2 {
   margin: 0; padding-bottom: 2pt; border-bottom: 0.75pt solid #111;
 }
 
-.r-entry { margin-top: 6pt; }
+.r-entry { margin-top: 5pt; }
 h2 + .r-entry, h2 + .r-honors { margin-top: 4pt; }
 .r-line { display: flex; justify-content: space-between; gap: 12pt; }
 .r-title { font-weight: 700; }
