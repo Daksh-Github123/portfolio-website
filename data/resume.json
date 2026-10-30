@@ -156,7 +156,13 @@
         "Designed the robot's full autonomous mode (ESP32, infrared sensors, PID control), using sensors to self-correct its path.",
         "2026: leading 10 students (Grades 7 and 9). Regionals in November 2026, nationals in December 2026."
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "label": "2025 participation certificate",
+          "href": "/assets/certificates/2025-nrl-participation.webp",
+          "cert": true
+        }
+      ],
       "pdf": {
         "title": "National Robotics League (NRL)",
         "subtitle": "",
@@ -952,7 +958,13 @@
         "2026: leading a team of 10 students."
       ],
       "result": "20th of 50 in division (2025). 2026 results to come.",
-      "evidence": []
+      "evidence": [
+        {
+          "label": "2025 participation certificate",
+          "href": "/assets/certificates/2025-nrl-participation.webp",
+          "cert": true
+        }
+      ]
     },
     {
       "id": "voting-machine",

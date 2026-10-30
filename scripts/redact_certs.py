@@ -1,6 +1,7 @@
 """Render certificate PDFs to WebP with signatures / ID codes blurred.
 
 Regions are fractions of page width/height: (x0, y0, x1, y1).
+Sources are PDFs, or WebP images when no PDF exists.
 Usage: python3.13 -I redact_certs.py <src_pdf_dir> <out_dir> <tmp_dir>
 """
 import subprocess
@@ -22,6 +23,8 @@ REGIONS = {
     "2025-icode-hackathon-nationals": [(0.185, 0.695, 0.315, 0.775), (0.465, 0.685, 0.57, 0.815)],
     # two rotated issuer signatures
     "2026-mate-rov-worlds-participation": [(0.63, 0.285, 0.708, 0.445), (0.63, 0.54, 0.708, 0.705)],
+    # three signatures with their signature ID codes (source is an image, not a PDF)
+    "2025-nrl-participation": [(0.235, 0.63, 0.445, 0.725), (0.475, 0.64, 0.595, 0.725), (0.65, 0.645, 0.815, 0.725)],
 }
 
 MAX_SIDE = 1600
@@ -32,9 +35,12 @@ def main(src_dir: Path, out_dir: Path, tmp_dir: Path) -> None:
     tmp_dir.mkdir(parents=True, exist_ok=True)
     for name, regions in REGIONS.items():
         pdf = src_dir / f"{name}.pdf"
-        stem = tmp_dir / name
-        subprocess.run(["pdftoppm", "-r", "130", "-png", "-singlefile", str(pdf), str(stem)], check=True)
-        img = Image.open(f"{stem}.png").convert("RGB")
+        if pdf.exists():
+            stem = tmp_dir / name
+            subprocess.run(["pdftoppm", "-r", "130", "-png", "-singlefile", str(pdf), str(stem)], check=True)
+            img = Image.open(f"{stem}.png").convert("RGB")
+        else:
+            img = Image.open(src_dir / f"{name}.webp").convert("RGB")
         w, h = img.size
         for x0, y0, x1, y1 in regions:
             box = (int(x0 * w), int(y0 * h), int(x1 * w), int(y1 * h))
